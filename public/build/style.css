@@ -43,6 +43,7 @@ html {
 body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
+  color:#032D57 !important;
 }
 /*
 1. Add the correct height in Firefox.
@@ -327,6 +328,9 @@ video {
 }
 html{
   -webkit-tap-highlight-color: transparent;
+}
+p{
+  text-align: justify;
 }
 :root{
   color-scheme: light;
@@ -2245,7 +2249,7 @@ details.collapse summary::-webkit-details-marker{
 }
 .bg-\[\#f5f1e4\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(245 241 228 / var(--tw-bg-opacity));
+  background-color:#feffff;
 }
 .bg-base-200{
   --tw-bg-opacity: 1;
@@ -2257,11 +2261,15 @@ details.collapse summary::-webkit-details-marker{
 }
 .bg-orange-100{
   --tw-bg-opacity: 1;
-  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+  background-color: #deeded ;
 }
 .bg-orange-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+  background-color: #c8e1e1;
+}
+.color-green{
+  --tw-bg-opacity: 1;
+  color: #129996;
 }
 .bg-stone-200{
   --tw-bg-opacity: 1;
@@ -2277,14 +2285,14 @@ details.collapse summary::-webkit-details-marker{
 }
 .bg-stone-900{
   --tw-bg-opacity: 1;
-  background-color: rgb(28 25 23 / var(--tw-bg-opacity));
+  background-color: #03203d;
 }
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-t{
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  background: linear-gradient(0deg, #deeded 0%, rgba(45,253,83,0.0032387955182072714) 100%);
 }
 .from-gray-800{
   --tw-gradient-from: #1f2937 var(--tw-gradient-from-position);
@@ -2911,7 +2919,7 @@ details.collapse summary::-webkit-details-marker{
     display: none;
   }
   .lg\:h-\[28\.4rem\]{
-    height: 28.4rem;
+    height:25.4rem;
   }
   .lg\:w-1\/2{
     width: 50%;
