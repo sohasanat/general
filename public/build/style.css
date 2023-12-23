@@ -471,6 +471,15 @@ html{
 .container{
   width: 100%;
 }
+.wrapperComment{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap:3rem;
+}
+.break-words{
+  overflow-wrap: break-word;
+}
 .displayflex{
   display: flex;
   flex-direction: column;
@@ -2301,7 +2310,6 @@ details.collapse summary::-webkit-details-marker{
 }
 .bg-stone-900{
   background: rgb(18,153,150);
-background: linear-gradient(0deg, rgba(18,153,150,1) 0%, rgba(200,225,225,1) 56%);
 
 }
 .bg-white{
