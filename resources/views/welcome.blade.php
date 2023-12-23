@@ -94,7 +94,7 @@
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="#">فرصت‌های شغلی</a></li>
                     </ul>
                 </div>
-                <div class="border bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full">
+                <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full">
                     <a href="login.html" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
                 </div>
         
@@ -102,11 +102,9 @@
         </div>
     </section>
 
-
     <section class="px-4 mb-24">
-     <div class="container mx-auto max-w-screen-xl relative pt-5 pl-5 lg:pt-10 lg:pl-10">
-        <div class="bg-stone-900 absolute top-0 left-0 h-36 lg:h-[28.4rem] w-52 lg:w-96 rounded-b-3xl"></div>
-        <div class="grid grid-cols-12 gap-8">
+     <div class="container mx-auto max-w-screen-xl relative pt-5 lg:pt-10 ">
+        <div class="grid grid-cols-12 gap-8p">
         <div class="col-span-12 lg:col-span-5 order-2 lg:order-1">
             <div class="leading-8 mt-8">
                 <span class="font-YekanBakh-Bold  py-1"> سهاصنعت، تحت لیسانس و شریک توسعه همکاران سیستم</span>
@@ -154,7 +152,7 @@
             <div class="flex justify-center relative mb-14">
                 <h2 class="font-YekanBakh-ExtraBlack text-3xl">شـــــــرکـــت‌ها </h2>
                 <div class="absolute -top-6">
-                    <span class="font-YekanBakh-ExtraBlack text-6xl text-opacity-10 text-stone-900">services</span>
+                    <span class="font-YekanBakh-ExtraBlack text-6xl text-opacity-10 text-stone-900">companies</span>
 
                 </div>
                 <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
@@ -162,58 +160,49 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 
-                <div class="bg-white p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
-                    <div class="w-16 mb-4">
-                        <img src="../assets/images/15.png" alt="">  
+                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/farayar.png" alt="">  
                     </div>
                     
                     <div class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13.98 5.31999L10.77 8.52999L8.79999 10.49C7.96999 11.32 7.96999 12.67 8.79999 13.5L13.98 18.68C14.66 19.36 15.82 18.87 15.82 17.92V12.31V6.07999C15.82 5.11999 14.66 4.63999 13.98 5.31999Z" fill="#b9a158"/>
-                          </svg>
                           <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایار سهاصنعت</h2></a>
                     </div>
                     <div>
-                        <p>شرکت فرایارسهاصنعت، تحت لیسانس همکاران سیستم، ارائه دهنده خدمات استقرار و متناسب سازی نرم افزارهای گروه همکاران سیستم اهم از نرم افزار مدیریت منابع سازمانی راهکاران است.</p>                          
+                        <p class="text-center">شرکت فرایارسهاصنعت، تحت لیسانس همکاران سیستم، ارائه دهنده خدمات استقرار و متناسب سازی نرم افزارهای گروه همکاران سیستم اهم از نرم افزار مدیریت منابع سازمانی راهکاران است.</p>                          
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
-                    <div class="w-16 mb-4">
-                        <img src="../assets/images/17.png" alt="">  
+                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/bazaryar.png" alt="">  
                     </div>
                     
-                    <div class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13.98 5.31999L10.77 8.52999L8.79999 10.49C7.96999 11.32 7.96999 12.67 8.79999 13.5L13.98 18.68C14.66 19.36 15.82 18.87 15.82 17.92V12.31V6.07999C15.82 5.11999 14.66 4.63999 13.98 5.31999Z" fill="#b9a158"/>
-                          </svg>
+                    <div class="flex text-center mb-4">
                           <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">بازاریار سهاصنعت</h2></a>
                     </div>
                     <div>
-                        <p>شرکت بازاریار سهاصنعت، شریک توسعه گروه همکاران سیستم، ارائه دهنده ی محصولات و ماژول هایی در زمینه ی هوشمندی صنایع و هوشمندی سازمانی روی نرم افزار راهکاران است.</p>                          
+                        <p class="items-center">شرکت بازاریار سهاصنعت، شریک توسعه گروه همکاران سیستم، ارائه دهنده ی محصولات و ماژول هایی در زمینه ی هوشمندی صنایع و هوشمندی سازمانی روی نرم افزار راهکاران است.</p>                          
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
-                    <div class="w-16 mb-4">
-                        <img src="../assets/images/14.png" alt="">  
+                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/fraiand.png" alt="">  
                     </div>
                     
                     <div class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13.98 5.31999L10.77 8.52999L8.79999 10.49C7.96999 11.32 7.96999 12.67 8.79999 13.5L13.98 18.68C14.66 19.36 15.82 18.87 15.82 17.92V12.31V6.07999C15.82 5.11999 14.66 4.63999 13.98 5.31999Z" fill="#b9a158"/>
-                          </svg>
                           <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایند سهاصنعت</h2></a>
                     </div>
                     <div>
-                        <p>شرکت فرایند سهاصنعت ارائه دهنده ی انواع راهکار در زمینه ی هوشمندی صنایع است. از جمله محصولات این شرکت سیستم عامل جامع حمل و نقل جاده ای بارابن است.</p>                          
+                        <p class="text-center">شرکت فرایند سهاصنعت ارائه دهنده ی انواع راهکار در زمینه ی هوشمندی صنایع است. از جمله محصولات این شرکت سیستم عامل جامع حمل و نقل جاده ای بارابن است.</p>                          
                     </div>
                 </div>
             </div>
         </div>
     </section> 
 
-    <section class="pt-20 mb-10 px-4">
+    <section class="pt-20 mb-10 px-4 py-14">
         <div class="container mx-auto max-w-screen-xl">
         <div class="container mx-auto max-w-screen-xl">
             <div class="flex justify-center relative mb-14">
@@ -228,133 +217,63 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <!-- image - start -->
                 <a href="single-project.html"
-                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-72">
-                    <img src="../assets/images/project-30.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
+                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:h-72 green">
+                    <img src="../assets/images/rah1.svg" loading="lazy" alt="Photo by Minh Pham" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
     
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
                     </div>
     
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره یک</span>
+                    <span class="relative mb-4 flex justify-center text-base text-center">
+                    راهکارهای صنعتی و خدماتی
+                    </span>
                 </a>
                 <!-- image - end -->
     
                 <!-- image - start -->
                 <a href="single-project.html"
-                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-72">
-                    <img src="../assets/images/blog-2.jpg" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
+                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:col-span-2 md:h-72 green">
+                    <img src="../assets/images/bi2.svg" loading="lazy" alt="Photo by Magicle" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
     
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
                     </div>
-    
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره دو</span>
+                    <span class="relative mb-4 flex justify-center text-base text-center">
+                    هوش تجاری و تصمیم‌گیری کلان هوش‌محور
+                    </span>
                 </a>
                 <!-- image - end -->
     
                 <!-- image - start -->
                 <a href="single-project.html"
-                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-72">
-                    <img src="../assets/images/project-31.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
+                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg  shadow-lg md:col-span-2 md:h-72 green">
+                    <img src="../assets/images/product3.svg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
     
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
                     </div>
-    
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره سه</span>
+                          
+                    <span class="relative mb-4 flex justify-center text-base text-center">
+                    محصولات اکوسیستم بازار گروه همکاران سیستم
+                    </span>
                 </a>
                 <!-- image - end -->
     
                 <!-- image - start -->
-                <a href="single-project.html" class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-72">
-                    <img src="../assets/images/blog-4.jpg" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
+                <a href="single-project.html" class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:h-72 green">
+                    <img src="../assets/images/st4.svg" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
     
                     <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
                     </div>
     
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره 4</span>
+                    <span class="relative mb-4 flex justify-center text-base text-center ">استقرار، متناسب سازی و شخصی سازی محصولات گروه همکاران سیستم</span>
                 </a>
                 <!-- image - end -->
             </div>
            
         </div>
     </section>
-
-    <section class="px-4 py-14 bg-gradient-to-t from-orange-100">
-        <div class="container mx-auto max-w-screen-xl">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <div class="bg-white p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
-                    <div class="w-16 mb-4">
-                        <img src="../assets/images/15.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13.98 5.31999L10.77 8.52999L8.79999 10.49C7.96999 11.32 7.96999 12.67 8.79999 13.5L13.98 18.68C14.66 19.36 15.82 18.87 15.82 17.92V12.31V6.07999C15.82 5.11999 14.66 4.63999 13.98 5.31999Z" fill="#b9a158"/>
-                          </svg>
-                          <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">استقرار، متناسب سازی و شخصی سازی محصولات گروه همکاران سیستم</h2></a>
-                    </div>
-                    <div>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده طراحان گرافیک و...</p>                          
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
-                    <div class="w-16 mb-4">
-                        <img src="../assets/images/17.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13.98 5.31999L10.77 8.52999L8.79999 10.49C7.96999 11.32 7.96999 12.67 8.79999 13.5L13.98 18.68C14.66 19.36 15.82 18.87 15.82 17.92V12.31V6.07999C15.82 5.11999 14.66 4.63999 13.98 5.31999Z" fill="#b9a158"/>
-                          </svg>
-                          <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">هوش تجاری و تصمیم‌گیری کلان هوش‌محور</h2></a>
-                    </div>
-                    <div>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده طراحان گرافیک و...</p>                          
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
-                    <div class="w-16 mb-4">
-                        <img src="../assets/images/14.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13.98 5.31999L10.77 8.52999L8.79999 10.49C7.96999 11.32 7.96999 12.67 8.79999 13.5L13.98 18.68C14.66 19.36 15.82 18.87 15.82 17.92V12.31V6.07999C15.82 5.11999 14.66 4.63999 13.98 5.31999Z" fill="#b9a158"/>
-                          </svg>
-                          <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">محصولات اکوسیستم گروه همکاران سیستم</h2></a>
-                    </div>
-                    <div>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده طراحان گرافیک و...</p>                          
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
-                    <div class="w-16 mb-4">
-                        <img src="../assets/images/16.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13.98 5.31999L10.77 8.52999L8.79999 10.49C7.96999 11.32 7.96999 12.67 8.79999 13.5L13.98 18.68C14.66 19.36 15.82 18.87 15.82 17.92V12.31V6.07999C15.82 5.11999 14.66 4.63999 13.98 5.31999Z" fill="#b9a158"/>
-                          </svg>
-                          <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">راهکارهای صنعتی و خدماتی</h2></a>
-                    </div>
-                    <div>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده طراحان گرافیک و...</p>                          
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-
 
     <section class="px-4 py-20 mb-16 bg-gradient-to-t from-orange-100">
         <div class="container mx-auto max-w-screen-xl">
@@ -467,8 +386,6 @@
 
         <div class="relative pt-20">
             <div aria-hidden="true" class="hidden sm:block">
-                <div class="absolute inset-y-0 left-0 w-1/2 bg-stone-900 rounded-r-3xl">
-                </div>
                 <svg class="absolute top-8 left-1/2 -ml-8" width="404" height="392" fill="none" viewBox="0 0 404 392">
                     <defs>
                         <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20"
@@ -704,7 +621,7 @@
       
     <footer class="p-10 bg-stone-800 text-white">
      <button id="to-top-button" onclick="goToTop()" title="Go To Top"
-     class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full bg-stone-900 hover:bg-orange-200 text-orange-200 hover:text-stone-900 duration-300">
+     class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full bg-green text-white hover:text-white hover:bg-green duration-300">
      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
       </svg>

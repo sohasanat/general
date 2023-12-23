@@ -329,9 +329,7 @@ video {
 html{
   -webkit-tap-highlight-color: transparent;
 }
-p{
-  text-align: justify;
-}
+
 :root{
   color-scheme: light;
   --pf: 259 94% 44%;
@@ -467,8 +465,16 @@ p{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.green{
+  background-color: #B8E0E0;
+}
 .container{
   width: 100%;
+}
+.displayflex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 640px){
   .container{
@@ -2044,6 +2050,9 @@ details.collapse summary::-webkit-details-marker{
 .w-8{
   width: 2rem;
 }
+.w-10{
+  width: 3rem;
+}
 .w-80{
   width: 20rem;
 }
@@ -2142,6 +2151,9 @@ details.collapse summary::-webkit-details-marker{
 }
 .gap-8{
   gap: 2rem;
+}
+.gap-8p{
+  gap: 7rem;
 }
 .gap-x-16{
   -moz-column-gap: 4rem;
@@ -2245,7 +2257,7 @@ details.collapse summary::-webkit-details-marker{
 }
 .border-orange-200{
   --tw-border-opacity: 1;
-  border-color: rgb(254 215 170 / var(--tw-border-opacity));
+  border-color: #129996;
 }
 .bg-\[\#f5f1e4\]{
   --tw-bg-opacity: 1;
@@ -2271,6 +2283,10 @@ details.collapse summary::-webkit-details-marker{
   --tw-bg-opacity: 1;
   color: #129996;
 }
+.bg-green{
+  --tw-bg-opacity: 1;
+  background-color: #129996;
+}
 .bg-stone-200{
   --tw-bg-opacity: 1;
   background-color: rgb(231 229 228 / var(--tw-bg-opacity));
@@ -2284,8 +2300,9 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(41 37 36 / var(--tw-bg-opacity));
 }
 .bg-stone-900{
-  --tw-bg-opacity: 1;
-  background-color: #03203d;
+  background: rgb(18,153,150);
+background: linear-gradient(0deg, rgba(18,153,150,1) 0%, rgba(200,225,225,1) 56%);
+
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -2706,7 +2723,7 @@ details.collapse summary::-webkit-details-marker{
 }
 .hover\:border-orange-200:hover{
   --tw-border-opacity: 1;
-  border-color: rgb(254 215 170 / var(--tw-border-opacity));
+  border-color: #129996;
 }
 .hover\:bg-orange-200:hover{
   --tw-bg-opacity: 1;
