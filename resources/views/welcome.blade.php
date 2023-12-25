@@ -6,7 +6,7 @@
     @vite('public')
     <link rel="stylesheet" href="{{asset('node_modules/swiper/swiper-bundle.min.css')}}">
     <link rel="stylesheet" href="{{asset('build/style.css')}}">
-    <title>سهاصنعت</title>
+    <title>سهاصنعت</title><link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 <body class="font-YekanBakh-Regular text-sm bg-[#f5f1e4]">
 
@@ -39,6 +39,8 @@
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/contact-us">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
+
                         
                       </ul>
                     </div>

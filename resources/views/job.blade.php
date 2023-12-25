@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/style.css">
-    <title>جزئیات پروژه</title>
+    <title>جزئیات پروژه</title><link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
 </head>
-<body class="font-YekanBakh-Regular text-sm bg-gradient-to-t">
+<body class="font-YekanBakh-Regular text-sm">
 
 <section class="px-4 static bg-orange-200 ">
         <div class="container mx-auto max-w-screen-xl">
@@ -39,6 +39,7 @@
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/contact-us">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
                         
                       </ul>
                     </div>
@@ -66,7 +67,7 @@
             </div>
         </div>
 </section>
-<section class="px-4 mb-24 min-height-50">
+<section class="px-4 pb-25 min-height-50 bg-gradient-to-t ">
         <div class="container mx-auto max-w-screen-xl">
             <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2">
@@ -94,7 +95,7 @@
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-16">
 
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
+<div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
 <div class="flex items-center">
 <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
     <img src="../assets/images/React-icon.png" class=""/>
@@ -108,7 +109,7 @@
                     <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
                 </div>
 </div>
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
+<div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
 <div class="flex items-center">
 <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
     <img src="../assets/images/React-icon.png" class=""/>
@@ -122,7 +123,7 @@
                     <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
                 </div>
 </div>
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
+<div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
 <div class="flex items-center">
 <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
     <img src="../assets/images/React-icon.png" class=""/>
@@ -136,7 +137,7 @@
                     <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
                 </div>
 </div>
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
+<div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
 <div class="flex items-center">
 <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
     <img src="../assets/images/React-icon.png" class=""/>

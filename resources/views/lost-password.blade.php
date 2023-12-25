@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/style.css">
-    <title>فراموشی رمز عبور</title>
+    <title>فراموشی رمز عبور</title><link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 <body class="font-YekanBakh-Regular text-sm bg-[#f5f1e4]">
 
