@@ -23,7 +23,7 @@
               <div class="divide-y divide-gray-200">
                 <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                     <input type="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
-                    <input type="email" placeholder="رمز عبور:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
+                    <input type="password" placeholder="رمز عبور:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
                     <button class="btn bg-stone-800 w-full hover:bg-stone-900 text-white rounded-full text-sm">ورود</button>
                     <p class="mt-6 text-xs text-gray-600 text-center leading-8">
                         رمز عبور خود را فراموش کرده اید؟ 

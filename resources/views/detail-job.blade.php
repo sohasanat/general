@@ -8,7 +8,7 @@
     <title>جزئیات پروژه</title>
 
 </head>
-<body class="font-YekanBakh-Regular text-sm bg-gradient-to-t">
+<body class="font-YekanBakh-Regular text-sm">
 
 <section class="px-4 static bg-orange-200 ">
         <div class="container mx-auto max-w-screen-xl">
@@ -81,78 +81,105 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                               </svg>
                               
-                            <a href="#" class="mr-1 text-sm font-medium">فرصت‌های شغلی</a>
+                            <a href="#" class="mr-1 text-sm font-medium">درخواست همکاری</a>
                         </div>
                     </li>
                 </ol>
             </nav>  
             <div class="flex flex-col items-center justify-center relative mt-16">
-                <h2 class="font-YekanBakh-ExtraBlack text-3xl">فرصت‌های شغلی</h2>
+                <h2 class="font-YekanBakh-ExtraBlack text-3xl">برنامه نویس Front-end</h2>
 
                 <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
             </div> 
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-16">
 
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
-<div class="flex items-center">
-<div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-    <img src="../assets/images/React-icon.png" class=""/>
+<div class="lightGreen2 rounded-lg flex items-center justify-between leading-8 p-6">
+  <div class="mr-2">
+                            <h2 class="font-YekanBakh-Bold text-base mb-2">
+                            تخصص‌های لازم
+                            </h2>
+<ul>
+    <li>
+    مسلط به HTML - CSS - JavaScript
+
+    </li>
+    <li>
+    مسلط به React js
+
+    </li>
+    <li>
+    دارای مهارت کافی در استفاده از Web Service ها (RESTFul Web Api, JSON)
+
+    </li>
+    <li>
+    آشنا به Agile - Scrum
+
+    </li>
+    <li>
+    توانایی پیاده سازی UI بصورت Pixel Perfect
+
+    </li>
+    <li>
+    آشنا بر State Management System ها مانند Redux
+
+    </li>
+</ul>
   </div>
-  <div class="mr-2 gap-2 flex flex-col ">
-                            <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-                        <p class="text-center">قرارداد تمام‌وقت و حضوری</p>                          
-  </div>
+
 </div>
-<div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
-                    <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
-                </div>
-</div>
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
-<div class="flex items-center">
-<div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-    <img src="../assets/images/React-icon.png" class=""/>
+
+<div class="lightGreen2 rounded-lg flex items-center justify-between leading-8 p-6">
+  <div class="mr-2">
+                            <h2 class="font-YekanBakh-Bold text-base mb-2">
+مهارت‌های فردی
+
+                            </h2>
+<ul>
+    <li>
+    توانایی انجام کارگروهی
+
+    </li>
+    <li>
+    جدیت و دقت در کار و اخلاق حرفه‌ای
+
+    </li>
+    <li>
+    توانایی حل مسئله و مدیریت زمان
+
+    </li>
+    <li>
+    خلاقیت
+
+    </li>
+    <li>
+    روحیه مطالعه و تحقیق بسیار
+
+    </li>
+    <li>
+
+    </li>
+</ul>
   </div>
-  <div class="mr-2 gap-2 flex flex-col ">
-                            <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-                        <p class="text-center">قرارداد تمام‌وقت و حضوری</p>                          
-  </div>
-</div>
-<div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
-                    <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
-                </div>
-</div>
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
-<div class="flex items-center">
-<div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-    <img src="../assets/images/React-icon.png" class=""/>
-  </div>
-  <div class="mr-2 gap-2 flex flex-col ">
-                            <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-                        <p class="text-center">قرارداد تمام‌وقت و حضوری</p>                          
-  </div>
-</div>
-<div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
-                    <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
-                </div>
-</div>
-<div class="bg-orange-200 rounded-lg flex items-center justify-between h-10 px-4">
-<div class="flex items-center">
-<div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-    <img src="../assets/images/React-icon.png" class=""/>
-  </div>
-  <div class="mr-2 gap-2 flex flex-col ">
-                            <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-                        <p class="text-center">قرارداد تمام‌وقت و حضوری</p>                          
-  </div>
-</div>
-<div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
-                    <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
-                </div>
+
 </div>
 
 
 </div>
+<div class="lightGreen2 mt-4 p-6 rounded-lg ">
+<form action="">
+<div class="text-base leading-6 text-gray-700 sm:text-lg sm:leading-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<input type="text" placeholder="نام و نام‌خانوادگی" class="input w-full  focus:outline-none placeholder:text-sm" />
+                    <input type="text" placeholder="تلفن همراه" class="input w-full  focus:outline-none placeholder:text-sm" />
+                    <input type="email" placeholder="ایمیل" class="input w-full  focus:outline-none placeholder:text-sm" />
+<input id="uploadInput" type="file" class="hidden">
+
+                    <button id="uploadButton" class="btn text-white  text-sm lightGreen3" >بارگذاری فایل رزومه</button>
+                </div>
+                <button class="btn mt-5 bg-green px-7 text-white  text-sm text-center">ارسال رزومه</button>
+            </form>
+        </div>
+
 </div>
 </section>
 
@@ -161,7 +188,7 @@
 
     <footer class="p-10 bg-stone-800 text-white">
      <button id="to-top-button" onclick="goToTop()" title="Go To Top"
-      class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full bg-green text-white hover:text-white hover:bg-green duration-300">
+      class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14  bg-green text-white hover:text-white hover:bg-green duration-300">
        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
         </svg>
@@ -204,5 +231,11 @@
   
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="../src/js/main.js"></script>
+    <script>
+        document.getElementById("uploadButton").addEventListener("click",()=>{
+            document.getElementById("uploadInput").click()
+        })
+    </script>
+    
 </body>
 </html>

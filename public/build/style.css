@@ -493,6 +493,14 @@ gap:3rem;
 .lightGreen{
   background-color: #dff3f3;
 }
+.lightGreen2{
+  background-color: #e8f3f3;
+  
+}
+.lightGreen3{
+  background-color: #4e8382 !important;
+}
+
 .min-height-50{
   min-height: 50vh
 }

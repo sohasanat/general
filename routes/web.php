@@ -62,3 +62,6 @@ Route::get('/single-product', function () {
 Route::get('/job', function () {
     return view('job');
 });
+Route::get('/detail-job', function () {
+    return view('detail-job');
+});
