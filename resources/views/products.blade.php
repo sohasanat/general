@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/style.css">
-    <title>تماس با ما</title>
+    <title>محصولات</title>
 </head>
-<body class="font-YekanBakh-Regular text-sm">
+<body class="font-YekanBakh-Regular text-sm bg-gradient-to-t">
 
-<div class=" bg-gradient-to-t">
+
 <section class="px-4 static bg-orange-200 ">
         <div class="container mx-auto max-w-screen-xl">
             <div class="flex justify-between items-center py-6">
@@ -38,7 +38,7 @@
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
                         
                         <li><details>
-                            <summary><a href="project"> محصولات</a></summary>
+                            <summary><a href="/products"> محصولات</a></summary>
                             <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
                               
                               <li><a> پروژه</a></li>
@@ -92,8 +92,8 @@
             </div>
         </div>
     </section>
-    
-    <section class="px-4 pb-8">
+
+    <section class="px-4 mb-24 ">
         <div class="container mx-auto max-w-screen-xl">
             <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2">
@@ -108,56 +108,101 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                               </svg>
                               
-                            <a href="#" class="mr-1 text-sm font-medium">تماس با ما</a>
+                            <a href="#" class="mr-1 text-sm font-medium">محصولات</a>
                         </div>
                     </li>
                 </ol>
             </nav>  
             <div class="flex justify-center relative my-16">
-                <h2 class="font-YekanBakh-ExtraBlack text-3xl">تمــــــاس بــــا مــــا</h2>
+                <h2 class="font-YekanBakh-ExtraBlack text-3xl"> محصــــــــــــــــولات</h2>
                 <div class="absolute -top-6">
-                    <span class="font-YekanBakh-ExtraBlack text-6xl text-opacity-10 text-stone-900">contact</span>
+                    <span class="font-YekanBakh-ExtraBlack text-6xl text-opacity-10 text-stone-900">product</span>
 
                 </div>
                 <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
 
             </div> 
 
-            <div class="relative">
-                <div class="px-5 mx-auto flex sm:flex-nowrap flex-wrap">
-                    <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full mt-8 md:mt-0 mb-8 md:mb-0">
-                        <div class="mr-2">
-                            <p class="font-YekanBakh-Bold text-base mb-2">پیغــام خــود را بـــا مـــا در میـــان بگذاریــــد...</p>
-                            <p class="mb-4 text-xs leading-6">جهت ارتباط با ما و ارسال نظرات و پیشنهادات خود می توانید از فرم زیر استفاده نمایید.</p>
-                        </div>
-                        <div class="form-control w-full flex flex-col gap-y-5">
-                            <input type="text" placeholder="موضوع پیام" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
-                            <input type="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
-                            <textarea class="textarea w-full h-32 rounded-3xl focus:outline-none placeholder:text-sm" placeholder="متن پیام را بنویسید..."></textarea>
-                            <button class="btn bg-stone-800 w-32 hover:bg-stone-900 text-white rounded-full text-sm">ارسال پیام</button>
-                          </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/icon1.png" alt="">  
                     </div>
-                    <div class="lg:w-2/3 md:w-1/2 rounded-3xl overflow-hidden sm:mr-10 p-10 hidden md:flex items-end justify-start relative">
-                            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
-                            marginwidth="0" scrolling="no" style="filter: grayscale(1) contrast(1.2) opacity(0.7);" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1258.3920220984826!2d51.70158335846726!3d32.64603791291042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1703419123037!5m2!1sen!2sde"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <div class="bg-white relative flex flex-wrap py-6 rounded-2xl mx-8">
-                            <div class="lg:w-1/2 px-6">
-                                <p class="font-YekanBakh-Bold text-base mb-2">مکـــان:</p>
-                                <p class="mb-4 text-xs leading-6">اصفهان - خیابان 22بهمن - روبه‌روی بانک سپه - پلاک 205</p>
-                            </div>
-                            <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                                <p class="font-YekanBakh-Bold text-base mb-2">ایمیــل:</p>
-                                <a class="text-orange-500 leading-relaxed">info@sohasanat.net</a>
-                                <p class="font-YekanBakh-Bold text-base mb-2">تمـاس:</p>
-                                <p class="leading-relaxed">031-91099120 | 09131862984</p>
-                            </div>
-                        </div>
+                    
+                    <div class="flex items-center mb-4">
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">شارژ بهینه ذوب</h2>
                     </div>
-                </div>
+                    <div>
+                        <p class="line3">یکی از نیازهای اساسی در صنایع فولاد و ریخته گری تهیه مذابی است که با ارزان ترین قیمت گرید آلیاژی مورد نظر را جهت ساخت محصول نهایی فراهم کند و به این ترتیب قیمت تمام شده مذاب پایین بیاید. بنابراین نیاز است محاسباتی انجام شود که با انتخاب بهینه مواد اولیه ارزان ترین شارژ را جهت استفاده در کوره ها پیشنهاد بدهد.</p>                          
+                    </div>
+</a>
+                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/icon2.png" alt="">  
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت ممیزی</h2>
+                    </div>
+                    <div>
+                        <p class="line3"> این محصول فرایند ممیزی را از برنامه ریزی ممیزی، تا تهیه چک لیست ها و استاندارد ها، امکان ثبت اقدامات اصلاحی بر روی عدم انطباق های شناسایی شده و پیگیری اقدامات و گزارشات سیستمی نهایی جهت ارائه نتایج به مدیریت و تحلیل های مقایسه ای به صورت کامل پوشش می دهد.</p>
+                    </div>
+</a>
+                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/icon3.png" alt="">  
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت قراضه</h2>
+                    </div>
+                    <div>
+                    <p class="line3">صنعت بازیافت فلزات اساسی، یک صنعت مهم و اساسی در کشور بشمار می آید که طی آن ضایعات و قراضه های آهن و فولاد جمع آوری و با ذوب و تبدیل به شمش، قابلیت استفاده در صنعت را پیدا می کنند.</p>
+                    </div>
+</a>
+                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/icon4.png" alt="">  
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">ارزیابی تامین کننده</h2>
+                    </div>
+                    <div>
+                    <p class="line3">این محصول راهکاری جهت تسهیل و بهبود ارزیابی تامین کنندگان شرکت های بزرگ ارائه می دهد. سیستم ارزیابی تامین کننده به منظور شفاف سازی و کمک به انتخاب تامین کنندگان برتر نسبت به پارامترهای تعریف شده سازمان و همچنین امکان انتخاب و ارزیابی دقیق تامین کنندگان براساس مستندات ثبت شده در سیستم تدارکات خرید در اختیار سازمان هایی که فرایند خرید در آنها صورت می پذیرد قرار می گیرد.</p>
+                    </div>
+</a>
+                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/icon5.png" alt="">  
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت کارگاه ساخت و غلتک</h2>
+                    </div>
+                    <div>
+                    <p class="line3">صنایع مادر و در راس آن صنعت فولاد در روند تولید نیازمند بازبینی، تعمیرات و نگهداری تجهیزات به صورت دوره ای می باشند که در این امر مهم نیازمند مدیریت تجهیزات کارگاهی بوده تا با بررسی اطلاعات در سریع ترین زمان ممکن تصمیمات حساس مدیریتی اخذ گردد.</p>
+                    </div>
+</a>
+                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/icon6.png" alt="">  
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت حمل‌ونقل جاده‌ای بارابُن</h2>
+                    </div>
+                    <div>
+                    <p class="line3">نرم افزار ما شامل چهار جزء اصلی می شود، مدیریت باربری، مدیریت حمل بار، مدیریت ناوگان و مدیریت تعمیر و نگه داری ناوگان که در کنار ماژول هوش تجاری مجموعه ای کامل از نرم افزارهای مورد استفاده در صنعت حمل و نقل را داراست که به صورت ساختار چندغرفه ای یا مالتی تننت پیاده سازی شده که قابلیت این را دارد با استفاده از ابزارهای تصمیم گیری مبتنی بر هوش مصنوعی و اینترنت اشیاء به عنوان یک سیستم عامل مدیریتی سرتاسری در حمل و نقل جاده ای به کار گرفته شود.</p>
+                    </div>
+</a>
+
+
             </div>
         </div>
     </section>
-</div>
+      
       
     <footer class="p-10 bg-stone-800 text-white">
      <button id="to-top-button" onclick="goToTop()" title="Go To Top"
@@ -198,11 +243,11 @@
   
     <footer class="footer footer-center p-4 bg-stone-700 text-white">
      <div>
-        <p>تمامی حقوق مادی و معنوی این سایت متعلق به سهاصنعت می باشد و هرگونه کپی برداری غیرقانونی محسوب خواهد شد</p>
+        <p class="line3">تمامی حقوق مادی و معنوی این سایت متعلق به سهاصنعت می باشد و هرگونه کپی برداری غیرقانونی محسوب خواهد شد</p>
      </div>
     </footer>
-    
-        <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-        <script src="../src/js/main.js"></script>
+
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="../src/js/main.js"></script>
     </body>
     </html>

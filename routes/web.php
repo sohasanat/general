@@ -47,15 +47,15 @@ Route::get('/manager', function () {
 Route::get('/project', function () {
     return view('project');
 });
-Route::get('/services', function () {
-    return view('services');
+Route::get('/products', function () {
+    return view('products');
 });
-Route::get('/sing-up', function () {
-    return view('sing-up');
+Route::get('/sign-up', function () {
+    return view('sign-up');
 });
 Route::get('/single-page', function () {
     return view('single-page');
 });
-Route::get('/single-project', function () {
-    return view('single-project');
+Route::get('/single-product', function () {
+    return view('single-product');
 });

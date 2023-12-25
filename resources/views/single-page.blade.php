@@ -35,11 +35,11 @@
                           </div> 
                         <!-- Sidebar content here -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="services">خدمات</a></li>
+                        
                         <li><details>
                             <summary><a href="project"> محصولات</a></summary>
                             <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              <li><a href="blog-2">وبلاگ دمو دوم</a></li>
+                              
                               <li><a> پروژه</a></li>
                               <li>
                                 <details>
@@ -53,7 +53,7 @@
                             </ul>
                         </details></li>
                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq">سوالات متداول</a></li> -->
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li>
+                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
                         
@@ -71,22 +71,14 @@
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
                         <li><details>
-                            <summary><a href="project">محصولات</a></summary>
+                            <summary><a href="/products">محصولات</a></summary>
                             <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              <li><a href="blog-2">وبلاگ دمو دوم</a></li>
-                              <li><a>جزئیات پروژه</a></li>
-                              <li>
-                                <details>
-                                  <summary>زیر منوی اول</summary>
-                                  <ul>
-                                    <li><a>آیتم شماره یک</a></li>
-                                    <li><a>آیتم شماره دوم</a></li>
-                                  </ul>
-                                </details>
-                              </li>
+                              <li><a> محصولات فرایار سهاصنعت</a></li>
+                              <li><a> محصولات بازاریار سهاصنعت</a></li>
+                              <li><a> محصولات فرایند سهاصنعت</a></li>
                             </ul>
                         </details></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li>
+                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="#">فرصت‌های شغلی</a></li>
@@ -209,13 +201,13 @@
                           <li><a href="about-us.html">درباره ما</a></li>
                           <li><a href="contact-us.html">تماس با ما</a></li>
                           <li><a href="project.html">پروژه ها</a></li>
-                          <li><a href="services.html">خدمات ما</a></li>
+                          <li><a href="products.html">خدمات ما</a></li>
                       </ul>
                   </div>
                   <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 text-right md:text-center">
                       <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">خدمات شرکت</h3>
                       <ul>
-                          <li><a href="single-page.html">جزئیات وبلاگ</a></li>
+                          <li><a href="/single-page">جزئیات وبلاگ</a></li>
                           <li><a href="single-project.html">جزئیات پروژه</a></li>
                           <li><a href="manager.html">مدیران</a></li>
                           <li><a href="faq.html">سوالات متداول</a></li>

@@ -36,27 +36,9 @@
                           </div> 
                         <!-- Sidebar content here -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="services">خدمات</a></li>
-                        <li><details>
-                            <summary><a href="project"> محصولات</a></summary>
-                            <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              <li><a href="blog-2">وبلاگ دمو دوم</a></li>
-                              <li><a> پروژه</a></li>
-                              <li>
-                                <details>
-                                  <summary>زیر منوی اول</summary>
-                                  <ul>
-                                    <li><a>آیتم شماره یک</a></li>
-                                    <li><a>آیتم شماره دوم</a></li>
-                                  </ul>
-                                </details>
-                              </li>
-                            </ul>
-                        </details></li>
-                        <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq">سوالات متداول</a></li> -->
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/about-us">درباره ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/contact-us">تماس با ما</a></li>
                         
                       </ul>
                     </div>
@@ -71,23 +53,7 @@
               <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        <li><details>
-                            <summary><a href="project">محصولات</a></summary>
-                            <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              <li><a href="blog-2">وبلاگ دمو دوم</a></li>
-                              <li><a>جزئیات پروژه</a></li>
-                              <li>
-                                <details>
-                                  <summary>زیر منوی اول</summary>
-                                  <ul>
-                                    <li><a>آیتم شماره یک</a></li>
-                                    <li><a>آیتم شماره دوم</a></li>
-                                  </ul>
-                                </details>
-                              </li>
-                            </ul>
-                        </details></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li>
+                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="#">فرصت‌های شغلی</a></li>
@@ -105,11 +71,11 @@
      <div class="container mx-auto max-w-screen-xl relative pt-5 lg:pt-10 ">
         <div class="grid grid-cols-12 gap-8">
         <div class="col-span-12 lg:col-span-5 order-2 lg:order-1">
-            <div class="leading-8 mt-8">
+            <div class="leading-8 mt-8 text-center md:textjustify">
                 <span class="font-YekanBakh-Bold  py-1"> سهاصنعت، تحت لیسانس و شریک توسعه همکاران سیستم</span>
                 <h2 class="font-YekanBakh-ExtraBlack text-4xl my-6">هوشمنــــــــــدی صنـــــایـع</h2>
                 <p class="break-words">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
-                <div class="flex justify-end">
+                <div class="flex justify-center md:justify-start ">
                 <a href="about-us" class="mt-4 py-1 px-7 rounded-full bg-orange-200 hover:duration-300 font-YekanBakh-SemiBold">بیشتر بخوانید...</a>
                 <!-- <div class="absolute bottom-0 lg:bottom-2 right-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="74" height="68" viewBox="0 0 109 78" fill="none">
@@ -159,39 +125,39 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 
-                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
+                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
                     <div class="w-10 mb-4">
                         <img src="../assets/images/farayar.png" alt="">  
                     </div>
                     
                     <div class="flex items-center mb-4">
-                          <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایار سهاصنعت</h2></a>
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایار سهاصنعت</h2>
                     </div>
                     <div>
-                        <p class="text-center">شرکت فرایارسهاصنعت، تحت لیسانس همکاران سیستم، ارائه دهنده خدمات استقرار و متناسب سازی نرم افزارهای گروه همکاران سیستم اهم از نرم افزار مدیریت منابع سازمانی راهکاران است.</p>                          
+                        <p class="text-center ">شرکت فرایارسهاصنعت، تحت لیسانس همکاران سیستم، ارائه دهنده خدمات استقرار و متناسب سازی نرم افزارهای گروه همکاران سیستم اهم از نرم افزار مدیریت منابع سازمانی راهکاران است.</p>                          
                     </div>
                 </div>
 
-                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
+                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
                     <div class="w-10 mb-4">
                         <img src="../assets/images/bazaryar.png" alt="">  
                     </div>
                     
                     <div class="flex text-center mb-4">
-                          <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">بازاریار سهاصنعت</h2></a>
+                          <h2 class="font-YekanBakh-ExtraBold text-base mr-1">بازاریار سهاصنعت</h2>
                     </div>
                     <div>
-                        <p class="items-center">شرکت بازاریار سهاصنعت، شریک توسعه گروه همکاران سیستم، ارائه دهنده ی محصولات و ماژول هایی در زمینه ی هوشمندی صنایع و هوشمندی سازمانی روی نرم افزار راهکاران است.</p>                          
+                        <p class="text-center">شرکت بازاریار سهاصنعت، شریک توسعه گروه همکاران سیستم، ارائه دهنده ی محصولات و ماژول هایی در زمینه ی هوشمندی صنایع و هوشمندی سازمانی روی نرم افزار راهکاران است.</p>                          
                     </div>
                 </div>
 
-                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
+                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
                     <div class="w-10 mb-4">
                         <img src="../assets/images/fraiand.png" alt="">  
                     </div>
                     
                     <div class="flex items-center mb-4">
-                          <a href="#">  <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایند سهاصنعت</h2></a>
+                       <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایند سهاصنعت</h2>
                     </div>
                     <div>
                         <p class="text-center">شرکت فرایند سهاصنعت ارائه دهنده ی انواع راهکار در زمینه ی هوشمندی صنایع است. از جمله محصولات این شرکت سیستم عامل جامع حمل و نقل جاده ای بارابن است.</p>                          
@@ -285,24 +251,26 @@
                 <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
 
             </div>
-            <div class="">
-                <div class="wrapperComment">
-                    <div class="leading-8">
-                        <h2 class="font-YekanBakh-ExtraBlack text-3xl my-4">از زبان مشتریان ما بشنوید...</h2>
-                    </div>
-                    <div class="rotate-45 p-4">
+              <div class="grid grid-cols-12 gap-8">
+                 <div class="col-span-12 md:col-span-5 flex items-center ">
+                     <div class="flex justify-start gap-6">
+                        <h2 class="font-YekanBakh-ExtraBlack text-3xl my-4">از زبان مشتریان ما بشنوید...</h2> 
+                        <div class="rotate-0 md:rotate-45">
                         <svg xmlns="http://www.w3.org/2000/svg" width="74" height="68" viewBox="0 0 109 78" fill="none">
                             <path d="M36.0266 66.768C40.3387 75.6038 51.9952 81.3138 60.8919 75.5938C67.5514 71.2493 70.4477 62.336 68.0942 54.8302C65.2375 46.0433 56.4003 40.4115 47.4782 39.5612C44.3548 39.2999 41.2098 39.53 38.1576 40.243L38.2775 39.8231C38.6511 38.4786 39.1418 36.8393 39.6446 35.5246C40.6743 32.6897 41.9597 29.9547 43.4849 27.3534C50.7521 14.6662 63.6009 5.64893 78.0733 3.41599C87.7236 1.80126 97.6351 3.0113 106.616 6.90071C106.898 7.02838 107.219 7.03886 107.508 6.92976C107.797 6.82066 108.031 6.60095 108.159 6.31899C108.286 6.03703 108.297 5.71589 108.188 5.42623C108.079 5.13658 107.859 4.90212 107.577 4.77445C102.919 2.66878 97.9808 1.24812 92.9165 0.556455C91.0181 0.30588 89.108 0.155134 87.1939 0.10487C76.3232 -0.231216 65.3439 2.82574 56.2945 8.90015C45.21 16.4576 37.1356 28.3169 34.1714 41.4154C30.8272 42.6224 27.6508 44.2519 24.719 46.2645C17.2668 51.3381 11.5767 58.3123 6.25754 65.3874L4.32513 55.5442C4.21348 54.9687 4.04118 54.5036 3.58733 54.1174C3.1603 53.7631 2.61237 53.589 2.0595 53.632C1.03476 53.7667 -0.0751006 54.7492 0.152237 55.9018L3.4667 72.7802C3.59858 73.4554 3.83724 73.9674 4.42905 74.3496C4.93432 74.6769 5.70826 74.866 6.28082 74.5693C8.28406 73.5306 10.3861 72.6951 12.5555 72.0754C13.0841 71.9248 13.616 71.7895 14.1505 71.6618C14.16 71.6602 14.1697 71.6594 14.1795 71.6593L14.1949 71.658L14.6197 71.5689C14.8744 71.5178 15.1293 71.4687 15.3866 71.4252C16.5252 71.2236 17.6736 71.0816 18.8271 70.9997C19.9208 70.9196 20.8808 69.8485 20.7345 68.7318C20.6774 68.1816 20.4094 67.6749 19.9868 67.3183C19.5643 66.9617 19.0202 66.783 18.4689 66.8197C16.059 66.9973 13.6732 67.418 11.3479 68.0755C17.3553 59.8941 24.1387 51.7672 33.1518 47.4745C32.4431 54.0238 32.9999 60.8392 36.0266 66.768ZM37.0777 45.8938C38.14 45.5436 39.2203 45.2505 40.3139 45.0158C44.7557 44.091 49.3392 44.3652 53.5171 46.1349C57.5542 47.7841 61.2045 50.8297 63.0637 54.7952C66.8271 62.3421 61.7607 73.8441 52.6583 73.6178C48.3381 73.5745 44.0947 71.0869 41.3971 67.7257C39.2731 65.0564 37.9645 61.7653 37.2881 58.4181C36.4777 54.3256 36.5125 50.0496 37.0777 45.8938Z" fill="#129996"/>
                           </svg>
-                    </div>
-                 <div>
+                  </div>                   
+                     </div>
+                  </div>
+  
+                 <div class="col-span-12 md:col-span-6 ">
                     <div class="swiper customer">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <div class="bg-white p-6 leading-8 rounded-3xl">
                                 <div class="flex items-center mb-4">
                                     <div class="avatar ml-4">
-                                        <div class="rounded-full">
+                                        <div class="w-20 rounded-full">
                                             <img src="../assets/images/user.png" />
                                         </div>
                                     </div>
@@ -315,21 +283,21 @@
                                 <p>اینجانب اقای عظیما به نمایندگی از شرکت اخشان ، از پشتیبانی و خدمات دهی در خصوص نرم افزار ارزیابی ، رضایت کامل را دارم و از پیگیری سرکار خانم مهندس خوانچه بمهر نیز کمال تقدیر و تشکر را داریم همچنین از نرم افزار فوق با توجه به پوشش دهی مورد نیاز شرکت رضایت داریم</p>
                             </div>
                           </div>
-                          <!-- <div class="swiper-slide">
+                          <div class="swiper-slide">
                             <div class="bg-white p-6 leading-8 rounded-3xl">
                                 <div class="flex items-center mb-4">
                                     <div class="avatar ml-4">
                                         <div class="w-20 rounded-full">
-                                            <img src="../assets/images/avatar-4.jpg" />
+                                            <img src="../assets/images/user.png" />
                                         </div>
                                     </div>
                                     <div class="flex flex-col items-center">
-                                        <h3 class="font-YekanBakh-Bold text-slate-800 text-sm">فرهاد یاسری</h3>
-                                        <p>طراح گرافیک</p>
+                                        <h3 class="font-YekanBakh-Bold text-slate-800 text-sm">مهندس عظیما</h3>
+                                        <p>مدیر تدارکات</p>
                                     </div>
         
                                 </div>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                                <p>اینجانب اقای عظیما به نمایندگی از شرکت اخشان ، از پشتیبانی و خدمات دهی در خصوص نرم افزار ارزیابی ، رضایت کامل را دارم و از پیگیری سرکار خانم مهندس خوانچه بمهر نیز کمال تقدیر و تشکر را داریم همچنین از نرم افزار فوق با توجه به پوشش دهی مورد نیاز شرکت رضایت داریم</p>
                             </div>
                           </div>
                           <div class="swiper-slide">
@@ -337,35 +305,18 @@
                                 <div class="flex items-center mb-4">
                                     <div class="avatar ml-4">
                                         <div class="w-20 rounded-full">
-                                            <img src="../assets/images/avatar-1.jpg" />
+                                            <img src="../assets/images/user.png" />
                                         </div>
                                     </div>
                                     <div class="flex flex-col items-center">
-                                        <h3 class="font-YekanBakh-Bold text-slate-800 text-sm">نوید محمودی</h3>
-                                        <p>طراح گرافیک</p>
+                                        <h3 class="font-YekanBakh-Bold text-slate-800 text-sm">مهندس عظیما</h3>
+                                        <p>مدیر تدارکات</p>
                                     </div>
         
                                 </div>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                                <p>اینجانب اقای عظیما به نمایندگی از شرکت اخشان ، از پشتیبانی و خدمات دهی در خصوص نرم افزار ارزیابی ، رضایت کامل را دارم و از پیگیری سرکار خانم مهندس خوانچه بمهر نیز کمال تقدیر و تشکر را داریم همچنین از نرم افزار فوق با توجه به پوشش دهی مورد نیاز شرکت رضایت داریم</p>
                             </div>
                           </div>
-                          <div class="swiper-slide">
-                            <div class="bg-white p-6 leading-8 rounded-3xl">
-                                <div class="flex items-center mb-4">
-                                    <div class="avatar ml-4">
-                                        <div class="w-20 rounded-full">
-                                            <img src="../assets/images/avatar-3.jpg" />
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col items-center">
-                                        <h3 class="font-YekanBakh-Bold text-slate-800 text-sm">سارا توحیدی</h3>
-                                        <p>طراح گرافیک</p>
-                                    </div>
-        
-                                </div>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                            </div>
-                          </div> -->
                         </div>
                         <div class="swiper-pagination"></div>
                       </div>
@@ -411,7 +362,7 @@
         </div>
     </section>
 
-    <section class="px-4 pb-20 bg-gradient-to-t from-orange-100">
+    <!-- <section class="px-4 pb-20 bg-gradient-to-t from-orange-100">
         <div class="container mx-auto max-w-screen-xl">
             <div class="flex justify-center relative mb-14">
                 <h2 class="font-YekanBakh-ExtraBlack text-3xl">وبـــــــــلاگ</h2>
@@ -529,20 +480,20 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="px-4 pb-20 pt-10 bg-orange-100">
         <div class="container mx-auto max-w-screen-xl">
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 lg:col-span-5">
                     <div class="flex flex-col md:flex-row items-center gap-x-16">
-                        <div class="leading-8">
+                        <div class="leading-8 text-center md:text-right">
                             <h2 class="font-YekanBakh-ExtraBlack text-3xl my-4">تجربـــه هـــای همکــاری</h2>
                             <p class="font-YekanBakh-Bold text-2xl my-4">افتخــــار همکـــــاری داشتـــــه ایـــــم</p>
                         </div>
                         <div class="rotate-0 md:rotate-45 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="74" height="68" viewBox="0 0 109 78" fill="none">
-                                <path d="M36.0266 66.768C40.3387 75.6038 51.9952 81.3138 60.8919 75.5938C67.5514 71.2493 70.4477 62.336 68.0942 54.8302C65.2375 46.0433 56.4003 40.4115 47.4782 39.5612C44.3548 39.2999 41.2098 39.53 38.1576 40.243L38.2775 39.8231C38.6511 38.4786 39.1418 36.8393 39.6446 35.5246C40.6743 32.6897 41.9597 29.9547 43.4849 27.3534C50.7521 14.6662 63.6009 5.64893 78.0733 3.41599C87.7236 1.80126 97.6351 3.0113 106.616 6.90071C106.898 7.02838 107.219 7.03886 107.508 6.92976C107.797 6.82066 108.031 6.60095 108.159 6.31899C108.286 6.03703 108.297 5.71589 108.188 5.42623C108.079 5.13658 107.859 4.90212 107.577 4.77445C102.919 2.66878 97.9808 1.24812 92.9165 0.556455C91.0181 0.30588 89.108 0.155134 87.1939 0.10487C76.3232 -0.231216 65.3439 2.82574 56.2945 8.90015C45.21 16.4576 37.1356 28.3169 34.1714 41.4154C30.8272 42.6224 27.6508 44.2519 24.719 46.2645C17.2668 51.3381 11.5767 58.3123 6.25754 65.3874L4.32513 55.5442C4.21348 54.9687 4.04118 54.5036 3.58733 54.1174C3.1603 53.7631 2.61237 53.589 2.0595 53.632C1.03476 53.7667 -0.0751006 54.7492 0.152237 55.9018L3.4667 72.7802C3.59858 73.4554 3.83724 73.9674 4.42905 74.3496C4.93432 74.6769 5.70826 74.866 6.28082 74.5693C8.28406 73.5306 10.3861 72.6951 12.5555 72.0754C13.0841 71.9248 13.616 71.7895 14.1505 71.6618C14.16 71.6602 14.1697 71.6594 14.1795 71.6593L14.1949 71.658L14.6197 71.5689C14.8744 71.5178 15.1293 71.4687 15.3866 71.4252C16.5252 71.2236 17.6736 71.0816 18.8271 70.9997C19.9208 70.9196 20.8808 69.8485 20.7345 68.7318C20.6774 68.1816 20.4094 67.6749 19.9868 67.3183C19.5643 66.9617 19.0202 66.783 18.4689 66.8197C16.059 66.9973 13.6732 67.418 11.3479 68.0755C17.3553 59.8941 24.1387 51.7672 33.1518 47.4745C32.4431 54.0238 32.9999 60.8392 36.0266 66.768ZM37.0777 45.8938C38.14 45.5436 39.2203 45.2505 40.3139 45.0158C44.7557 44.091 49.3392 44.3652 53.5171 46.1349C57.5542 47.7841 61.2045 50.8297 63.0637 54.7952C66.8271 62.3421 61.7607 73.8441 52.6583 73.6178C48.3381 73.5745 44.0947 71.0869 41.3971 67.7257C39.2731 65.0564 37.9645 61.7653 37.2881 58.4181C36.4777 54.3256 36.5125 50.0496 37.0777 45.8938Z" fill="#1E1E1E"/>
+                                <path d="M36.0266 66.768C40.3387 75.6038 51.9952 81.3138 60.8919 75.5938C67.5514 71.2493 70.4477 62.336 68.0942 54.8302C65.2375 46.0433 56.4003 40.4115 47.4782 39.5612C44.3548 39.2999 41.2098 39.53 38.1576 40.243L38.2775 39.8231C38.6511 38.4786 39.1418 36.8393 39.6446 35.5246C40.6743 32.6897 41.9597 29.9547 43.4849 27.3534C50.7521 14.6662 63.6009 5.64893 78.0733 3.41599C87.7236 1.80126 97.6351 3.0113 106.616 6.90071C106.898 7.02838 107.219 7.03886 107.508 6.92976C107.797 6.82066 108.031 6.60095 108.159 6.31899C108.286 6.03703 108.297 5.71589 108.188 5.42623C108.079 5.13658 107.859 4.90212 107.577 4.77445C102.919 2.66878 97.9808 1.24812 92.9165 0.556455C91.0181 0.30588 89.108 0.155134 87.1939 0.10487C76.3232 -0.231216 65.3439 2.82574 56.2945 8.90015C45.21 16.4576 37.1356 28.3169 34.1714 41.4154C30.8272 42.6224 27.6508 44.2519 24.719 46.2645C17.2668 51.3381 11.5767 58.3123 6.25754 65.3874L4.32513 55.5442C4.21348 54.9687 4.04118 54.5036 3.58733 54.1174C3.1603 53.7631 2.61237 53.589 2.0595 53.632C1.03476 53.7667 -0.0751006 54.7492 0.152237 55.9018L3.4667 72.7802C3.59858 73.4554 3.83724 73.9674 4.42905 74.3496C4.93432 74.6769 5.70826 74.866 6.28082 74.5693C8.28406 73.5306 10.3861 72.6951 12.5555 72.0754C13.0841 71.9248 13.616 71.7895 14.1505 71.6618C14.16 71.6602 14.1697 71.6594 14.1795 71.6593L14.1949 71.658L14.6197 71.5689C14.8744 71.5178 15.1293 71.4687 15.3866 71.4252C16.5252 71.2236 17.6736 71.0816 18.8271 70.9997C19.9208 70.9196 20.8808 69.8485 20.7345 68.7318C20.6774 68.1816 20.4094 67.6749 19.9868 67.3183C19.5643 66.9617 19.0202 66.783 18.4689 66.8197C16.059 66.9973 13.6732 67.418 11.3479 68.0755C17.3553 59.8941 24.1387 51.7672 33.1518 47.4745C32.4431 54.0238 32.9999 60.8392 36.0266 66.768ZM37.0777 45.8938C38.14 45.5436 39.2203 45.2505 40.3139 45.0158C44.7557 44.091 49.3392 44.3652 53.5171 46.1349C57.5542 47.7841 61.2045 50.8297 63.0637 54.7952C66.8271 62.3421 61.7607 73.8441 52.6583 73.6178C48.3381 73.5745 44.0947 71.0869 41.3971 67.7257C39.2731 65.0564 37.9645 61.7653 37.2881 58.4181C36.4777 54.3256 36.5125 50.0496 37.0777 45.8938Z" fill="#129996"/>
                               </svg>
                         </div>
                     </div>
@@ -601,45 +552,36 @@
       
     <footer class="p-10 bg-stone-800 text-white">
      <button id="to-top-button" onclick="goToTop()" title="Go To Top"
-     class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full bg-green text-white hover:text-white hover:bg-green duration-300">
-     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full bg-green text-white hover:text-white hover:bg-green duration-300">
+       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
-      </svg>
+        </svg>
       
-     <span class="sr-only">Go to top</span>
+       <span class="sr-only">Go to top</span>
      </button>
         <div class="container mx-auto max-w-screen-xl">
             <div class="grid grid-cols-12 gap-4 leading-8">
                 <div class="col-span-12 lg:col-span-5">
-                    <img class="mb-4" src="../assets/images/logo-footer.png" alt="">
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده است.</p>
+                <div class="mb-4">
+                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">سهاصنعت</a>
                 </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 text-right md:text-center">
+                    <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
+                </div>
+                <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 text-right md:text-center">
                     <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
                     <ul>
                         <li><a href="index">صفحه اصلی</a></li>
                         <li><a href="/about-us">درباره ما</a></li>
                         <li><a href="/contact-us">تماس با ما</a></li>
-                        <li><a href="/project">پروژه ها</a></li>
-                        <li><a href="/services">خدمات ما</a></li>
-                    </ul>
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 text-right md:text-center">
-                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">خدمات شرکت</h3>
-                    <ul>
-                        <li><a href="single-page">جزئیات وبلاگ</a></li>
-                        <li><a href="single-project">جزئیات پروژه</a></li>
-                        <li><a href="manager">مدیران</a></li>
-                        <li><a href="faq">سوالات متداول</a></li>
-                        <li><a href="404">404</a></li>
+                        <li><a href="/project">محصولات</a></li>
                     </ul>
                 </div>
                 <div class="col-span-12 md:col-span-4 lg:col-span-3">
-                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">عضویت در خبرنامه</h3>
-                    <div class="flex items-center">
+
+                    <!-- <div class="flex items-center">
                       <img src="../assets/images/enamad_logo.png" alt="">
                       <img src="../assets/images/samandehi_logo.png" alt="">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -647,7 +589,7 @@
   
     <footer class="footer footer-center p-4 bg-stone-700 text-white">
      <div>
-        <p>Copyright © 2023 - تمامی حقوق برای راست چین محفوظ می باشد</p>
+        <p>تمامی حقوق مادی و معنوی این سایت متعلق به سهاصنعت می باشد و هرگونه کپی برداری غیرقانونی محسوب خواهد شد</p>
      </div>
     </footer>
     
