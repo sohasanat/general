@@ -56,7 +56,7 @@
                          <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="#">فرصت‌های شغلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
                     </ul>
                 </div>
                 <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full">

@@ -471,6 +471,11 @@ html{
 .container{
   width: 100%;
 }
+.icongreen{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .wrapperComment{
 display: flex;
 align-items: center;
@@ -484,6 +489,12 @@ gap:3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.lightGreen{
+  background-color: #dff3f3;
+}
+.min-height-50{
+  min-height: 50vh
 }
 .line3{
   width: 100%;
@@ -1883,6 +1894,10 @@ details.collapse summary::-webkit-details-marker{
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
+.mt-16{
+  margin-top: 4rem;
+}
+
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1966,6 +1981,9 @@ details.collapse summary::-webkit-details-marker{
 .mt-8{
   margin-top: 2rem;
 }
+.mt-10{
+  margin-top: 3rem;
+}
 .inline-block{
   display: inline-block;
 }
@@ -2013,6 +2031,9 @@ details.collapse summary::-webkit-details-marker{
 }
 .h-8{
   height: 2rem;
+}
+.h-10{
+  height: 5rem;
 }
 .h-full{
   height: 100%;

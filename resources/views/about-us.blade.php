@@ -35,22 +35,8 @@
                         <!-- Sidebar content here -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
                         
-                        <li><details>
-                            <summary><a href="project"> محصولات</a></summary>
-                            <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              
-                              <li><a> پروژه</a></li>
-                              <li>
-                                <details>
-                                  <summary>زیر منوی اول</summary>
-                                  <ul>
-                                    <li><a>آیتم شماره یک</a></li>
-                                    <li><a>آیتم شماره دوم</a></li>
-                                  </ul>
-                                </details>
-                              </li>
-                            </ul>
-                        </details></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
+
                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq">سوالات متداول</a></li> -->
                          <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
@@ -69,18 +55,12 @@
               <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        <li><details>
-                            <summary><a href="/products">محصولات</a></summary>
-                            <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              <li><a> محصولات فرایار سهاصنعت</a></li>
-                              <li><a> محصولات بازاریار سهاصنعت</a></li>
-                              <li><a> محصولات فرایند سهاصنعت</a></li>
-                            </ul>
-                        </details></li>
+                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
+
                          <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="#">فرصت‌های شغلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
                     </ul>
                 </div>
                 <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full">

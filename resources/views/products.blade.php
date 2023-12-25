@@ -71,18 +71,12 @@
               <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        <li><details>
-                            <summary><a href="/products">محصولات</a></summary>
-                            <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              <li><a> محصولات فرایار سهاصنعت</a></li>
-                              <li><a> محصولات بازاریار سهاصنعت</a></li>
-                              <li><a> محصولات فرایند سهاصنعت</a></li>
-                            </ul>
-                        </details></li>
+                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
+
                          <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="#">فرصت‌های شغلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
                     </ul>
                 </div>
                 <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full">
@@ -196,7 +190,7 @@
                     <div>
                     <p class="line3">نرم افزار ما شامل چهار جزء اصلی می شود، مدیریت باربری، مدیریت حمل بار، مدیریت ناوگان و مدیریت تعمیر و نگه داری ناوگان که در کنار ماژول هوش تجاری مجموعه ای کامل از نرم افزارهای مورد استفاده در صنعت حمل و نقل را داراست که به صورت ساختار چندغرفه ای یا مالتی تننت پیاده سازی شده که قابلیت این را دارد با استفاده از ابزارهای تصمیم گیری مبتنی بر هوش مصنوعی و اینترنت اشیاء به عنوان یک سیستم عامل مدیریتی سرتاسری در حمل و نقل جاده ای به کار گرفته شود.</p>
                     </div>
-</a>
+                </a>
 
 
             </div>
