@@ -1,5 +1,3 @@
-@extends('index')
-@section('content')
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -247,14 +245,13 @@
     <section class="px-4 py-20 mb-16 bg-gradient-to-t from-orange-100">
         <div class="container mx-auto max-w-screen-xl">
             <div class="flex justify-center relative mb-14">
-                <h2 class="font-YekanBakh-ExtraBlack text-3xl">{{ $mainparametr->name }}</h2>
-
+                <h2 class="font-YekanBakh-ExtraBlack text-3xl">نظــــــرات مشتریــــــان</h2>
                 <div class="absolute -top-6">
                     <span class="font-YekanBakh-ExtraBlack text-6xl text-opacity-10 text-stone-900">customer</span>
 
                 </div>
                 <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
- 
+
             </div>
               <div class="grid grid-cols-12 gap-8">
                  <div class="col-span-12 md:col-span-5 flex items-center ">
@@ -554,8 +551,6 @@
             </div>
         </div>
     </section>
-
-@endsection
       
     <footer class="p-10 bg-stone-800 text-white">
      <button id="to-top-button" onclick="goToTop()" title="Go To Top"
