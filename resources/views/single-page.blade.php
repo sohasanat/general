@@ -38,42 +38,43 @@
                                 </div>
                                 <!-- Sidebar content here -->
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
-
-                                <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq">سوالات متداول</a></li> -->
-                                <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/about-us">درباره ما</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/contact-us">تماس با ما</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
+
 
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center gap-8">
-                    <div>
-                        <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">سهاصنعت</a>
+                    <div class="w-22">
+                        <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
+                            <img class="object-cover w-full rounded-xl" src="../assets/images/logomain.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <div>
+                            <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">سهاصنعت</a>
+                        </div>
+
+                    </div>
+                    <div class="hidden lg:block">
+                        <ul class="flex menu lg:menu-horizontal">
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
+                        </ul>
+                    </div>
+                    <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full">
+                        <a href="login" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
                     </div>
 
                 </div>
-                <div class="hidden lg:block">
-                    <ul class="flex menu lg:menu-horizontal">
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
-
-                        <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
-                    </ul>
-                </div>
-                <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full">
-                    <a href="login" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
-                </div>
-
             </div>
-        </div>
     </section>
     <section class="px-4 mb-24">
         <div class="container mx-auto max-w-screen-xl">

@@ -142,7 +142,11 @@
             <div class="grid grid-cols-12 gap-4 leading-8">
                 <div class="col-span-12 lg:col-span-5">
                 <div class="mb-4">
-                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">سهاصنعت</a>
+                                  <div class="w-22">
+                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
+                    <img class="object-cover w-full rounded-xl" src="../assets/images/logomain2.svg" alt="">
+                    </a>
+                </div>
                 </div>
                     <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
                 </div>
