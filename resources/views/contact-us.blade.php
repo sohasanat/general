@@ -10,6 +10,7 @@
 <body class="font-YekanBakh-Regular text-sm">
 
 <div class=" bg-gradient-to-t">
+
 <section class="px-4 static bg-orange-200 ">
         <div class="container mx-auto max-w-screen-xl">
             <div class="flex justify-between items-center py-6">
@@ -37,8 +38,8 @@
                         <!-- Sidebar content here -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/about-us">درباره ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/contact-us">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
 
                         
@@ -47,8 +48,10 @@
                   </div>
             </div>
               <div class="flex items-center gap-8">
-                <div>
-                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">سهاصنعت</a>
+              <div class="w-22">
+                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
+                    <img class="object-cover w-full rounded-xl" src="../assets/images/logomain.svg" alt="">
+                    </a>
                 </div>
 
               </div>
@@ -56,8 +59,6 @@
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
                          <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
-
-                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
@@ -150,7 +151,11 @@
             <div class="grid grid-cols-12 gap-4 leading-8">
                 <div class="col-span-12 lg:col-span-5">
                 <div class="mb-4">
-                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">سهاصنعت</a>
+                                  <div class="w-22">
+                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
+                    <img class="object-cover w-full rounded-xl" src="../assets/images/logomain2.svg" alt="">
+                    </a>
+                </div>
                 </div>
                     <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
                 </div>

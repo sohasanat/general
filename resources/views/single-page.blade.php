@@ -35,21 +35,21 @@
                           </div> 
                         <!-- Sidebar content here -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/about-us">درباره ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/contact-us">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
 
-                        <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq">سوالات متداول</a></li> -->
-                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li> <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
                         
                       </ul>
                     </div>
                   </div>
             </div>
               <div class="flex items-center gap-8">
-                <div>
-                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">سهاصنعت</a>
+              <div class="w-22">
+                    <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
+                    <img class="object-cover w-full rounded-xl" src="../assets/images/logomain.svg" alt="">
+                    </a>
                 </div>
 
               </div>
@@ -57,8 +57,6 @@
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
                          <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
-
-                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
