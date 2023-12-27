@@ -37,7 +37,7 @@
                         <!-- Sidebar content here -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
                         
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
 
                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq">سوالات متداول</a></li> -->
                          <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
@@ -58,7 +58,7 @@
               <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
+                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
 
                          <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li> -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
@@ -106,78 +106,27 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 
-                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+
+
+@foreach($allproductsvar as $produts)
+
+                <a href="{{ route('product.details', $produts->id) }}" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
                     <div class="w-10 mb-4">
-                        <img src="../assets/images/icon1.png" alt="">  
+                        <img src="{{$produts->logo}}" alt="">  
                     </div>
                     
                     <div class="flex items-center mb-4">
-                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">شارژ بهینه ذوب</h2>
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">{{$produts->name}}</h2>
                     </div>
                     <div>
-                        <p class="line3">یکی از نیازهای اساسی در صنایع فولاد و ریخته گری تهیه مذابی است که با ارزان ترین قیمت گرید آلیاژی مورد نظر را جهت ساخت محصول نهایی فراهم کند و به این ترتیب قیمت تمام شده مذاب پایین بیاید. بنابراین نیاز است محاسباتی انجام شود که با انتخاب بهینه مواد اولیه ارزان ترین شارژ را جهت استفاده در کوره ها پیشنهاد بدهد.</p>                          
+                        <p class="line3">{{$produts->Description}}</p>                          
                     </div>
 </a>
-                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/icon2.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت ممیزی</h2>
-                    </div>
-                    <div>
-                        <p class="line3"> این محصول فرایند ممیزی را از برنامه ریزی ممیزی، تا تهیه چک لیست ها و استاندارد ها، امکان ثبت اقدامات اصلاحی بر روی عدم انطباق های شناسایی شده و پیگیری اقدامات و گزارشات سیستمی نهایی جهت ارائه نتایج به مدیریت و تحلیل های مقایسه ای به صورت کامل پوشش می دهد.</p>
-                    </div>
-</a>
-                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/icon3.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت قراضه</h2>
-                    </div>
-                    <div>
-                    <p class="line3">صنعت بازیافت فلزات اساسی، یک صنعت مهم و اساسی در کشور بشمار می آید که طی آن ضایعات و قراضه های آهن و فولاد جمع آوری و با ذوب و تبدیل به شمش، قابلیت استفاده در صنعت را پیدا می کنند.</p>
-                    </div>
-</a>
-                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/icon4.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">ارزیابی تامین کننده</h2>
-                    </div>
-                    <div>
-                    <p class="line3">این محصول راهکاری جهت تسهیل و بهبود ارزیابی تامین کنندگان شرکت های بزرگ ارائه می دهد. سیستم ارزیابی تامین کننده به منظور شفاف سازی و کمک به انتخاب تامین کنندگان برتر نسبت به پارامترهای تعریف شده سازمان و همچنین امکان انتخاب و ارزیابی دقیق تامین کنندگان براساس مستندات ثبت شده در سیستم تدارکات خرید در اختیار سازمان هایی که فرایند خرید در آنها صورت می پذیرد قرار می گیرد.</p>
-                    </div>
-</a>
-                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/icon5.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت کارگاه ساخت و غلتک</h2>
-                    </div>
-                    <div>
-                    <p class="line3">صنایع مادر و در راس آن صنعت فولاد در روند تولید نیازمند بازبینی، تعمیرات و نگهداری تجهیزات به صورت دوره ای می باشند که در این امر مهم نیازمند مدیریت تجهیزات کارگاهی بوده تا با بررسی اطلاعات در سریع ترین زمان ممکن تصمیمات حساس مدیریتی اخذ گردد.</p>
-                    </div>
-</a>
-                <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/icon6.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت حمل‌ونقل جاده‌ای بارابُن</h2>
-                    </div>
-                    <div>
-                    <p class="line3">نرم افزار ما شامل چهار جزء اصلی می شود، مدیریت باربری، مدیریت حمل بار، مدیریت ناوگان و مدیریت تعمیر و نگه داری ناوگان که در کنار ماژول هوش تجاری مجموعه ای کامل از نرم افزارهای مورد استفاده در صنعت حمل و نقل را داراست که به صورت ساختار چندغرفه ای یا مالتی تننت پیاده سازی شده که قابلیت این را دارد با استفاده از ابزارهای تصمیم گیری مبتنی بر هوش مصنوعی و اینترنت اشیاء به عنوان یک سیستم عامل مدیریتی سرتاسری در حمل و نقل جاده ای به کار گرفته شود.</p>
-                    </div>
-                </a>
+
+@endforeach
+
+
+
 
 
             </div>
