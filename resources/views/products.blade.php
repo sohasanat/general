@@ -126,8 +126,19 @@
 
                 @endforeach
 
-
-
+                <!------------ barabon --------------->
+                <!-- <a href="/single-product" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                    <div class="w-10 mb-4">
+                        <img src="../assets/images/icon6.png" alt="">  
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">مدیریت حمل‌ونقل جاده‌ای بارابُن</h2>
+                    </div>
+                    <div>
+                    <p class="line3">نرم افزار ما شامل چهار جزء اصلی می شود، مدیریت باربری، مدیریت حمل بار، مدیریت ناوگان و مدیریت تعمیر و نگه داری ناوگان که در کنار ماژول هوش تجاری مجموعه ای کامل از نرم افزارهای مورد استفاده در صنعت حمل و نقل را داراست که به صورت ساختار چندغرفه ای یا مالتی تننت پیاده سازی شده که قابلیت این را دارد با استفاده از ابزارهای تصمیم گیری مبتنی بر هوش مصنوعی و اینترنت اشیاء به عنوان یک سیستم عامل مدیریتی سرتاسری در حمل و نقل جاده ای به کار گرفته شود.</p>
+                    </div>
+                </a> -->
 
 
             </div>

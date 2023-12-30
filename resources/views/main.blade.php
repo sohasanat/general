@@ -110,6 +110,9 @@
                             <div class="swiper-slide">
                                 <img class="object-cover w-full rounded-xl" src="../assets/images/slider-5.jpg" alt="">
                             </div>
+                            <div class="swiper-slide">
+                                <img class="object-cover w-full rounded-xl" src="../assets/images/slider-6.jpg" alt="">
+                            </div>
                         </div>
                         <div class="swiper-button-next after:text-2xl after:text-stone-900 mx-2"></div>
                         <div class="swiper-button-prev after:text-2xl after:text-stone-900 mx-2"></div>
@@ -474,20 +477,21 @@
                     <div class="swiper partners">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="flex justify-center">
-                                    <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/logo-8.png" alt="">
+                                <div class="flex justify-center w-full">
+                                    <img class="grayscale hover:grayscale-0 duration-300 w-full" src="../assets/images/chodanSazan.svg" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="flex justify-center">
-                                    <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/logo-9.png" alt="">
+                                    <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/akhshan.png" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="flex justify-center">
-                                    <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/logo-10.png" alt="">
+                                <div class="flex justify-center w-full">
+                                    <img class="grayscale hover:grayscale-0 duration-300 w-full" src="../assets/images/ghaltakSazan.png" alt="">
                                 </div>
                             </div>
+                             <!--
                             <div class="swiper-slide">
                                 <div class="flex justify-center">
                                     <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/logo-11.png" alt="">
@@ -512,7 +516,7 @@
                                 <div class="flex justify-center">
                                     <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/logo-16.png" alt="">
                                 </div>
-                            </div>
+                            </div> -->
 
 
                         </div>
