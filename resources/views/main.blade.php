@@ -327,7 +327,7 @@
                             <h2 class="font-YekanBakh-ExtraBlack text-4xl text-white">با مشـــاوران مـــا در ارتبـــاط باشیــــد...</h2>
                             <p class="mt-6 mx-auto max-w-2xl text-base text-gray-100">در صورت نیاز به مشاوره جهت هوشمند سازی سازمان یا مجموعه صنعتی خود </p>
                         </div>
-                        <a href="contact-us" class="w-auto inline-block mt-5 mx-auto py-2 px-7 rounded-full bg-orange-200 hover:duration-300 font-YekanBakh-SemiBold">تماس بگیرید</a>
+                        <a href="{{ route('connect.us') }}" class="w-auto inline-block mt-5 mx-auto py-2 px-7 rounded-full bg-orange-200 hover:duration-300 font-YekanBakh-SemiBold">تماس بگیرید</a>
                     </div>
                 </div>
             </div>
