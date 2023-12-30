@@ -36,7 +36,7 @@
                           </div> 
                         <!-- Sidebar content here -->
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/products">محصولات</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/contact-us">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
@@ -57,7 +57,7 @@
               <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
-                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="products">محصولات</a></li>
+                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/job">فرصت‌های شغلی</a></li>
@@ -129,44 +129,21 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 
-                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/farayar.png" alt="">  
+                @foreach($companyvar as $company)
+                    <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                        <div class="w-10 mb-4">
+                            <img src="{{$company->Description}}" alt="">  
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <h2 class="font-YekanBakh-ExtraBold text-base mr-1">{{$company->name}}</h2>
+                        </div>
+                        <div>
+                            <p class="text-center">{{$company->Description}}</p>                          
+                        </div>
                     </div>
-                    
-                    <div class="flex items-center mb-4">
-                           <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایار سهاصنعت</h2>
-                    </div>
-                    <div>
-                        <p class="text-center ">شرکت فرایارسهاصنعت، تحت لیسانس همکاران سیستم، ارائه دهنده خدمات استقرار و متناسب سازی نرم افزارهای گروه همکاران سیستم اهم از نرم افزار مدیریت منابع سازمانی راهکاران است.</p>                          
-                    </div>
-                </div>
+                @endforeach                
 
-                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/bazaryar.png" alt="">  
-                    </div>
-                    
-                    <div class="flex text-center mb-4">
-                          <h2 class="font-YekanBakh-ExtraBold text-base mr-1">بازاریار سهاصنعت</h2>
-                    </div>
-                    <div>
-                        <p class="text-center">شرکت بازاریار سهاصنعت، شریک توسعه گروه همکاران سیستم، ارائه دهنده ی محصولات و ماژول هایی در زمینه ی هوشمندی صنایع و هوشمندی سازمانی روی نرم افزار راهکاران است.</p>                          
-                    </div>
-                </div>
-
-                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                        <img src="../assets/images/fraiand.png" alt="">  
-                    </div>
-                    
-                    <div class="flex items-center mb-4">
-                       <h2 class="font-YekanBakh-ExtraBold text-base mr-1">فرایند سهاصنعت</h2>
-                    </div>
-                    <div>
-                        <p class="text-center">شرکت فرایند سهاصنعت ارائه دهنده ی انواع راهکار در زمینه ی هوشمندی صنایع است. از جمله محصولات این شرکت سیستم عامل جامع حمل و نقل جاده ای بارابن است.</p>                          
-                    </div>
-                </div>
             </div>
         </div>
     </section> 

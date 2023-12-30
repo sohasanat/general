@@ -476,6 +476,12 @@ html{
   display: flex;
   align-items: center;
 }
+.overflow-y-h{
+  overflow-y: hidden;
+}
+.min-height-9{
+  min-height: 9rem;
+}
 .wrapperComment{
 display: flex;
 align-items: center;
@@ -2061,6 +2067,9 @@ details.collapse summary::-webkit-details-marker{
 .w-1\/2{
   width: 50%;
 }
+.w-13{
+  width: 3rem;
+}
 .w-14{
   width: 3.5rem;
 }
@@ -2312,6 +2321,9 @@ details.collapse summary::-webkit-details-marker{
 .bg-\[\#f5f1e4\]{
   --tw-bg-opacity: 1;
   background-color:#feffff;
+}
+.bg-black{
+  background-color: #000;
 }
 .bg-base-200{
   --tw-bg-opacity: 1;
@@ -2657,6 +2669,9 @@ details.collapse summary::-webkit-details-marker{
 }
 .opacity-0{
   opacity: 0;
+}
+.opacity-25{
+  opacity: 0.25;
 }
 .opacity-50{
   opacity: 0.5;

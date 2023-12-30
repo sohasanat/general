@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('hints', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+            $table->string('Description');
             $table->unsignedBigInteger('products_id');
             $table->foreign('products_id')->references('id')->on('products')->onDelete('cascade');
             $table->rememberToken();
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-      Schema::dropIfExists('images');
+        Schema::dropIfExists('hints');
     }
 };

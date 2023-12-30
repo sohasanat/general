@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Company_contrller;
+use App\Http\Controllers\Products_contrller;
+use App\Http\Controllers\aboutus_contrller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,18 +15,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view(view:'main');
-});
+Route::get('/', [Company_contrller::class, 'companysender'])->name('main.company');
 
-// Route::get('/main/page',  [Maincontller::class, 'Main'])->name('index.main');
- 
+
+
+
+
+
+Route::get('/product-send', [Products_contrller::class, 'productsender'])->name('allproducts');
+
+Route::get('/single-product/{id}', [Products_contrller::class, 'productdetails'])->name('product.details');
+
+
+Route::get('/about-us', [aboutus_contrller::class, 'aboutus'])->name('aboutus.us');
+
+
 Route::get('/404', function () {
     return view('404');
 });
-Route::get('/about-us', function () {
-    return view('about-us');
-});
+//Route::get('/about-us', function () {
+//    return view('about-us');
+//});
 Route::get('/blog-2', function () {
     return view('blog-2');
 });
@@ -50,18 +61,18 @@ Route::get('/manager', function () {
 Route::get('/project', function () {
     return view('project');
 });
-Route::get('/products', function () {
-    return view('products');
-});
+//Route::get('/products', function () {
+//   return view('products');
+//});
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
 Route::get('/single-page', function () {
     return view('single-page');
 });
-Route::get('/single-product', function () {
-    return view('single-product');
-});
+//Route::get('/single-product', function () {
+//    return view('single-product');
+//});
 Route::get('/job', function () {
     return view('job');
 });
