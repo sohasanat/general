@@ -19,11 +19,16 @@ class Products_contrller extends Controller
     public function productdetails($id)
     {
         $productsvar = Products_model::find($id);
-        $hintsvar = hints_model::where('products_id', $id)->get('Description');
-        $informationvar = Productinformations_model::where('products_id', $id)->get('Description');
-        $productimg = images_model::where('products_id', $id)->get('image');
-        $product = Products_model::find($id);
-        $reltionproductsvar = Products_model::where('company_id', $product->company_id)->get();
-        return view('single-product', compact('productsvar', 'hintsvar', 'informationvar', 'productimg', 'reltionproductsvar'));
+        if ($productsvar) {
+            $hintsvar = hints_model::where('products_id', $id)->get('Description');
+            $informationvar = Productinformations_model::where('products_id', $id)->get('Description');
+            $productimg = images_model::where('products_id', $id)->get('image');
+            $reltionproductsvar = Products_model::where('company_id', $productsvar->company_id)->get();
+            return view('single-product', compact('productsvar', 'hintsvar', 'informationvar', 'productimg', 'reltionproductsvar'));
+        } else {
+
+            $allproductsvar = Products_model::all();
+            return view('products', compact('allproductsvar'));
+        }
     }
 }

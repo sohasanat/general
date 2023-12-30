@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Company_contrller;
 use App\Http\Controllers\Products_contrller;
 use App\Http\Controllers\aboutus_contrller;
+use App\Http\Controllers\job_contrller;
+use App\Http\Controllers\connectus_contrller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +22,12 @@ Route::get('/', [Company_contrller::class, 'companysender'])->name('main.company
 
 
 
+Route::get('/job', [job_contrller::class, 'jobs'])->name('jobs');
 
+
+Route::get('/detail-job', [job_contrller::class, 'jobdeails'])->name('job.deails');
+
+Route::get('/connect-us', [connectus_contrller::class, 'connectes'])->name('connect.us');
 
 
 Route::get('/product-send', [Products_contrller::class, 'productsender'])->name('allproducts');
@@ -42,9 +50,9 @@ Route::get('/blog-2', function () {
 Route::get('/blog', function () {
     return view('blog');
 });
-Route::get('/contact-us', function () {
-    return view('contact-us');
-});
+//Route::get('/contact-us', function () {
+//    return view('contact-us');
+//});//**** */
 Route::get('/faq', function () {
     return view('faq');
 });
@@ -73,9 +81,9 @@ Route::get('/single-page', function () {
 //Route::get('/single-product', function () {
 //    return view('single-product');
 //});
-Route::get('/job', function () {
-    return view('job');
-});
-Route::get('/detail-job', function () {
-    return view('detail-job');
-});
+//Route::get('/job', function () {
+//    return view('job');
+//});//**** */
+//Route::get('/detail-job', function () {
+//    return view('detail-job');
+//});//**** */

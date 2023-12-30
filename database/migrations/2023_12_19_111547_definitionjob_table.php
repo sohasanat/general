@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('skills');
             $table->string('skillsdescription');
             $table->string('title');
+            $table->string('Description');
             $table->rememberToken();
             $table->timestamps();
         });
