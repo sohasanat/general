@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="142" height="142" viewBox="0 0 142 142">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_677" data-name="Rectangle 677" width="142" height="142" transform="translate(-5129 -2953)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="akhshan" transform="translate(5129 2953)" clip-path="url(#clip-path)">
+    <g id="Group_4388" data-name="Group 4388">
+      <g id="akhshan-2" data-name="akhshan" transform="translate(893.576 77.479)">
+        <path id="Path_26957" data-name="Path 26957" d="M-6002.584-2998.314h-31.829l16-16.164,35.161,35.995-10.164,10.665h-7.5l-.671-29.551" transform="translate(67.639 -6)" fill="#c48b3a"/>
+        <path id="Path_26958" data-name="Path 26958" d="M-6026.183-2970.075h33.588l-16.724,17.145-36.257-36.82,11.665-11.243h6.885l-.066,29.755" transform="translate(58 5.644)" fill="#c48b3a"/>
+        <path id="Path_26959" data-name="Path 26959" d="M-6036.008-3000.992h25.337v10.146h-15.716v9.619h26.455" transform="translate(66.81 6.586)" fill="none" stroke="#c48b3a" stroke-width="1"/>
+      </g>
+      <text id="اخشان" transform="translate(-5026 -2832)" fill="#c48b3a" font-size="24" font-family="Shabnam" letter-spacing="-0.011em"><tspan x="-63.339" y="0">اخشان</tspan></text>
+    </g>
+  </g>
+</svg>

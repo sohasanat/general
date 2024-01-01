@@ -219,8 +219,8 @@
           <ul>
             <li><a href="index">صفحه اصلی</a></li>
             <li><a href="/about-us">درباره ما</a></li>
-            <li><a href="/contact-us">تماس با ما</a></li>
-            <li><a href="/project">محصولات</a></li>
+            <li><a href="{{ route('connect.us') }}">تماس با ما</a></li>
+            <li><a href="{{ route('allproducts') }}">محصولات</a></li>
           </ul>
         </div>
         <div class="col-span-12 md:col-span-4 lg:col-span-3">

@@ -96,26 +96,26 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/slider-1.jpg" alt="">
+                                <a href="/single-product/3"><img class="object-cover w-full rounded-xl" src="../assets/images/slider-1.jpg" alt=""></a>
                             </div>
                             <div class="swiper-slide">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/slider-2.jpg" alt="">
+                                <a href="/single-product/5"><img class="object-cover w-full rounded-xl" src="../assets/images/slider-2.jpg" alt=""></a>
                             </div>
                             <div class="swiper-slide">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/slider-3.jpg" alt="">
+                            <a href="/single-product/4"><img class="object-cover w-full rounded-xl" src="../assets/images/slider-3.jpg" alt=""></a>
                             </div>
                             <div class="swiper-slide">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/slider-4.jpg" alt="">
+                            <a href="/single-product/6"><img class="object-cover w-full rounded-xl" src="../assets/images/slider-4.jpg" alt=""></a>
                             </div>
                             <div class="swiper-slide">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/slider-5.jpg" alt="">
+                            <img class="object-cover w-full rounded-xl" src="../assets/images/slider-5.jpg" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/slider-6.jpg" alt="">
+                            <a href="/single-product/7"><img class="object-cover w-full rounded-xl" src="../assets/images/slider-6.jpg" alt=""></a>
                             </div>
                         </div>
-                        <div class="swiper-button-next after:text-2xl after:text-stone-900 mx-2"></div>
-                        <div class="swiper-button-prev after:text-2xl after:text-stone-900 mx-2"></div>
+                        <div class="swiper-button-next after:text-2xl after:text-stone-900 mx-2 p-6"></div>
+                        <div class="swiper-button-prev after:text-2xl after:text-stone-900 mx-2 p-6"></div>
                     </div>
                 </div>
             </div>
@@ -457,7 +457,7 @@
         </div>
     </section> -->
 
-    <section class="px-4 pb-20 pt-10 bg-orange-100">
+    <section class="px-4 pb-10 pt-10 bg-orange-100">
         <div class="container mx-auto max-w-screen-xl">
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 lg:col-span-5">
@@ -477,20 +477,22 @@
                     <div class="swiper partners">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="flex justify-center w-full">
-                                    <img class="grayscale hover:grayscale-0 duration-300 w-full" src="../assets/images/chodanSazan.svg" alt="">
+                                <div class="flex justify-center  w-22 h-31 rounded-xl">
+                                    <img class=" hover:grayscale-0 duration-300 w-full" src="../assets/images/chodanSazan.svg" alt="">
                                 </div>
+
                             </div>
                             <div class="swiper-slide">
-                                <div class="flex justify-center">
-                                    <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/akhshan.png" alt="">
+                              <div class="flex justify-center  w-22 h-31 rounded-xl">
+                                    <img class=" hover:grayscale-0 duration-300 w-full" src="../assets/images/akhshan.svg" alt="">
                                 </div>
+
                             </div>
+                            <div>
                             <div class="swiper-slide">
-                                <div class="flex justify-center w-full">
-                                    <img class="grayscale hover:grayscale-0 duration-300 w-full" src="../assets/images/ghaltakSazan.png" alt="">
+                                <div class="flex justify-center  w-22 h-31 rounded-xl">
+                                    <img class=" hover:grayscale-0 duration-300 w-full" src="../assets/images/ghaltakSazan.svg" alt="">
                                 </div>
-                            </div>
                              <!--
                             <div class="swiper-slide">
                                 <div class="flex justify-center">
@@ -546,21 +548,20 @@
                     </div>
                     <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
                 </div>
-                <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 text-right md:text-center">
-                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
+<div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
                     <ul>
                         <li><a href="index">صفحه اصلی</a></li>
                         <li><a href="/about-us">درباره ما</a></li>
-                        <li><a href="/contact-us">تماس با ما</a></li>
-                        <li><a href="/project">محصولات</a></li>
+                        <li><a  href="{{ route('connect.us') }}">تماس با ما</a></li>
+                        <li><a href="{{ route('allproducts') }}">محصولات</a></li>
                     </ul>
                 </div>
                 <div class="col-span-12 md:col-span-4 lg:col-span-3">
 
-                    <!-- <div class="flex items-center">
+ <div class="flex items-center">
                       <img src="../assets/images/enamad_logo.png" alt="">
                       <img src="../assets/images/samandehi_logo.png" alt="">
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>

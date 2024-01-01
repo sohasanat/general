@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <div class="lg:w-2/3 md:w-1/2 rounded-3xl overflow-hidden sm:mr-10 p-10 hidden md:flex items-end justify-start relative">
-                            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" style="filter: grayscale(1) contrast(1.2) opacity(0.7);" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1258.3920220984826!2d51.70158335846726!3d32.64603791291042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1703419123037!5m2!1sen!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" style="filter: contrast(1.2) opacity(0.7);" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1258.3920220984826!2d51.70158335846726!3d32.64603791291042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1703419123037!5m2!1sen!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <div class="bg-white relative flex flex-wrap py-6 rounded-2xl mx-8">
                                 <div class="lg:w-1/2 px-6">
                                     <p class="font-YekanBakh-Bold text-base mb-2">مکـــان:</p>
@@ -160,21 +160,20 @@
                     </div>
                     <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
                 </div>
-                <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 text-right md:text-center">
-                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
+<div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
                     <ul>
                         <li><a href="index">صفحه اصلی</a></li>
                         <li><a href="/about-us">درباره ما</a></li>
-                        <li><a href="/contact-us">تماس با ما</a></li>
-                        <li><a href="/project">محصولات</a></li>
+                        <li><a  href="{{ route('connect.us') }}">تماس با ما</a></li>
+                        <li><a href="{{ route('allproducts') }}">محصولات</a></li>
                     </ul>
                 </div>
                 <div class="col-span-12 md:col-span-4 lg:col-span-3">
 
-                    <!-- <div class="flex items-center">
+ <div class="flex items-center">
                       <img src="../assets/images/enamad_logo.png" alt="">
                       <img src="../assets/images/samandehi_logo.png" alt="">
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>

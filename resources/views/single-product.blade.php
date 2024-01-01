@@ -102,7 +102,7 @@
 
       <div class="max-w-4xl mx-auto">
         <div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center image-modal">
-          <button class="absolute top-10 right-10 text-white close-modal">حذف</button>
+          <button class="absolute top-10 right-10 text-white close-modal">بستن</button>
           <img style="max-width: 90%;" src="../assets/images/imagesfra/g4.png" alt="" class="big-image">
         </div>
         <div class="mb-12">
@@ -167,6 +167,10 @@
           </div>
 
         </div>
+        <?php
+        if(count($reltionproductsvar) != 1)
+        {
+        ?>
         <div class="mb-12">
           <div class="flex items-center mb-6">
 
@@ -178,7 +182,10 @@
             <div class="swiper-wrapper ease-linear">
 
               @foreach($reltionproductsvar as $relproduts)
-
+              <?php
+              if($relproduts->id != $productsvar->id)
+              {
+              ?>
               <div class="swiper-slide">
                 <div class="group/item">
                   <a href="{{ route('product.details', $relproduts->id) }}" class="bg-white w-full displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
@@ -195,25 +202,22 @@
                   </a>
                 </div>
               </div>
+              <?php
+              }              
+              ?>
               @endforeach
-
-
-
-
-
-
-
-
             </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
+        <?php
+        }
+        ?>
         <div>
           <div class="flex items-center mb-6">
 
             <div class="mr-2">
               <span class="font-IRANSansWeb_Bold rounded-full py-1 font-YekanBakh-SemiBold">نظرات</span>
-              <p class="mt-2">شما با نام یاسمن وارد شده اید!!</p>
             </div>
           </div>
           <textarea class="textarea textarea-bordered w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
@@ -243,21 +247,22 @@
                     </div>
           <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
         </div>
-        <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 text-right md:text-center">
+        <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">
+
           <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
           <ul>
             <li><a href="index">صفحه اصلی</a></li>
             <li><a href="/about-us">درباره ما</a></li>
-            <li><a href="/contact-us">تماس با ما</a></li>
-            <li><a href="/project">محصولات</a></li>
+            <li><a  href="{{ route('connect.us') }}">تماس با ما</a></li>
+                        <li><a href="{{ route('allproducts') }}">محصولات</a></li>
           </ul>
         </div>
         <div class="col-span-12 md:col-span-4 lg:col-span-3">
 
-          <!-- <div class="flex items-center">
+           <div class="flex items-center">
                       <img src="../assets/images/enamad_logo.png" alt="">
                       <img src="../assets/images/samandehi_logo.png" alt="">
-                    </div> -->
+                    </div> 
         </div>
       </div>
     </div>

@@ -157,7 +157,6 @@
 
                         <div class="mr-2">
                             <span class="font-IRANSansWeb_Bold bg-orange-200 rounded-full px-4 py-1">نظرات</span>
-                            <p class="mt-2">شما با نام یاسمن وارد شده اید!!</p>
                         </div>
                     </div>
                     <textarea class="textarea textarea-bordered w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>

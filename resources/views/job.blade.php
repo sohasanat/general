@@ -132,11 +132,11 @@
         <div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
           <div class="flex items-center">
             <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-              <img src="../assets/images/React-icon.png" class="" />
+              <img src="../assets/images/React-icon.png" class="jobicon" />
             </div>
             <div class="mr-2 gap-2 flex flex-col ">
               <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-              <p class="text-center">قرارداد تمام‌وقت و حضوری</p>
+              <p class="">قرارداد تمام‌وقت و حضوری</p>
             </div>
           </div>
           <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
@@ -146,11 +146,11 @@
         <div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
           <div class="flex items-center">
             <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-              <img src="../assets/images/React-icon.png" class="" />
+              <img src="../assets/images/core.png" class="jobicon" />
             </div>
             <div class="mr-2 gap-2 flex flex-col ">
-              <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-              <p class="text-center">قرارداد تمام‌وقت و حضوری</p>
+              <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Back-end</h2></a>
+              <p class="">قرارداد تمام‌وقت و حضوری</p>
             </div>
           </div>
           <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
@@ -160,11 +160,11 @@
         <div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
           <div class="flex items-center">
             <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-              <img src="../assets/images/React-icon.png" class="" />
+              <img src="../assets/images/info.svg" class="jobicon" />
             </div>
             <div class="mr-2 gap-2 flex flex-col ">
-              <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-              <p class="text-center">قرارداد تمام‌وقت و حضوری</p>
+              <h2 class="font-YekanBakh-Bold text-base">کارشناس استقرار حوزه اتوماسیون صنعتی</h2></a>
+              <p class="">قرارداد تمام‌وقت و حضوری</p>
             </div>
           </div>
           <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
@@ -174,11 +174,25 @@
         <div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
           <div class="flex items-center">
             <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-              <img src="../assets/images/React-icon.png" class="" />
+              <img src="../assets/images/info.svg" class="jobicon" />
             </div>
             <div class="mr-2 gap-2 flex flex-col ">
-              <h2 class="font-YekanBakh-Bold text-base">برنامه نویس Front-end</h2></a>
-              <p class="text-center">قرارداد تمام‌وقت و حضوری</p>
+              <h2 class="font-YekanBakh-Bold text-base">کارشناس فروش</h2></a>
+              <p class="">قرارداد تمام‌وقت و حضوری</p>
+            </div>
+          </div>
+          <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
+            <a href="detail-job" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
+          <div class="flex items-center">
+            <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
+              <img src="../assets/images/info.svg" class="jobicon" />
+            </div>
+            <div class="mr-2 gap-2 flex flex-col ">
+              <h2 class="font-YekanBakh-Bold text-base">کارشناس استقرار</h2></a>
+              <p class="">قرارداد تمام‌وقت و حضوری</p>
             </div>
           </div>
           <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">
@@ -219,8 +233,8 @@
           <ul>
             <li><a href="index">صفحه اصلی</a></li>
             <li><a href="/about-us">درباره ما</a></li>
-            <li><a href="/contact-us">تماس با ما</a></li>
-            <li><a href="/project">محصولات</a></li>
+            <li><a  href="{{ route('connect.us') }}">تماس با ما</a></li>
+                        <li><a href="{{ route('allproducts') }}">محصولات</a></li>
           </ul>
         </div>
         <div class="col-span-12 md:col-span-4 lg:col-span-3">
