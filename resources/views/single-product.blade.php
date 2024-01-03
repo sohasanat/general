@@ -126,7 +126,7 @@
           <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟!&nbsp; &nbsp; بــخــرش</h3>
           <img src="../assets/images/arrow.svg" alt="">
 
-          <a href="{{ route('connect.us') }}" class="w-auto inline-block py-2 px-7 rounded-full bg-green text-white font-YekanBakh-SemiBold rounded-lg">خرید محصول</a>
+          <a href="{{ route() }}" class="w-auto inline-block py-2 px-7 rounded-full bg-green text-white font-YekanBakh-SemiBold rounded-lg">خرید محصول</a>
 
         </div>
         <div class="leading-8 mb-12">
