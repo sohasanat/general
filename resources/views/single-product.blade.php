@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
   <link rel="stylesheet" href="{{asset('build/style.css')}}">
-  <title>جزئیات پروژه</title>
+  <title>جزئیات محصول</title>
   <link rel="icon" type="image/x-icon" href="{{asset('../assets/images/favicon.ico')}}">
 
 </head>
@@ -49,13 +49,13 @@
           </div>
         </div>
         <div class="flex items-center gap-8">
-        <div class="mb-4">
-                        <div class="w-22">
-                            <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/logomain.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
+          <div class="mb-4">
+            <div class="w-22">
+              <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
+                <img class="object-cover w-full rounded-xl" src="../assets/images/logomain.svg" alt="">
+              </a>
+            </div>
+          </div>
 
         </div>
         <div class="hidden lg:block">
@@ -122,6 +122,13 @@
             </div>
           </div>
         </div>
+        <div class="rounded-lg mb-12 order">
+          <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟!&nbsp; &nbsp; بــخــرش</h3>
+          <img src="../assets/images/arrow.svg" alt="">
+
+          <a href="{{ route('connect.us') }}" class="w-auto inline-block py-2 px-7 rounded-full bg-green text-white font-YekanBakh-SemiBold rounded-lg">خرید محصول</a>
+
+        </div>
         <div class="leading-8 mb-12">
 
           <!-- Tab Content -->
@@ -168,48 +175,46 @@
 
         </div>
         <?php
-        if(count($reltionproductsvar) != 1)
-        {
+        if (count($reltionproductsvar) != 1) {
         ?>
-        <div class="mb-12">
-          <div class="flex items-center mb-6">
+          <div class="mb-12">
+            <div class="flex items-center mb-6">
 
-            <div class="mr-2">
-              <span class="font-IRANSansWeb_Bold  rounded-full py-1 font-YekanBakh-SemiBold"> محصولات مرتبط</span>
-            </div>
-          </div>
-          <div class="swiper sin-project">
-            <div class="swiper-wrapper ease-linear">
-
-              @foreach($reltionproductsvar as $relproduts)
-              <?php
-              if($relproduts->id != $productsvar->id)
-              {
-              ?>
-              <div class="swiper-slide">
-                <div class="group/item">
-                  <a href="{{ route('product.details', $relproduts->id) }}" class="bg-white w-full displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
-                    <div class="w-10 mb-4">
-                      <img src="{{$relproduts->logo}}" alt="">
-                    </div>
-
-                    <div class="flex items-center mb-4">
-                      <h2 class="font-YekanBakh-ExtraBold text-base mr-1">{{$relproduts->name}}</h2>
-                    </div>
-                    <div>
-                      <p class="line3">{{$relproduts->Description}}</p>
-                    </div>
-                  </a>
-                </div>
+              <div class="mr-2">
+                <span class="font-IRANSansWeb_Bold  rounded-full py-1 font-YekanBakh-SemiBold"> محصولات مرتبط</span>
               </div>
-              <?php
-              }              
-              ?>
-              @endforeach
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper sin-project">
+              <div class="swiper-wrapper ease-linear">
+
+                @foreach($reltionproductsvar as $relproduts)
+                <?php
+                if ($relproduts->id != $productsvar->id) {
+                ?>
+                  <div class="swiper-slide">
+                    <div class="group/item">
+                      <a href="{{ route('product.details', $relproduts->id) }}" class="bg-white w-full displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                        <div class="w-10 mb-4">
+                          <img src="{{$relproduts->logo}}" alt="">
+                        </div>
+
+                        <div class="flex items-center mb-4">
+                          <h2 class="font-YekanBakh-ExtraBold text-base mr-1">{{$relproduts->name}}</h2>
+                        </div>
+                        <div>
+                          <p class="line3">{{$relproduts->Description}}</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                <?php
+                }
+                ?>
+                @endforeach
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-        </div>
         <?php
         }
         ?>
@@ -238,13 +243,13 @@
     <div class="container mx-auto max-w-screen-xl">
       <div class="grid grid-cols-12 gap-4 leading-8">
         <div class="col-span-12 lg:col-span-5">
-        <div class="mb-4">
-                        <div class="w-22">
-                            <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
-                                <img class="object-cover w-full rounded-xl" src="../assets/images/logomain2.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
+          <div class="mb-4">
+            <div class="w-22">
+              <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
+                <img class="object-cover w-full rounded-xl" src="../assets/images/logomain2.svg" alt="">
+              </a>
+            </div>
+          </div>
           <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
         </div>
         <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">
@@ -253,16 +258,16 @@
           <ul>
             <li><a href="index">صفحه اصلی</a></li>
             <li><a href="/about-us">درباره ما</a></li>
-            <li><a  href="{{ route('connect.us') }}">تماس با ما</a></li>
-                        <li><a href="{{ route('allproducts') }}">محصولات</a></li>
+            <li><a href="{{ route('connect.us') }}">تماس با ما</a></li>
+            <li><a href="{{ route('allproducts') }}">محصولات</a></li>
           </ul>
         </div>
         <div class="col-span-12 md:col-span-4 lg:col-span-3">
 
-           <div class="flex items-center">
-                      <img src="../assets/images/enamad_logo.png" alt="">
-                      <img src="../assets/images/samandehi_logo.png" alt="">
-                    </div> 
+          <div class="flex items-center">
+            <img src="../assets/images/enamad_logo.png" alt="">
+            <img src="../assets/images/samandehi_logo.png" alt="">
+          </div>
         </div>
       </div>
     </div>

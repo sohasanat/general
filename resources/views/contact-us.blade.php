@@ -112,12 +112,15 @@
                                 <p class="font-YekanBakh-Bold text-base mb-2">پیغــام خــود را بـــا مـــا در میـــان بگذاریــــد...</p>
                                 <p class="mb-4 text-xs leading-6">جهت ارتباط با ما و ارسال نظرات و پیشنهادات خود می توانید از فرم زیر استفاده نمایید.</p>
                             </div>
-                            <div class="form-control w-full flex flex-col gap-y-5">
-                                <input type="text" placeholder="موضوع پیام" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
-                                <input type="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
-                                <textarea class="textarea w-full h-32 rounded-3xl focus:outline-none placeholder:text-sm" placeholder="متن پیام را بنویسید..."></textarea>
-                                <button class="btn bg-stone-800 w-32 hover:bg-stone-900 text-white rounded-full text-sm">ارسال پیام</button>
-                            </div>
+                            <form action="{{ route('connect.us.comment') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-control w-full flex flex-col gap-y-5">
+                                    <input required type="text" name="title" placeholder="موضوع پیام" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
+                                    <input required type="email" name="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
+                                    <textarea class="textarea w-full h-32 rounded-3xl focus:outline-none placeholder:text-sm" name="Description" placeholder="متن پیام را بنویسید..."></textarea>
+                                    <button class="btn bg-stone-800 w-32 hover:bg-stone-900 text-white rounded-full text-sm">ارسال پیام</button>
+                                </div>
+                            </form>
                         </div>
                         <div class="lg:w-2/3 md:w-1/2 rounded-3xl overflow-hidden sm:mr-10 p-10 hidden md:flex items-end justify-start relative">
                             <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" style="filter: contrast(1.2) opacity(0.7);" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1258.3920220984826!2d51.70158335846726!3d32.64603791291042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1703419123037!5m2!1sen!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -137,6 +140,25 @@
                     </div>
                 </div>
             </div>
+            @if(session('message'))
+            <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
+                <p class="font-bold">{{ session('message') }}</p>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+                    <linearGradient id="I9GV0SozQFknxHSR6DCx5a" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#21ad64" />
+                        <stop offset="1" stop-color="#088242" />
+                    </linearGradient>
+                    <path fill="url(#I9GV0SozQFknxHSR6DCx5a)" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z" />
+                    <path d="M32.172,16.172L22,26.344l-5.172-5.172c-0.781-0.781-2.047-0.781-2.828,0l-1.414,1.414	c-0.781,0.781-0.781,2.047,0,2.828l8,8c0.781,0.781,2.047,0.781,2.828,0l13-13c0.781-0.781,0.781-2.047,0-2.828L35,16.172	C34.219,15.391,32.953,15.391,32.172,16.172z" opacity=".05" />
+                    <path d="M20.939,33.061l-8-8c-0.586-0.586-0.586-1.536,0-2.121l1.414-1.414c0.586-0.586,1.536-0.586,2.121,0	L22,27.051l10.525-10.525c0.586-0.586,1.536-0.586,2.121,0l1.414,1.414c0.586,0.586,0.586,1.536,0,2.121l-13,13	C22.475,33.646,21.525,33.646,20.939,33.061z" opacity=".07" />
+                    <path fill="#fff" d="M21.293,32.707l-8-8c-0.391-0.391-0.391-1.024,0-1.414l1.414-1.414c0.391-0.391,1.024-0.391,1.414,0	L22,27.758l10.879-10.879c0.391-0.391,1.024-0.391,1.414,0l1.414,1.414c0.391,0.391,0.391,1.024,0,1.414l-13,13	C22.317,33.098,21.683,33.098,21.293,32.707z" />
+                </svg>
+
+
+            </div>
+            @endif
+
         </section>
     </div>
 
@@ -160,19 +182,20 @@
                     </div>
                     <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
                 </div>
-<div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
+                <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">
+                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
                     <ul>
                         <li><a href="index">صفحه اصلی</a></li>
                         <li><a href="/about-us">درباره ما</a></li>
-                        <li><a  href="{{ route('connect.us') }}">تماس با ما</a></li>
+                        <li><a href="{{ route('connect.us') }}">تماس با ما</a></li>
                         <li><a href="{{ route('allproducts') }}">محصولات</a></li>
                     </ul>
                 </div>
                 <div class="col-span-12 md:col-span-4 lg:col-span-3">
 
- <div class="flex items-center">
-                      <img src="../assets/images/enamad_logo.png" alt="">
-                      <img src="../assets/images/samandehi_logo.png" alt="">
+                    <div class="flex items-center">
+                        <img src="../assets/images/enamad_logo.png" alt="">
+                        <img src="../assets/images/samandehi_logo.png" alt="">
                     </div>
                 </div>
             </div>
@@ -187,6 +210,11 @@
 
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="../src/js/main.js"></script>
+    <script>
+        setTimeout(() => {
+            document.querySelector(".success-message").style.display = "none"
+        }, 5000)
+    </script>
 </body>
 
 </html>

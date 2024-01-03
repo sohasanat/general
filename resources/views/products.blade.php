@@ -166,19 +166,20 @@
                     </div>
                     <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
                 </div>
-<div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
+                <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">
+                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
                     <ul>
                         <li><a href="index">صفحه اصلی</a></li>
                         <li><a href="/about-us">درباره ما</a></li>
-                        <li><a  href="{{ route('connect.us') }}">تماس با ما</a></li>
+                        <li><a href="{{ route('connect.us') }}">تماس با ما</a></li>
                         <li><a href="{{ route('allproducts') }}">محصولات</a></li>
                     </ul>
                 </div>
                 <div class="col-span-12 md:col-span-4 lg:col-span-3">
 
- <div class="flex items-center">
-                      <img src="../assets/images/enamad_logo.png" alt="">
-                      <img src="../assets/images/samandehi_logo.png" alt="">
+                    <div class="flex items-center">
+                        <img src="../assets/images/enamad_logo.png" alt="">
+                        <img src="../assets/images/samandehi_logo.png" alt="">
                     </div>
                 </div>
             </div>

@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('connects', function (Blueprint $table) {
+        Schema::create('jobskills', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('email')->nullable();
-            $table->string('Description');
+            $table->string('skillsDescription');
+            $table->unsignedBigInteger('job_id');
+            $table->foreign('job_id')->references('id')->on('definitionjobs')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('connects');
+        Schema::dropIfExists('jobskills');
     }
 };

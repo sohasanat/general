@@ -491,6 +491,22 @@ gap:3rem;
 .break-words{
   overflow-wrap: break-word;
 }
+.order{
+  display: flex;
+  border: 1px solid #c8e1e1;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    background-color: #c8e1e1;
+}
+.order img{
+  width: 7rem;
+    height: auto;
+}
+.text-white{
+    color: white
+}
 .displayflex{
   display: flex;
   flex-direction: column;

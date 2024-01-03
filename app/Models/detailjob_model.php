@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class detailjob_model extends Model
 {
     protected $table = 'definitionjobs';
-    protected $fillable = ['expertise', 'expertisedescription', 'skills', 'skillsdescription', 'title', 'Description'];
+    protected $fillable = ['title', 'Description', 'photo'];
 }

@@ -24,10 +24,13 @@ Route::get('/', [Company_contrller::class, 'companysender'])->name('main.company
 
 Route::get('/job', [job_contrller::class, 'jobs'])->name('jobs');
 
+Route::get('/detail-job/{id}', [job_contrller::class, 'jobdeails'])->name('job.deails');
 
-Route::get('/detail-job', [job_contrller::class, 'jobdeails'])->name('job.deails');
+Route::post('/detail-job-request', [job_contrller::class, 'jobrequest'])->name('job.request');
+
 
 Route::get('/connect-us', [connectus_contrller::class, 'connectes'])->name('connect.us');
+Route::post('/connect-us-comment', [connectus_contrller::class, 'connectescomment'])->name('connect.us.comment');
 
 
 Route::get('/product-send', [Products_contrller::class, 'productsender'])->name('allproducts');
