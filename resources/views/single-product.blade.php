@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
   <link rel="stylesheet" href="{{asset('build/style.css')}}">
-  <title>جزئیات پروژه</title>
+  <title>جزئیات محصول</title>
   <link rel="icon" type="image/x-icon" href="{{asset('../assets/images/favicon.ico')}}">
 
 </head>
@@ -122,6 +122,13 @@
             </div>
           </div>
         </div>
+        <div class="rounded-lg mb-12 order">
+          <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟!&nbsp; &nbsp; &nbsp;برو بخرش</h3>
+<img src="../assets/images/arrow.svg" alt="">
+
+          <a href="{{ route('connect.us') }}" class="w-auto inline-block py-2 px-7 rounded-full bg-green text-white font-YekanBakh-SemiBold rounded-lg">خرید محصول</a>
+
+</div>
         <div class="leading-8 mb-12">
 
           <!-- Tab Content -->
