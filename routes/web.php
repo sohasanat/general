@@ -6,6 +6,8 @@ use App\Http\Controllers\Products_contrller;
 use App\Http\Controllers\aboutus_contrller;
 use App\Http\Controllers\job_contrller;
 use App\Http\Controllers\connectus_contrller;
+use App\Http\Controllers\blogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,28 +19,28 @@ use App\Http\Controllers\connectus_contrller;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//صفحه اصلی
 Route::get('/', [Company_contrller::class, 'companysender'])->name('main.company');
 
 
-
+//شغل و فرصت های شغلی
 Route::get('/job', [job_contrller::class, 'jobs'])->name('jobs');
-
 Route::get('/detail-job/{id}', [job_contrller::class, 'jobdeails'])->name('job.deails');
-
 Route::post('/detail-job-request', [job_contrller::class, 'jobrequest'])->name('job.request');
 
-
+//ارتباط با ما
 Route::get('/connect-us', [connectus_contrller::class, 'connectes'])->name('connect.us');
 Route::post('/connect-us-comment', [connectus_contrller::class, 'connectescomment'])->name('connect.us.comment');
 
-
+//محصولات
 Route::get('/product-send', [Products_contrller::class, 'productsender'])->name('allproducts');
-
 Route::get('/single-product/{id}', [Products_contrller::class, 'productdetails'])->name('product.details');
 
-
+//درباره ی ما 
 Route::get('/about-us', [aboutus_contrller::class, 'aboutus'])->name('aboutus.us');
+
+//وبلاگ
+Route::get('/blog-all', [blogController::class, 'blogall'])->name('blog.all');
 
 
 Route::get('/404', function () {
