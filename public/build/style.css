@@ -43,7 +43,7 @@ html {
 body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
-  color:#032D57 !important;
+  color:#252627 !important;
 }
 /*
 1. Add the correct height in Firefox.
@@ -466,7 +466,7 @@ html{
   --tw-backdrop-sepia:  ;
 }
 .green{
-  background-color: #B8E0E0;
+  background-color: #F5F5F5;
 }
 .container{
   width: 100%;
@@ -493,12 +493,20 @@ gap:3rem;
 }
 .order{
   display: flex;
-  border: 1px solid #c8e1e1;
+  border: 1px solid #d9d7d7;
     align-items: center;
     justify-content: space-between;
     padding-inline: 1rem;
     padding-block: 1rem;
-    background-color: #c8e1e1;
+    background-color: #e1e1e1;
+}
+.imgT{
+  width: 50px;
+  height: 50px;
+}
+.border1{
+  border: 1px solid #efefef !important;
+  border-radius: 5px;
 }
 .order img{
   width: 7rem;
@@ -513,14 +521,26 @@ gap:3rem;
   align-items: center;
 }
 .lightGreen{
-  background-color: #dff3f3;
+  background-color: #F5F5F5;
 }
 .lightGreen2{
-  background-color: #e8f3f3;
+  background-color: #f5f5f5;
   
 }
 .lightGreen3{
-  background-color: #4e8382 !important;
+  background-color: #f7e2e2 !important;
+  color:#8f5d5f !important;
+  
+}
+.p-filter{
+    border-block-end: 1px solid #e6e6e6;
+    padding-bottom: 1rem;
+    color: #4c4a4a;
+    font-weight: 700;
+}
+.formInput{
+  width: 18px;
+  height: 18px;
 }
 .jobicon{
   width: 100%;
@@ -538,6 +558,286 @@ gap:3rem;
   display: -webkit-box;
   text-align: justify;
 }
+.textjustify{
+  text-align: justify;
+}
+.box-border{
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.gray{
+  background-color: #e3e3e3;
+}
+.btn-tab{
+  border-radius: 5px;
+  flex: 1;
+}
+.min-h{
+  min-height: 500px;
+}
+/*---------------start table--------------*/
+#app {
+  display: contents;
+  direction: rtl;
+  font-family: YekanBakh-Regular;
+}
+#app thead tr{
+  border-bottom:1px solid #c1c1c1;
+}
+#app .arr {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#app .alo {
+  background-color: rgb(255 255 255);
+}
+#app .ua {
+  max-width: 80rem;
+}
+
+#app .gx {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#app .ma {
+  display: flow-root;
+}
+#app .lm {
+  margin-top: 2rem;
+}
+#app .ari {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#app .adi {
+    overflow-x: auto;
+}
+#app .gl {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+}
+#app .gc {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+#app .avo {
+    vertical-align: middle;
+}
+#app .arv {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#app .ts {
+    min-width: 100%;
+}
+#app .lv {
+    display: inline-block;
+}
+#app table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+
+#app .axv {
+    color: rgb(17 24 39);
+}
+#app .awg {
+    font-weight: 600;
+}
+#app .awa {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+#app .auc {
+    padding-right: 0.75rem;
+}
+
+#app .asa {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+}
+#app .ach > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgb(209 213 219);
+}
+
+
+#app .arf {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+#app .awe {
+    font-weight: 500;
+}
+
+
+#app .atn {
+    padding-left: 1rem;
+}
+#app .asc {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#app .adm {
+    white-space: nowrap;
+}
+
+
+
+#app button, [role="button"] {
+  cursor: pointer;
+}
+#app button{
+  text-transform: none;
+  padding-inline: 1.5rem !important;
+  padding-block: 1rem !important;
+}
+#app button{
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+#app .awp {
+  line-height: 1.5rem;
+}
+
+#app .avy {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#app blockquote,#app dl,#app dd,#app h1,#app h2,#app h3,#app h4,#app h5,#app h6,#app hr,#app figure,#app p,#app pre {
+  margin: 0;
+}
+#app h1,#app h2,#app h3,#app h4,#app h5,#app h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+#app .axt {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+#app .lb {
+  margin-top: 0.5rem;
+}
+
+
+#app .lh {
+    margin-top: 1rem;
+}
+#app .bbn {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#app .bah {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+
+#app .avl {
+  text-align: center;
+}
+
+#app .ajr {
+  background-color: #d71920;
+  
+}
+
+#app .adu {
+  border-radius: 0.375rem;
+}
+#app .lu {
+  display: block;
+}
+
+#app .bgm:nth-child(even) {
+
+  background-color: rgb(249 250 251 );
+}
+#app .wrapperTable{
+  padding-block: 35px;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  padding-inline: 35px;
+}
+#app th,#app td{
+  text-align: right;
+}
+#app .ayh {
+  color: rgb(79 70 229);
+}
+
+#app a {
+  color: inherit;
+  text-decoration: inherit;
+}
+#app .imgB{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+#app .edit{
+margin-left: 1rem;
+}
+@media (min-width: 1024px)
+{
+  #app .ddh {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+  #app .cte {
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+}
+
+@media (min-width: 640px)
+{
+  #app .bzz {
+    flex: none;
+}
+#app .bwv {
+    margin-top: 0px;
+}
+
+  #app .bzy {
+    flex: 1 1 auto;
+}
+
+  #app .cgi {
+    padding-left: 0px;
+}
+  #app .cfc {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+  }
+  #app .cbi {
+    align-items: center;
+}
+#app .bxr {
+  display: flex;
+}
+#app .buw {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+}
+/*---------------end table--------------*/
+
 @media (min-width: 640px){
   .container{
     max-width: 640px;
@@ -584,10 +884,10 @@ gap:3rem;
   justify-content: center;
 }
 @media (hover:hover){
-  .label a:hover{
+  /* .label a:hover{
     --tw-text-opacity: 1;
     color: hsl(var(--bc) / var(--tw-text-opacity));
-  }
+  } */
   .menu li > *:not(ul):not(.menu-title):not(details):active,
 .menu li > *:not(ul):not(.menu-title):not(details).active,
 .menu li > details > summary:active{
@@ -851,7 +1151,7 @@ gap:3rem;
     --tw-border-opacity: 0;
     background-color: hsl(var(--n) / var(--tw-bg-opacity));
     --tw-bg-opacity: 0.2;
-    color: hsl(var(--bc) / var(--tw-text-opacity));
+    /* color: hsl(var(--bc) / var(--tw-text-opacity)); */
     --tw-text-opacity: 0.2;
   }
   .btn:is(input[type="checkbox"]:checked):hover, .btn:is(input[type="radio"]:checked):hover{
@@ -864,7 +1164,7 @@ gap:3rem;
     cursor: pointer;
     background-color: hsl(var(--bc) / 0.1);
     --tw-text-opacity: 1;
-    color: hsl(var(--bc) / var(--tw-text-opacity));
+    /* color: hsl(var(--bc) / var(--tw-text-opacity)); */
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
@@ -1460,7 +1760,7 @@ details.collapse summary::-webkit-details-marker{
   cursor: pointer;
   background-color: hsl(var(--bc) / 0.1);
   --tw-text-opacity: 1;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
+  /* color: hsl(var(--bc) / var(--tw-text-opacity)); */
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -1780,9 +2080,9 @@ details.collapse summary::-webkit-details-marker{
 }
 .tab-button.active{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+  background-color:#d13c41;
   --tw-text-opacity: 1;
-  color: rgb(28 25 23 / var(--tw-text-opacity));
+  color: white;
 }
 .menu li a:hover{
   border-radius: 0px;
@@ -2341,7 +2641,7 @@ details.collapse summary::-webkit-details-marker{
 }
 .border-orange-200{
   --tw-border-opacity: 1;
-  border-color: #129996;
+  border-color: #f7e2e2;
 }
 .bg-\[\#f5f1e4\]{
   --tw-bg-opacity: 1;
@@ -2360,19 +2660,19 @@ details.collapse summary::-webkit-details-marker{
 }
 .bg-orange-100{
   --tw-bg-opacity: 1;
-  background-color: #deeded ;
+  background-color: #f5f5f5 ;
 }
 .bg-orange-200{
   --tw-bg-opacity: 1;
-  background-color: #c8e1e1;
+  background-color: #d71920;
 }
 .color-green{
   --tw-bg-opacity: 1;
-  color: #129996;
+  color: #d71920;
 }
 .bg-green{
   --tw-bg-opacity: 1;
-  background-color: #129996;
+  background-color: #252627;
 }
 .bg-stone-200{
   --tw-bg-opacity: 1;
@@ -2380,14 +2680,14 @@ details.collapse summary::-webkit-details-marker{
 }
 .bg-stone-700{
   --tw-bg-opacity: 1;
-  background-color: #03213f;
+  background-color: #1b1d1e;
 }
 .bg-stone-800{
   --tw-bg-opacity: 1;
-  background-color: #032d57;
+  background-color: #252627;
 }
 .bg-stone-900{
-  background: rgb(18,153,150);
+  background: #d13c41;
 
 }
 .bg-white{
@@ -2395,7 +2695,7 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-t{
-  background: linear-gradient(0deg, #deeded 0%, rgba(45,253,83,0.0032387955182072714) 100%);
+  background: linear-gradient(0deg, #f5f5f5 0%, rgba(45,253,83,0.0032387955182072714) 100%);
 }
 .from-gray-800{
   --tw-gradient-from: #1f2937 var(--tw-gradient-from-position);
@@ -2447,6 +2747,9 @@ details.collapse summary::-webkit-details-marker{
 }
 .p-2{
   padding: 0.5rem;
+}
+.p-1{
+  padding: 0.25rem;
 }
 .p-4{
   padding: 1rem;
@@ -2818,7 +3121,7 @@ details.collapse summary::-webkit-details-marker{
 }
 .hover\:border-orange-200:hover{
   --tw-border-opacity: 1;
-  border-color: #129996;
+  border-color: #d71920;
 }
 .hover\:bg-orange-200:hover{
   --tw-bg-opacity: 1;
@@ -2884,6 +3187,7 @@ details.collapse summary::-webkit-details-marker{
   .sm\:block{
     display: block;
   }
+  
   .sm\:max-w-3xl{
     max-width: 48rem;
   }
@@ -2939,6 +3243,13 @@ details.collapse summary::-webkit-details-marker{
   .sm\:leading-7{
     line-height: 1.75rem;
   }
+  .sm\:hidden{
+    display: none;
+  }
+
+.sm\:justify-between{
+justify-content: space-between;
+}
 }
 @media (min-width: 768px){
   .md\:col-span-1{
@@ -2946,6 +3257,9 @@ details.collapse summary::-webkit-details-marker{
   }
   .md\:col-span-2{
     grid-column: span 2 / span 2;
+  }
+  .md\:col-span-3{
+    grid-column: span 3 / span 3;
   }
   .md\:col-span-4{
     grid-column: span 4 / span 4;
@@ -2958,6 +3272,12 @@ details.collapse summary::-webkit-details-marker{
   }
   .md\:col-span-7{
     grid-column: span 7 / span 7;
+  }
+  .md\:col-span-8{
+    grid-column: span 8 / span 8;
+  }
+  .md\:col-span-9{
+    grid-column: span 9 / span 9;
   }
   .md\:mb-0{
     margin-bottom: 0px;

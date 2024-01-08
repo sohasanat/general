@@ -144,7 +144,7 @@
                 <div class="mb-4">
                                   <div class="w-22">
                     <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
-                    <img class="object-cover w-full rounded-xl" src="../assets/images/logomain2.svg" alt="">
+                    <img class="object-cover w-full" src="../assets/images/logomain.svg" alt="">
                     </a>
                 </div>
                 </div>

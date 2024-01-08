@@ -58,7 +58,7 @@
             </div>
             <div class="mr-2 gap-2 flex flex-col ">
               <h2 class="font-YekanBakh-Bold text-base">{{$jobs->title}}</h2></a>
-              <p class="text-center">{{$jobs->Description}}</p>
+              <p>{{$jobs->Description}}</p>
             </div>
           </div>
           <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-lg">

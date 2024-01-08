@@ -66,18 +66,24 @@
             </div>
           </div>
         </div>
-        <div class="rounded-lg mb-12 order">
-          <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟!&nbsp; &nbsp; بــخــرش</h3>
-          <img src="../assets/images/arrow.svg" alt="">
+        <div class="rounded-lg  mb-12 order flex-wrap gap-2 justify-center sm:justify-between">
+          <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟! </h3>
+          <img class="hidden sm:block" src="../assets/images/arrow.svg" alt="">
 
-          <a href="{{$productsvar->link  }}" class="w-auto inline-block py-2 px-7 rounded-full bg-green text-white font-YekanBakh-SemiBold rounded-lg">خرید محصول</a>
+          <a href="{{$productsvar->link  }}" class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg">خرید محصول</a>
 
         </div>
-        <div class="leading-8 mb-12">
-
+        <div class="leading-8 mb-12 box-border min-h">
+        <div class="p-2 mb-4">
+                        <div class="flex justify-between gap-2 flex-wrap">
+                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab1')">توضیحات</button>
+                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab2')">نگارش‌ها</button>
+                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab3')">نظرات</button>
+                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab4')">داستان موفقیت</button>
+                        </div>
+                      </div>
           <!-- Tab Content -->
-          <div class="p-4 pb-8  rounded-lg">
-            <h2 class="font-YekanBakh-ExtraBold text-2xl mb-4 text-center">توضیحات</h2>
+          <div id="tab1" class="tab-content p-4 pb-8  rounded-lg">
             <p>
               {{$productsvar->longDescreption}}
             <ul>
@@ -93,15 +99,14 @@
             </ul>
             </p>
           </div>
-          <div class="  rounded-lg">
-            <h2 class="font-YekanBakh-ExtraBold text-2xl mb-4 text-center">اطلاعات بیشتر</h2>
+          <div id="tab2" class="tab-content p-4 pb-8  rounded-lg">
             <div class="grid gap-4">
 
               @foreach($informationvar as $infovar)
-              <div class="bg-orange-200 rounded-lg flex items-center">
-                <div class="bg-stone-900 text-white rounded-lg p-4 icongreen w-13">
+              <div class=" rounded-lg flex items-center">
+                <div class="p-2 rounded-lg flex justify-center items-center icongreen w-8 h-8">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.375 26.563">
-                    <path id="_2175555261690015850" data-name="2175555261690015850" d="M39.8,12.405a2.292,2.292,0,0,1,3.271,0,2.366,2.366,0,0,1,.033,3.281L24.626,37.53a.79.79,0,0,1-.057.064,2.291,2.291,0,0,1-3.271,0L10.052,26.2a2.366,2.366,0,0,1,0-3.315,2.292,2.292,0,0,1,3.271,0l9.54,9.667L39.74,12.475A.771.771,0,0,1,39.8,12.405Z" transform="translate(-9.375 -11.719)" fill="#fff" />
+                    <path id="_2175555261690015850" data-name="2175555261690015850" d="M39.8,12.405a2.292,2.292,0,0,1,3.271,0,2.366,2.366,0,0,1,.033,3.281L24.626,37.53a.79.79,0,0,1-.057.064,2.291,2.291,0,0,1-3.271,0L10.052,26.2a2.366,2.366,0,0,1,0-3.315,2.292,2.292,0,0,1,3.271,0l9.54,9.667L39.74,12.475A.771.771,0,0,1,39.8,12.405Z" transform="translate(-9.375 -11.719)" fill="#d13c41" />
                   </svg>
 
                 </div>
@@ -116,7 +121,24 @@
 
             </div>
           </div>
+          <div id="tab3" class="tab-content p-4 pb-8  rounded-lg">
+            <p class="text-center rounded-2xl p-4">نظری برای این محصول ثبت نشده است</p>
+          <div>
+          <div class="flex items-center mb-4">
 
+            <div class="mr-2">
+              <span class="font-IRANSansWeb_Bold rounded-full py-1 font-YekanBakh-SemiBold">نظر شما</span>
+            </div>
+          </div>
+          <textarea class="textarea textarea-bordered w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
+          <button class="btn bg-stone-800 w-36 hover:bg-stone-900 text-white mt-4 rounded-full">ارسال پیام</button>
+        </div>
+          </div>
+          <div id="tab4" class="tab-content p-4 pb-8  rounded-lg">
+          <p class="text-center rounded-2xl p-4">
+          داستان موفقیتی برای این محصول ایجاد نشده است
+</p>
+          </div>
         </div>
         <?php
         if (count($reltionproductsvar) != 1) {
@@ -162,16 +184,7 @@
         <?php
         }
         ?>
-        <div>
-          <div class="flex items-center mb-6">
 
-            <div class="mr-2">
-              <span class="font-IRANSansWeb_Bold rounded-full py-1 font-YekanBakh-SemiBold">نظرات</span>
-            </div>
-          </div>
-          <textarea class="textarea textarea-bordered w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
-          <button class="btn bg-stone-800 w-36 hover:bg-stone-900 text-white mt-4 rounded-full">ارسال پیام</button>
-        </div>
       </div>
 
     </div>

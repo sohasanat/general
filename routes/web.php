@@ -41,26 +41,24 @@ Route::get('/about-us', [aboutus_contrller::class, 'aboutus'])->name('aboutus.us
 
 //وبلاگ
 Route::get('/blog-all', [blogController::class, 'blogall'])->name('blog.all');
-
+Route::get('/blogList', [blogController::class, 'bloglist'])->name('blog.list');
+Route::get('/editBlog/{id}', [blogController::class, 'editblog'])->name('blog.edit');
 
 Route::get('/404', function () {
     return view('404');
 });
-//Route::get('/about-us', function () {
-//    return view('about-us');
-//});
+
 Route::get('/blog-2', function () {
     return view('blog-2');
 });
 Route::get('/blog', function () {
     return view('blog');
 });
-//Route::get('/contact-us', function () {
-//    return view('contact-us');
-//});//**** */
+
 Route::get('/faq', function () {
     return view('faq');
 });
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -68,27 +66,24 @@ Route::get('/login', function () {
 Route::get('/lost-password', function () {
     return view('lost-password');
 });
+
 Route::get('/manager', function () {
     return view('manager');
 });
+
 Route::get('/project', function () {
     return view('project');
 });
-//Route::get('/products', function () {
-//   return view('products');
-//});
+
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
+
 Route::get('/single-page', function () {
     return view('single-page');
 });
-//Route::get('/single-product', function () {
-//    return view('single-product');
-//});
-//Route::get('/job', function () {
-//    return view('job');
-//});//**** */
-//Route::get('/detail-job', function () {
-//    return view('detail-job');
-//});//**** */
+
+Route::get('/createBlog', function () {
+    return view('createBlog');
+});
+
