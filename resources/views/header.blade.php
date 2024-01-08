@@ -7,7 +7,7 @@
                         <div class="drawer-content">
                             <!-- Page content here -->
                             <label for="my-drawer" class="drawer-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-black swap-off fill-current">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-gray swap-off fill-current">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                 </svg>
                             </label>
@@ -29,6 +29,7 @@
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.all') }}"> وبلاگ</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="login"> ورود | ثبت نام</a></li>
                                 <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.list') }}"> cms</a></li> -->
 
                             </ul>
@@ -45,18 +46,18 @@
                 </div>
                 <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal text-white">
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('main.company') }}">صفحه اصلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.all') }}">وبلاگ</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('main.company') }}">صفحه اصلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('blog.all') }}">وبلاگ</a></li>
                         <!-- <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.list') }}"> cms</a></li> -->
 
 
                     </ul>
                 </div>
-                <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full">
+                <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full hidden sm:block">
                     <a href="login" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
                 </div>
 
