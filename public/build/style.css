@@ -524,7 +524,7 @@ gap:3rem;
   background-color: #F5F5F5;
 }
 .lightGreen2{
-  background-color: #ebebeb;
+  background-color: #f5f5f5;
   
 }
 .lightGreen3{
@@ -2705,7 +2705,7 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-t{
-  background: linear-gradient(0deg, #ebebeb 0%, rgba(45,253,83,0.0032387955182072714) 100%);
+  background: linear-gradient(0deg, #f5f5f5 0%, rgba(45,253,83,0.0032387955182072714) 100%);
 }
 .from-gray-800{
   --tw-gradient-from: #1f2937 var(--tw-gradient-from-position);
