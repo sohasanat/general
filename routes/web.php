@@ -40,7 +40,7 @@ Route::get('/single-product/{id}', [Products_contrller::class, 'productdetails']
 Route::get('/about-us', [aboutus_contrller::class, 'aboutus'])->name('aboutus.us');
 
 //وبلاگ
-Route::get('/blog-all', [blogController::class, 'blogall'])->name('blog.all');
+Route::get('/blog-all', [blogController::class, 'blogallmain'])->name('blogall.main');
 Route::get('/blogList', [blogController::class, 'bloglist'])->name('blog.list');
 Route::get('/editBlog/{id}', [blogController::class, 'editblog'])->name('blog.edit');
 
@@ -86,4 +86,3 @@ Route::get('/single-page', function () {
 Route::get('/createBlog', function () {
     return view('createBlog');
 });
-

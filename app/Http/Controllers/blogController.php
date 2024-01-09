@@ -7,10 +7,11 @@ use App\Models\blog_model;
 
 class blogController extends Controller
 {
-    public function blogall()
+
+    public function blogallmain()
     {
-        $blogvar = blog_model::all();
-        return view('blog', compact('blogvar'));
+        $blogvarall = blog_model::all();
+        return view('blog', compact('blogvarall'));
     }
     public function bloglist()
     {

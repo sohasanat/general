@@ -28,7 +28,7 @@
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.all') }}"> وبلاگ</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blogall.main') }}"> وبلاگ</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="login"> ورود | ثبت نام</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.list') }}"> cms</a></li>
 
@@ -51,7 +51,7 @@
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('blog.all') }}">وبلاگ</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('blogall.main') }}">وبلاگ</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.list') }}"> cms</a></li>
 
 
