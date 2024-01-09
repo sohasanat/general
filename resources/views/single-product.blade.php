@@ -159,7 +159,7 @@
                 ?>
                   <div class="swiper-slide">
                     <div class="group/item">
-                      <a href="{{ route('product.details', $relproduts->id) }}" class="bg-white w-full displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                      <a href="{{ route('product.details', $relproduts->id) }}" class="bg-white border-1p w-full displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
                         <div class="w-10 mb-4">
                           <img src="{{$relproduts->logo}}" alt="">
                         </div>

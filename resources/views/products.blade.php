@@ -160,7 +160,7 @@
 
 @foreach($allproductsvar as $produts)
 
-<a href="{{ route('product.details', $produts->id) }}" class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform product-show">
+<a href="{{ route('product.details', $produts->id) }}" class="bg-white border-box displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform product-show">
     <div class="w-10 mb-4">
         <img src="{{$produts->logo}}" alt="">
     </div>

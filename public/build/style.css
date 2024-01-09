@@ -524,7 +524,7 @@ gap:3rem;
   background-color: #F5F5F5;
 }
 .lightGreen2{
-  background-color: #f5f5f5;
+  background-color: #ebebeb;
   
 }
 .lightGreen3{
@@ -550,7 +550,7 @@ gap:3rem;
   border-bottom: 1px solid #252627;
 }
 .min-height-50{
-  min-height: 50vh
+  min-height: 65vh
 }
 .line3{
   width: 100%;
@@ -566,8 +566,12 @@ gap:3rem;
 }
 .box-border{
   border: 1px solid #efefef;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1rem;
+  background-color: white;
+}
+.border-1p{
+  border: 1px solid #efefef;
 }
 .gray{
   background-color: #e3e3e3;
@@ -2625,6 +2629,9 @@ details.collapse summary::-webkit-details-marker{
   border-top-width: 1px;
   border-bottom-width: 1px;
 }
+.border-box{
+  border: 1px solid #f5f5f5;
+}
 .border-b{
   border-bottom-width: 1px;
 }
@@ -2698,7 +2705,7 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-t{
-  background: linear-gradient(0deg, #f5f5f5 0%, rgba(45,253,83,0.0032387955182072714) 100%);
+  background: linear-gradient(0deg, #ebebeb 0%, rgba(45,253,83,0.0032387955182072714) 100%);
 }
 .from-gray-800{
   --tw-gradient-from: #1f2937 var(--tw-gradient-from-position);

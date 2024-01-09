@@ -51,7 +51,7 @@
 
         @foreach($jobsvar as $jobs)
 
-        <div class="bg-white rounded-lg flex items-center justify-between h-10 px-4">
+        <div class="bg-white rounded-lg flex items-center justify-between border-1p h-10 px-4">
           <div class="flex items-center">
             <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
               <img src="{{$jobs->photo}}" class="w-full" />
