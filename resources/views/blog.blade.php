@@ -53,7 +53,7 @@
 
 
 
-                @foreach($blogvar as $blog)
+                @foreach($blogvarall as $blog)
 
                 <div class="bg-white overflow-hidden rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform  shadow-lg">
                     <div class="p-6">

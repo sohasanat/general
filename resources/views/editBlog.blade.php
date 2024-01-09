@@ -1,4 +1,5 @@
-</html><!DOCTYPE html>
+</html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
 <head>
@@ -25,16 +26,17 @@
     <div class="container mx-auto max-w-screen-xl">
 
       <div class="lightGreen2 mt-4 p-6 rounded-lg ">
-        <form action="{{ route('job.request') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('blog.editsave',$blogidvar->id) }}" method="POST" enctype="multipart/form-data">
+          @csrf
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
-          <input required type="text" name="name" placeholder="نویسنده"  value="{{$blogidvar->name}}"  class="input w-full focus:outline-none placeholder:text-sm" />
+            <input required type="text" name="name" placeholder="نویسنده" value="{{$blogidvar->name}}" class="input w-full focus:outline-none placeholder:text-sm" />
 
-            <input required type="text" name="name" placeholder=" عنوان بلاگ" value="{{$blogidvar->title}}"  class="input w-full  focus:outline-none placeholder:text-sm" />
-            <img src="{{$blogidvar->photo}}" class="imgT"/>
-            <input type="file" name="myInput" value="{{$blogidvar->photo}}" accept="image/*, .pdf" required>
-            <textarea required placeholder="متن بلاگ" class="textarea w-full   focus:outline-none placeholder:text-sm">
+            <input required type="text" name="title" placeholder=" عنوان بلاگ" value="{{$blogidvar->title}}" class="input w-full  focus:outline-none placeholder:text-sm" />
+            <img src="{{$blogidvar->photo}}" class="imgT" />
+            <input type="file" name="photo" value="{{$blogidvar->photo}}" accept="image/*, .pdf" required>
+            <textarea name="Description" required placeholder="متن بلاگ" class="textarea w-full   focus:outline-none placeholder:text-sm">
             {{$blogidvar->Description}}
-</textarea>
+            </textarea>
           </div>
           <button class="btn mt-5 bg-green px-7 text-white  text-sm text-center" type="submit">ثبت تغییرات</button>
         </form>
@@ -53,4 +55,3 @@
 </body>
 
 </html>
-
