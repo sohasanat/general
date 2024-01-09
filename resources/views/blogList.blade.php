@@ -25,7 +25,7 @@
                             <h1 class="avy awg awp axv">لیست بلاگ</h1>
                         </div>
                         <div class="lh bwf bwv bzz">
-                            <button type="button" class="lu adu ajr arf arv avl awa awg bah bbn bis boy boz bpb bpk">ایجاد بلاگ</button>
+                            <button type="button" class="lu adu ajr arf arv avl awa awg bah bbn bis boy boz bpb bpk" href="">ایجاد بلاگ</button>
                         </div>
                     </div>
                     <div class="lm ma">
@@ -47,7 +47,7 @@
                                         @foreach($blogvar as $blog)
                                         <tr class="bgm">
                                             <td class="adm asc atn auc awa awe axv cgi">{{$blog->id}}</td>
-                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/slider-1.jpg" alt=""></td>
+                                            <td class="adm arf asc awa axr"><img class="imgB" src="{{$blog->photo}}" alt=""></td>
                                             <td class="adm arf asc awa axr">{{$blog->title}}</td>
                                             <td class="adm arf asc awa axr">{{$blog->name}}</td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">

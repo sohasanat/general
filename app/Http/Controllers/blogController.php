@@ -25,4 +25,22 @@ class blogController extends Controller
             return view('editBlog', compact('blogidvar'));
         }
     }
+
+    public function editsave(Request $request, $id)
+    {
+        $edit = blog_model::find($id);
+        $edit->name = $request->name;
+        $edit->title = $request->title;
+        $edit->photo = $request->photo;
+        $edit->Description = $request->Description;
+        if ($request->file('photo')) {
+            $file = $request->file('photo');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('assets/images/blogimages'), $filename);
+            $edit['photo'] = $filename;
+        }
+        $edit->push();
+        session()->flash('message', 'درخواست شما با موفقیت ثبت شد');
+        return redirect()->back();
+    }
 }

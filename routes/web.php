@@ -43,6 +43,7 @@ Route::get('/about-us', [aboutus_contrller::class, 'aboutus'])->name('aboutus.us
 Route::get('/blog-all', [blogController::class, 'blogallmain'])->name('blogall.main');
 Route::get('/blogList', [blogController::class, 'bloglist'])->name('blog.list');
 Route::get('/editBlog/{id}', [blogController::class, 'editblog'])->name('blog.edit');
+Route::post('/editBlogsave/{id}', [blogController::class, 'editsave'])->name('blog.editsave');
 
 Route::get('/404', function () {
     return view('404');
