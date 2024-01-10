@@ -12,12 +12,16 @@
                    <div class="mb-4">
                        <div class="w-22">
                            <a href="/" class="font-YekanBakh-ExtraBlack text-3xl color-green">
-                               <img class="object-cover w-full" src="../assets/images/logomain.svg" alt="">
+                               <img class="object-cover w-full" src="../assets/images/logomain2.svg" alt="">
                            </a>
                        </div>
                    </div>
-                   <p class="md:textjustify">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
-               </div>
+                   <p class="md:textjustify mb-4">هدف اصلی مجموعه شرکت های سهاصنعت، تحت لیسانس و شریک توسعه گروه همکاران سیستم اشاعه ی هوشمندی و هوش محوری و در نتیجه افزایش بهره وری در صنایعِ مختلف علی الخصوص صنایعِ بالادستی است.</p>
+               <p >
+شماره تماس:  91099120-031  |  09131862984
+               </p>
+                </div>
+
                <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 md:p-right-7 text-right">
                    <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
                    <ul>
@@ -27,12 +31,30 @@
                        <li><a href="{{ route('allproducts') }}">محصولات</a></li>
                    </ul>
                </div>
+               
                <div class="col-span-12 md:col-span-4 lg:col-span-3">
 
-                   <div class="flex items-center">
+<div class="flex flex-col gap-8">
+<div class="flex items-center justify-center">
                        <img src="../assets/images/enamad_logo.png" alt="">
                        <img src="../assets/images/samandehi_logo.png" alt="">
                    </div>
+                   <div class="flex gap-2 flex-wrap justify-center">
+                   <a class="socialicon cursor-pointer">
+                   <img class="w-full" src="../assets/images/instagram.svg" alt="">
+                   </a>
+                   <a class="socialicon cursor-pointer">
+                   <img class="w-full" src="../assets/images/aparat.svg" alt="">
+</a>
+<a class="socialicon cursor-pointer">
+<img class="w-full" src="../assets/images/youtube.svg" alt="">
+</a>
+<a class="socialicon cursor-pointer">
+<img class="w-full" src="../assets/images/linkedin.svg" alt="">
+</a>
+
+                   </div>
+</div>
                </div>
            </div>
        </div>

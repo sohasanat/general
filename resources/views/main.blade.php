@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden col-span-12 lg:col-span-7 order-1 lg:order-2  sm:block">
+                <div class="hidden col-span-12 lg:col-span-7 order-1 lg:order-2  sm:block " id="slidershow">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
 
@@ -62,8 +62,8 @@
                             </div>
 
                         </div>
-                        <div class="swiper-button-next after:text-2xl after:text-stone-900 mx-2 p-6"></div>
-                        <div class="swiper-button-prev after:text-2xl after:text-stone-900 mx-2 p-6"></div>
+                        <div class="swiper-button-next after:text-2xl after:text-stone-900 mx-2 p-6 arrowslid" style="display: none;"></div>
+                        <div class="swiper-button-prev after:text-2xl after:text-stone-900 mx-2 p-6 arrowslid" style="display: none;"></div>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
                 @foreach($companyvar as $company)
-                <div class="bg-white displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
+                <div class="bg-white displayflex border-1p p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform">
                     <div class="w-10 mb-4">
                         <img src="{{$company->logo}}" alt="">
                     </div>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="grid grid-cols-3 sm:grid-cols-3 gap-4">
                     <!-- image - start -->
-                    <div class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:h-72 green">
+                    <div class="group relative border-1p flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:h-72 green">
                         <img src="../assets/images/rah1.svg" loading="lazy" alt="Photo by Minh Pham" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
 
                         <div class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
@@ -129,7 +129,7 @@
                     <!-- image - end -->
 
                     <!-- image - start -->
-                    <div class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:col-span-2 md:h-72 green">
+                    <div class="group relative border-1p flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:col-span-2 md:h-72 green">
                         <img src="../assets/images/bi2.svg" loading="lazy" alt="Photo by Magicle" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
 
                         <div class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
@@ -141,7 +141,7 @@
                     <!-- image - end -->
 
                     <!-- image - start -->
-                    <div class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg  shadow-lg md:col-span-2 md:h-72 green">
+                    <div class="group relative border-1p flex justify-center h-48 items-end overflow-hidden rounded-lg  shadow-lg md:col-span-2 md:h-72 green">
                         <img src="../assets/images/product3.svg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
 
                         <div class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
@@ -154,7 +154,7 @@
                     <!-- image - end -->
 
                     <!-- image - start -->
-                    <div class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:h-72 green">
+                    <div class="group relative flex border-1p justify-center h-48 items-end overflow-hidden rounded-lg shadow-lg md:h-72 green">
                         <img src="../assets/images/st4.svg" class="absolute h-full object-center transition duration-300 group-hover:scale-110" />
 
                         <div class="pointer-events-none absolute inset-0 from-gray-800 via-transparent to-transparent opacity-50">
@@ -195,7 +195,7 @@
                     <div class="swiper customer">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="bg-white p-6 leading-8 rounded-3xl">
+                                <div class="bg-white p-6 leading-8 rounded-3xl border-1p">
                                     <div class="flex items-center mb-4">
                                         <div class="avatar ml-4">
                                             <div class="w-20 rounded-full">
@@ -387,6 +387,11 @@
 
     <script src="{{asset('node_modules/swiper/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('src/js/main.js')}}"></script>
+    <script>
+
+
+
+    </script>
 </body>
 
 </html>

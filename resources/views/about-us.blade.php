@@ -127,7 +127,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 @foreach($allmembers as $members)
 
-                <div class="bg-white displayflex p-6 rounded-3xl gap-2 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
+                <div class="bg-white border-1p displayflex p-6 rounded-3xl gap-2 transform hover:-translate-y-1 duration-300 transition-transform cursor-pointer">
                     <div class=" mb-4 w-32">
                         <img class="rounded-2xl" src="{{$members->photo}}" alt="SVG Image">
                     </div>
