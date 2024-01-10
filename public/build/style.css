@@ -2551,9 +2551,7 @@ details.collapse summary::-webkit-details-marker{
 .max-w-2xl{
   max-width: 42rem;
 }
-.max-w-4xl{
-  max-width: 56rem;
-}
+
 .max-w-md{
   max-width: 28rem;
 }
