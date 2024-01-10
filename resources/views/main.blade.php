@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden col-span-12 lg:col-span-7 order-1 lg:order-2  sm:block">
+                <div class="hidden col-span-12 lg:col-span-7 order-1 lg:order-2  sm:block " id="slidershow">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             
@@ -62,8 +62,8 @@
                             </div>
 
                         </div>
-                        <div class="swiper-button-next after:text-2xl after:text-stone-900 mx-2 p-6"></div>
-                        <div class="swiper-button-prev after:text-2xl after:text-stone-900 mx-2 p-6"></div>
+                        <div class="swiper-button-next after:text-2xl after:text-stone-900 mx-2 p-6 arrowslid" style="display: none;"></div>
+                        <div class="swiper-button-prev after:text-2xl after:text-stone-900 mx-2 p-6 arrowslid" style="display: none;"></div>
                     </div>
                 </div>
             </div>
@@ -455,6 +455,11 @@
 
     <script src="{{asset('node_modules/swiper/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('src/js/main.js')}}"></script>
+    <script>
+
+
+
+    </script>
 </body>
 
 </html>

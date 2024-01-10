@@ -19,6 +19,52 @@
 
   <!--endheader-->
   <section class="px-4 mb-24">
+<!-- moshavere-->
+  <div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center" id="modalProduct2">
+    <div class="px-6 flex flex-wrap gap-8 modalProduct p-10">
+        <button class="absolute top-1 left-1 close-modal w-6" id="closemode2">
+          <img class="w-full" src="../assets/images/close.svg" alt="">
+        </button>
+      <div>
+        <p class="font-YekanBakh-Bold text-base mb-2">ایمیــل:</p>
+        <a class="text-orange-500 leading-relaxed">info@sohasanat.net</a>
+      </div>
+      <div>
+        <p class="font-YekanBakh-Bold text-base mb-2">تمـاس:</p>
+        <p class="leading-relaxed">031-91099120 | 09131862984</p>
+      </div>
+    </div>
+  </div>
+
+<!-- demo-->
+<div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center" id="modalProduct1">
+    <div class="px-6 flex flex-col gap-2 modalProduct p-10">
+        <button class="absolute top-1 left-1 close-modal w-6" id="closemode1">
+          <img class="w-full" src="../assets/images/close.svg" alt="">
+        </button>
+        <input required type="text"  placeholder="نام و نام‌خانوادگی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+        <input required type="text"  placeholder="شماره تماس:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+        <input required type="text"  placeholder="شرکت:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+        <input required type="text"  placeholder="سمت شغلی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+        <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class=" border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+        <div>
+          <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" id="cat-35">
+          <label for="cat-35"> درخواست دمو </label>
+        </div>
+        <div>
+          <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" id="cat-38">
+          <label for="cat-38"> درخواست بروشور </label> 
+        </div>
+        <button class="btn bg-stone-800 hover:bg-stone-900 text-white mt-4 rounded-full w-full">ثبت درخواست </button>
+  
+
+            
+    </div>
+  </div>
+
+
+
+
     <div class="container mx-auto max-w-screen-xl">
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
@@ -70,7 +116,11 @@
           <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟! </h3>
           <img class="hidden sm:block" src="../assets/images/arrow.svg" alt="">
 
-          <a href="{{$productsvar->link  }}" class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg">خرید محصول</a>
+          <div class="flex flex-wrap gap-4">
+  <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg " id="btn-modal1">درخواست دمو / بروشور</button>
+          <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg" id="btn-modal2">مشاوره</button>
+  </div>
+
 
         </div>
         <div class="leading-8 mb-12 box-border min-h">
@@ -130,7 +180,9 @@
               <span class="font-IRANSansWeb_Bold rounded-full py-1 font-YekanBakh-SemiBold">نظر شما</span>
             </div>
           </div>
-          <textarea class="textarea textarea-bordered w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
+          <input required type="text" name="name" placeholder="نام:" class="border-box mb-5 input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required type="email" name="email" placeholder="ایمیل:" class=" border-box mb-5 input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <textarea  class="textarea border-box mb-5 w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
           <button class="btn bg-stone-800 w-36 hover:bg-stone-900 text-white mt-4 rounded-full">ارسال پیام</button>
         </div>
           </div>
@@ -202,7 +254,6 @@
     const images = document.getElementsByClassName("images")
     Array.from(images).forEach((element) => {
       element.addEventListener("click", () => {
-        console.log("ms vbxmc vmnc")
         const src = element.getAttribute("src")
         document.querySelector(".image-modal").style.display = "flex"
         document.querySelector(".big-image").setAttribute("src", src)
@@ -212,6 +263,28 @@
     document.querySelector(".close-modal").addEventListener("click", () => {
       document.querySelector(".image-modal").style.display = "none"
     })
+
+
+        
+const btnmodal2 = document.getElementById("btn-modal2")
+      btnmodal2.addEventListener("click", () => {
+        document.getElementById("modalProduct2").style.display = "flex"
+        
+      })
+      document.getElementById("closemode2").addEventListener("click", () => {
+        document.getElementById("modalProduct2").style.display = "none"
+    })
+        
+          
+    const btnmodal1 = document.getElementById("btn-modal1")
+      btnmodal1.addEventListener("click", () => {
+
+        document.getElementById("modalProduct1").style.display = "flex"
+      })
+      document.getElementById("closemode1").addEventListener("click", () => {
+        document.getElementById("modalProduct1").style.display = "none"
+    })
+   
   </script>
 </body>
 

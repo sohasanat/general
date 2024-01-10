@@ -167,3 +167,18 @@ for (let checkBox of checkBoxs) {
   })
 }
 
+
+//slider
+let slidershow=document.getElementById("slidershow");
+let arrowslid=document.getElementsByClassName("arrowslid");
+slidershow.addEventListener("mouseenter",()=>{
+  Array.from(arrowslid).forEach((element) => {
+    element.style.display = "block";
+  }) 
+})
+
+slidershow.addEventListener("mouseleave",()=>{
+  Array.from(arrowslid).forEach((element) => {
+    element.style.display = "none";
+  }) 
+})

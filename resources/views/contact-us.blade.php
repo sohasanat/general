@@ -60,7 +60,15 @@
                             <form action="{{ route('connect.us.comment') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-control w-full flex flex-col gap-y-5">
-                                    <input required type="text" name="title" placeholder="موضوع پیام" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
+<div class="custom-select">
+<select required name="form_fields[name]" id="form-field-name" class="input w-full rounded-full focus:outline-none placeholder:text-sm" required="required" aria-required="true">
+                                    <option value="یک مورد انتخاب کنید">موضوع پیام</option>
+                                    <option value="پیشنهاد">پیشنهاد</option><option value="انتقاد">انتقاد</option>
+                                    <option value="شکایت">شکایت</option>
+                                    <option value="پیگیری">پیگیری</option>
+                                    <option value="سایر">سایر</option>
+</select>
+</div>
                                     <input required type="email" name="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
                                     <textarea class="textarea w-full h-32 rounded-3xl focus:outline-none placeholder:text-sm" name="Description" placeholder="متن پیام را بنویسید..."></textarea>
                                     <button class="btn bg-stone-800 w-32 hover:bg-stone-900 text-white rounded-full text-sm">ارسال پیام</button>
@@ -68,8 +76,8 @@
                             </form>
                         </div>
                         <div class="lg:w-2/3 md:w-1/2 rounded-3xl overflow-hidden sm:mr-10 p-10 hidden md:flex items-end justify-start relative">
-                            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" style="filter: contrast(1.2) opacity(0.7);" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1258.3920220984826!2d51.70158335846726!3d32.64603791291042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1703419123037!5m2!1sen!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="bg-white relative flex flex-wrap py-6 rounded-2xl mx-8">
+                            <iframe width="100%" height="100%" class="absolute border-1p inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" style="filter: opacity(0.7);" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1258.3920220984826!2d51.70158335846726!3d32.64603791291042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1703419123037!5m2!1sen!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="bg-white relative flex flex-wrap py-6 rounded-2xl mx-8 border-1p">
                                 <div class="lg:w-1/2 px-6">
                                     <p class="font-YekanBakh-Bold text-base mb-2">مکـــان:</p>
                                     <p class="mb-4 text-xs leading-6">اصفهان - خیابان 22بهمن - روبه‌روی بانک سپه - پلاک 205</p>

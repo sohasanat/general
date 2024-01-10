@@ -55,45 +55,45 @@
 <div class="w-full box-border mb-2">
 <p class="mb-6 p-filter">حوزه فعالیت</p>
 
-<ul class="leading-10">
+<ul class="overflow-h leading-10">
         <li>
-            <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Kotlin" id="cat-35">
+            <input type="checkbox" name="categories1"  class="formInput ml-4" value="Kotlin" id="cat-35">
           <label for="cat-35"> انبار و تدارکات </label>
         </li>
         
         <li>
             
-            <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Ionic" id="cat-38">
+            <input type="checkbox" name="categories1"  class="formInput ml-4" value="Ionic" id="cat-38">
              <label for="cat-38"> پخش </label>
             
         </li>
         <li>
-                <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Android" id="cat-40">
+                <input type="checkbox" name="categories1"  class="formInput ml-4" value="Android" id="cat-40">
                  <label for="cat-40"> خرده فروشی </label>
                 </li>
         <li>
-                    <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Cordova" id="cat-44">
+                    <input type="checkbox" name="categories1"  class="formInput ml-4" value="Cordova" id="cat-44">
                      <label for="cat-44"> سرمایه انسانی </label>
                     </li>
                     <li>
-                        <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="PWA" id="cat-52">
+                        <input type="checkbox" name="categories1"  class="formInput ml-4" value="PWA" id="cat-52">
                          <label for="cat-52"> عمومی و زیرساخت </label>
                         </li>
                         <li>
-                            <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Dart" id="cat-66">
+                            <input type="checkbox" name="categories1"  class="formInput ml-4" value="Dart" id="cat-66">
                              <label for="cat-66"> فروش و خدمات </label>
                             </li>
                             <li>
-                                <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Flutter" id="cat-67">
+                                <input type="checkbox" name="categories1"  class="formInput ml-4" value="Flutter" id="cat-67">
                                  <label for="cat-67"> مالی و حسابداری </label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="MAUI" id="cat-2099">
+                                    <input type="checkbox" name="categories1"  class="formInput ml-4" value="MAUI" id="cat-2099">
                                      <label for="cat-2099"> مدیریت پروژه </label>
                                     
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Swift" id="cat-2100">
+                                        <input type="checkbox" name="categories1"  class="formInput ml-4" value="Swift" id="cat-2100">
                                         
                                          <label for="cat-2100"> مدیریت کارخانه </label>
                                         </li>
@@ -103,40 +103,40 @@
 <p class="mb-6 p-filter">صنعت</p>
 
 
-<ul class="leading-10">
+<ul class="overflow-h leading-10">
         <li>
-            <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Kotlin" id="cat-35">
+            <input type="checkbox" name="categories1"  class="formInput ml-4" value="Kotlin" id="cat-35">
           <label for="cat-35"> آب و فاضلاب </label>
         </li>
         
         <li>
             
-            <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Ionic" id="cat-38">
+            <input type="checkbox" name="categories1"  class="formInput ml-4" value="Ionic" id="cat-38">
              <label for="cat-38"> آشامیدنی </label>
             
             </li>
             <li>
-                <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Android" id="cat-40">
+                <input type="checkbox" name="categories1"  class="formInput ml-4" value="Android" id="cat-40">
                  <label for="cat-40"> آموزش </label>
                 </li>
                 <li>
-                    <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Cordova" id="cat-44">
+                    <input type="checkbox" name="categories1"  class="formInput ml-4" value="Cordova" id="cat-44">
                      <label for="cat-44"> استخدام و کاریابی </label>
                     </li>
                     <li>
-                        <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="PWA" id="cat-52">
+                        <input type="checkbox" name="categories1"  class="formInput ml-4" value="PWA" id="cat-52">
                          <label for="cat-52"> استخراج نفت خام و گاز طبیعی </label>
                         </li>
                         <li>
-                            <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Dart" id="cat-66">
+                            <input type="checkbox" name="categories1"  class="formInput ml-4" value="Dart" id="cat-66">
                              <label for="cat-66"> استخراج و بهره برداری از معادن </label>
                             </li>
                             <li>
-                                <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="Flutter" id="cat-67">
+                                <input type="checkbox" name="categories1"  class="formInput ml-4" value="Flutter" id="cat-67">
                                  <label for="cat-67"> الکترونیک و سخت افزار رایانه </label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" value="MAUI" id="cat-2099">
+                                    <input type="checkbox" name="categories1"  class="formInput ml-4" value="MAUI" id="cat-2099">
                                      <label for="cat-2099"> انجمن ها و موسسات خیریه </label>
                                     
                                     </li>
