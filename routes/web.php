@@ -44,6 +44,10 @@ Route::get('/blog-all', [blogController::class, 'blogallmain'])->name('blogall.m
 Route::get('/blogList', [blogController::class, 'bloglist'])->name('blog.list');
 Route::get('/editBlog/{id}', [blogController::class, 'editblog'])->name('blog.edit');
 Route::post('/editBlogsave/{id}', [blogController::class, 'editsave'])->name('blog.editsave');
+Route::post('/Blogsave', [blogController::class, 'blogsave'])->name('blog.save');
+Route::get('/Blogcreate', [blogController::class, 'blogcreate'])->name('blog.create');
+Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name('blog.delete');
+
 
 Route::get('/404', function () {
     return view('404');

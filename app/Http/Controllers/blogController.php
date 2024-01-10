@@ -40,7 +40,39 @@ class blogController extends Controller
             $edit['photo'] = $filename;
         }
         $edit->push();
-        session()->flash('message', 'درخواست شما با موفقیت ثبت شد');
+        session()->flash('message', 'تغییرات وبلاگ شما با موفقیت ثبت شد');
+        return redirect()->back();
+    }
+    public function blogsave(Request $request)
+    {
+        $saveblog = new blog_model;
+        $saveblog->name = $request->name;
+        $saveblog->title = $request->title;
+        $saveblog->photo = $request->photo;
+        $saveblog->Description = $request->Description;
+        if ($request->file('photo')) {
+            $file = $request->file('photo');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('assets/images/blogimages'), $filename);
+            $saveblog['photo'] = $filename;
+        }
+        $saveblog->save();
+        session()->flash('message', ' وبلاگ شما با موفقیت ثبت شد');
+        return redirect()->back();
+    }
+
+    public function blogcreate()
+    {
+        return view('createBlog');
+    }
+
+
+    public function blogdelete($id)
+    {
+
+        $deleteblog = blog_model::find($id);
+        $deleteblog->delete();
+        session()->flash('message', 'وبلاگ شما با موفقیت حذف شد');
         return redirect()->back();
     }
 }

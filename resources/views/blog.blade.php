@@ -60,7 +60,7 @@
                         <div class="flex items-center mb-4 border-b border-dashed pb-4">
                             <div class="avatar ml-2">
                                 <div class="w-14 rounded-full">
-                                    <img src="{{$blog->photo}}" />
+                                    <img src="../assets/images/blogimages/{{$blog->photo}}" />
                                 </div>
                             </div>
                             <div class="flex flex-col mt-1">
