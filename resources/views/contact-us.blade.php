@@ -60,15 +60,16 @@
                             <form action="{{ route('connect.us.comment') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-control w-full flex flex-col gap-y-5">
-<div class="custom-select">
-<select required name="form_fields[name]" id="form-field-name" class="input w-full rounded-full focus:outline-none placeholder:text-sm" required="required" aria-required="true">
-                                    <option value="یک مورد انتخاب کنید">موضوع پیام</option>
-                                    <option value="پیشنهاد">پیشنهاد</option><option value="انتقاد">انتقاد</option>
-                                    <option value="شکایت">شکایت</option>
-                                    <option value="پیگیری">پیگیری</option>
-                                    <option value="سایر">سایر</option>
-</select>
-</div>
+                                    <div class="custom-select">
+                                        <select required name="title" id="form-field-name" class="input w-full rounded-full focus:outline-none placeholder:text-sm" required="required" aria-required="true">
+                                            <option value="یک مورد انتخاب کنید">موضوع پیام</option>
+                                            <option value="پیشنهاد">پیشنهاد</option>
+                                            <option value="انتقاد">انتقاد</option>
+                                            <option value="شکایت">شکایت</option>
+                                            <option value="پیگیری">پیگیری</option>
+                                            <option value="سایر">سایر</option>
+                                        </select>
+                                    </div>
                                     <input required type="email" name="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
                                     <textarea class="textarea w-full h-32 rounded-3xl focus:outline-none placeholder:text-sm" name="Description" placeholder="متن پیام را بنویسید..."></textarea>
                                     <button class="btn bg-stone-800 w-32 hover:bg-stone-900 text-white rounded-full text-sm">ارسال پیام</button>

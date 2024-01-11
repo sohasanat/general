@@ -95,7 +95,7 @@
 
       </div>
       <div class="lightGreen2 mt-4 p-6 rounded-lg ">
-        <form action="{{ route('job.request') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('product.comment') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <input type="hidden" name="param_name" value="{{ $jobsdetails->id}}">
           <div class="text-base leading-6 text-gray-700 sm:text-lg sm:leading-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
