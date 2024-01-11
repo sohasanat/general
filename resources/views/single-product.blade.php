@@ -19,48 +19,50 @@
 
   <!--endheader-->
   <section class="px-4 mb-24">
-<!-- moshavere-->
-  <div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center" id="modalProduct2">
-    <div class="px-6 flex flex-wrap gap-8 modalProduct p-10">
+    <!-- moshavere-->
+    <div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center" id="modalProduct2">
+      <div class="px-6 flex flex-wrap gap-8 modalProduct p-10">
         <button class="absolute top-1 left-1 close-modal w-6" id="closemode2">
           <img class="w-full" src="../assets/images/close.svg" alt="">
         </button>
-      <div>
-        <p class="font-YekanBakh-Bold text-base mb-2">ایمیــل:</p>
-        <a class="text-orange-500 leading-relaxed">info@sohasanat.net</a>
-      </div>
-      <div>
-        <p class="font-YekanBakh-Bold text-base mb-2">تمـاس:</p>
-        <p class="leading-relaxed">031-91099120 | 09131862984</p>
+        <div>
+          <p class="font-YekanBakh-Bold text-base mb-2">ایمیــل:</p>
+          <a class="text-orange-500 leading-relaxed">info@sohasanat.net</a>
+        </div>
+        <div>
+          <p class="font-YekanBakh-Bold text-base mb-2">تمـاس:</p>
+          <p class="leading-relaxed">031-91099120 | 09131862984</p>
+        </div>
       </div>
     </div>
-  </div>
 
-<!-- demo-->
-<div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center" id="modalProduct1">
-    <div class="px-6 flex flex-col gap-2 modalProduct p-10">
+    <!-- demo-->
+    <div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center" id="modalProduct1">
+      <div class="px-6 flex flex-col gap-2 modalProduct p-10">
         <button class="absolute top-1 left-1 close-modal w-6" id="closemode1">
           <img class="w-full" src="../assets/images/close.svg" alt="">
         </button>
-        <input required type="text"  placeholder="نام و نام‌خانوادگی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-        <input required type="text"  placeholder="شماره تماس:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-        <input required type="text"  placeholder="شرکت:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-        <input required type="text"  placeholder="سمت شغلی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-        <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class=" border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-        <div>
-          <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" id="cat-35">
-          <label for="cat-35"> درخواست دمو </label>
-        </div>
-        <div>
-          <input type="checkbox" name="categories1" value="zahra" class="formInput ml-4" id="cat-38">
-          <label for="cat-38"> درخواست بروشور </label> 
-        </div>
-        <button class="btn bg-stone-800 hover:bg-stone-900 text-white mt-4 rounded-full w-full">ثبت درخواست </button>
-  
+        <form action="">
+          @csrf
+          <input required name="fullname" type="text" placeholder="نام و نام‌خانوادگی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="phone" type="text" placeholder="شماره تماس:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="company" type="text" placeholder="شرکت:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="post" type="text" placeholder="سمت شغلی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class=" border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <div>
+            <input type="checkbox" name="demo" value="zahra" class="formInput ml-4" id="cat-35">
+            <label for="cat-35"> درخواست دمو </label>
+          </div>
+          <div>
+            <input type="checkbox" name="broshor" value="zahra" class="formInput ml-4" id="cat-38">
+            <label for="cat-38"> درخواست بروشور </label>
+          </div>
+          <button class="btn bg-stone-800 hover:bg-stone-900 text-white mt-4 rounded-full w-full" tyoe="submit">ثبت درخواست </button>
+        </form>
 
-            
+
+      </div>
     </div>
-  </div>
 
 
 
@@ -117,21 +119,21 @@
           <img class="hidden sm:block" src="../assets/images/arrow.svg" alt="">
 
           <div class="flex flex-wrap gap-4">
-  <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg " id="btn-modal1">درخواست دمو / بروشور</button>
-          <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg" id="btn-modal2">مشاوره</button>
-  </div>
+            <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg " id="btn-modal1">درخواست دمو / بروشور</button>
+            <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg" id="btn-modal2">مشاوره</button>
+          </div>
 
 
         </div>
         <div class="leading-8 mb-12 box-border min-h">
-        <div class="p-2 mb-4">
-                        <div class="flex justify-between gap-2 flex-wrap">
-                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab1')">توضیحات</button>
-                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab2')">نگارش‌ها</button>
-                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab3')">نظرات</button>
-                          <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab4')">داستان موفقیت</button>
-                        </div>
-                      </div>
+          <div class="p-2 mb-4">
+            <div class="flex justify-between gap-2 flex-wrap">
+              <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab1')">توضیحات</button>
+              <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab2')">نگارش‌ها</button>
+              <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab3')">نظرات</button>
+              <button class="px-3 py-1 gray btn-tab tab-button" onclick="showTab('tab4')">داستان موفقیت</button>
+            </div>
+          </div>
           <!-- Tab Content -->
           <div id="tab1" class="tab-content p-4 pb-8  rounded-lg">
             <p>
@@ -173,23 +175,23 @@
           </div>
           <div id="tab3" class="tab-content p-4 pb-8  rounded-lg">
             <p class="text-center rounded-2xl p-4">نظری برای این محصول ثبت نشده است</p>
-          <div>
-          <div class="flex items-center mb-4">
+            <div>
+              <div class="flex items-center mb-4">
 
-            <div class="mr-2">
-              <span class="font-IRANSansWeb_Bold rounded-full py-1 font-YekanBakh-SemiBold">نظر شما</span>
+                <div class="mr-2">
+                  <span class="font-IRANSansWeb_Bold rounded-full py-1 font-YekanBakh-SemiBold">نظر شما</span>
+                </div>
+              </div>
+              <input required type="text" name="name" placeholder="نام:" class="border-box mb-5 input w-full rounded-full focus:outline-none placeholder:text-sm" />
+              <input required type="email" name="email" placeholder="ایمیل:" class=" border-box mb-5 input w-full rounded-full focus:outline-none placeholder:text-sm" />
+              <textarea class="textarea border-box mb-5 w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
+              <button class="btn bg-stone-800 w-36 hover:bg-stone-900 text-white mt-4 rounded-full">ارسال پیام</button>
             </div>
           </div>
-          <input required type="text" name="name" placeholder="نام:" class="border-box mb-5 input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required type="email" name="email" placeholder="ایمیل:" class=" border-box mb-5 input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <textarea  class="textarea border-box mb-5 w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
-          <button class="btn bg-stone-800 w-36 hover:bg-stone-900 text-white mt-4 rounded-full">ارسال پیام</button>
-        </div>
-          </div>
           <div id="tab4" class="tab-content p-4 pb-8  rounded-lg">
-          <p class="text-center rounded-2xl p-4">
-          داستان موفقیتی برای این محصول ایجاد نشده است
-</p>
+            <p class="text-center rounded-2xl p-4">
+              داستان موفقیتی برای این محصول ایجاد نشده است
+            </p>
           </div>
         </div>
         <?php
@@ -265,26 +267,25 @@
     })
 
 
-        
-const btnmodal2 = document.getElementById("btn-modal2")
-      btnmodal2.addEventListener("click", () => {
-        document.getElementById("modalProduct2").style.display = "flex"
-        
-      })
-      document.getElementById("closemode2").addEventListener("click", () => {
-        document.getElementById("modalProduct2").style.display = "none"
-    })
-        
-          
-    const btnmodal1 = document.getElementById("btn-modal1")
-      btnmodal1.addEventListener("click", () => {
 
-        document.getElementById("modalProduct1").style.display = "flex"
-      })
-      document.getElementById("closemode1").addEventListener("click", () => {
-        document.getElementById("modalProduct1").style.display = "none"
+    const btnmodal2 = document.getElementById("btn-modal2")
+    btnmodal2.addEventListener("click", () => {
+      document.getElementById("modalProduct2").style.display = "flex"
+
     })
-   
+    document.getElementById("closemode2").addEventListener("click", () => {
+      document.getElementById("modalProduct2").style.display = "none"
+    })
+
+
+    const btnmodal1 = document.getElementById("btn-modal1")
+    btnmodal1.addEventListener("click", () => {
+
+      document.getElementById("modalProduct1").style.display = "flex"
+    })
+    document.getElementById("closemode1").addEventListener("click", () => {
+      document.getElementById("modalProduct1").style.display = "none"
+    })
   </script>
 </body>
 
