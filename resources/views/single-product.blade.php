@@ -44,11 +44,11 @@
         </button>
         <form action="{{ route('product.demo') }}" method="POST" enctype="multipart/form-data">
           @csrf
-          <input required name="fullname" type="text" placeholder="نام و نام‌خانوادگی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required name="phone" type="text" placeholder="شماره تماس:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required name="company" type="text" placeholder="شرکت:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required name="post" type="text" placeholder="سمت شغلی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class=" border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="fullname" type="text" placeholder="نام و نام‌خانوادگی:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="phone" type="text" placeholder="شماره تماس:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="company" type="text" placeholder="شرکت:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="post" type="text" placeholder="سمت شغلی:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
           <div>
             <input type="checkbox" name="demo" value="zahra" class="formInput ml-4" id="cat-35">
             <label for="cat-35"> درخواست دمو </label>
@@ -111,7 +111,7 @@
 
       <div class="max-w-4xl mx-auto">
         <div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center image-modal">
-          <button class="absolute top-10 right-10 text-white close-modal">بستن</button>
+          <button id="closemode3" class="absolute top-10 right-10 text-white ">بستن</button>
           <img style="max-width: 90%;" src="../assets/images/imagesfra/g4.png" alt="" class="big-image">
         </div>
         <div class="mb-12">
@@ -122,7 +122,7 @@
             <div class="swiper-wrapper">
 
               @foreach($productimg as $img)
-              <div class="swiper-slide  overflow-y-h h-36">
+              <div class="swiper-slide  overflow-y-h slidr-product h-36">
                 <img class="rounded-xl cursor-pointer min-height-9 images" src="{{$img->image}}" />
               </div>
               @endforeach
@@ -282,12 +282,13 @@
       element.addEventListener("click", () => {
         const src = element.getAttribute("src")
         document.querySelector(".image-modal").style.display = "flex"
-        document.querySelector(".big-image").setAttribute("src", src)
+        document.querySelector(".big-image").setAttribute("src", src);
       })
     })
 
-    document.querySelector(".close-modal").addEventListener("click", () => {
-      document.querySelector(".image-modal").style.display = "none"
+    document.getElementById("closemode3").addEventListener("click", () => {
+      document.querySelector(".image-modal").style.display = "none";
+
     })
 
 

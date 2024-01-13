@@ -465,6 +465,12 @@ html{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.slidr-product{
+  max-height: 115px;
+  border: 1px solid rgb(225 225 225);
+  border-radius: 15px;
+  max-width: 180px;
+}
 .green{
   background-color: #F5F5F5;
 }
@@ -664,7 +670,9 @@ gap:3rem;
 }
 .modalProduct{
   justify-content: center;
-  min-width: 300px;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 10px;
   position: absolute;
   background-color: #eeeeee;
   color: rgb(41, 40, 39);
