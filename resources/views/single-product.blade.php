@@ -88,7 +88,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="#" class="inline-flex items-center">
+            <a href="{{ route('main.company') }}" class="inline-flex items-center">
               خانه
             </a>
           </li>
@@ -103,7 +103,7 @@
           </li>
         </ol>
       </nav>
-      <div class="flex flex-col items-center justify-center relative mb-8 mt-16">
+      <div class="flex flex-col items-center justify-center relative mb-12 mt-12">
         <h2 class="font-YekanBakh-ExtraBlack text-3xl">{{$productsvar->name}}</h2>
 
         <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
@@ -122,8 +122,8 @@
             <div class="swiper-wrapper">
 
               @foreach($productimg as $img)
-              <div class="swiper-slide  overflow-y-h slidr-product h-36">
-                <img class="rounded-xl cursor-pointer min-height-9 images" src="{{$img->image}}" />
+              <div class="swiper-slide slidr-product">
+                <img class="rounded-xl cursor-pointer images" src="{{$img->image}}" />
               </div>
               @endforeach
 
@@ -135,7 +135,7 @@
           <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟! </h3>
           <img class="hidden sm:block" src="../assets/images/arrow.svg" alt="">
 
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap gap-4 items-center">
             <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg " id="btn-modal1">درخواست دمو / بروشور</button>
             <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg" id="btn-modal2">مشاوره</button>
           </div>

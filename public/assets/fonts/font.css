@@ -9,7 +9,7 @@
 @font-face {
 	font-family: YekanBakh-Regular;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 200;
 	src: url('woff/YekanBakhFaNum-Regular.woff') format('woff'),   
 	url('woff2/YekanBakhFaNum-Regular.woff2') format('woff2');		 
 }
@@ -50,24 +50,18 @@
 
 @font-face {
 	font-family: sgKara-regular;
-	font-style: normal;
-	font-weight: bold;
 	src: url('woff/SG-Kara-Regular') format('woff'),   
 	url('woff2/SG-Kara-Regular.woff2') format('woff2'); 
 }
 
 @font-face {
 	font-family: sgKara-light;
-	font-style: normal;
-	font-weight: 800;
 	src: url('woff/SGKara-Light.woff') format('woff'),   
 	url('woff2/SGKara-Light.woff2') format('woff2');		 
 }
 
 @font-face {
 	font-family: sgKara-bold;
-	font-style: normal;
-	font-weight: 950;
 	src: url('woff/SG-Kara-SemiBold.woff') format('woff'),   
 	url('woff2/SG-Kara-SemiBold.woff2') format('woff2');		 
 }
