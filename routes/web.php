@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,9 @@ Route::get('/product-send', [Products_contrller::class, 'productsender'])->name(
 Route::get('/single-product/{id}', [Products_contrller::class, 'productdetails'])->name('product.details');
 Route::post('/single-product-demo', [Products_contrller::class, 'productdemo'])->name('product.demo');
 Route::post('/single-product-comment', [Products_contrller::class, 'productcomments'])->name('product.comment');
+
+Route::get('/product-serch', [Products_contrller::class, 'products'])->name('searchpro');
+Route::get('/product-fillter', [Products_contrller::class, 'productsfill'])->name('productsfilter');
 
 //درباره ی ما 
 Route::get('/about-us', [aboutus_contrller::class, 'aboutus'])->name('aboutus.us');

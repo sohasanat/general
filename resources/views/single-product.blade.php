@@ -311,6 +311,10 @@
       document.getElementById("modalProduct1").style.display = "none"
     })
   </script>
+
+
+
+
 </body>
 
 </html>
