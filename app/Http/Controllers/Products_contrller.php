@@ -99,33 +99,33 @@ class Products_contrller extends Controller
         }
     }
 
-    public function productsfill(Request $request)
-    {
-        $filloutput = '';
-        $categories = $request->input('categories');
+    //   public function productsfill(Request $request)
+    //   {
+    //      $filloutput = '';
+    //       $categories = $request->input('categories');
 
-        // Query the products based on the selected categories
-        $products = Products_model::whereIn('Grouping', $categories)->get();
-        if ($products) {
-            foreach ($products as $product) {
-                $filloutput .= '
+    // Query the products based on the selected categories
+    //      $products = Products_model::whereIn('Grouping', $categories)->get();
+    //      if ($products) {
+    //          foreach ($products as $product) {
+    //              $filloutput .= '
 
-                        <a  href="' . route('product.details', $product->id) . '" class="bg-white border-box displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform product-show">
-                        <div class="w-10 mb-4">
-                            <img src=' . $product->logo . ' alt="">
-                        </div>
-
-                        <div class="flex items-center mb-4">
-                            <h2 class="font-YekanBakh-ExtraBold text-base mr-1">' . $product->name . '</h2>
-                        </div>
-                        <div>
-                            <p class="line3">' . $product->Description . '</p>
-                        </div>
-                        </a>
-';
-            }
-            // Return the filtered products as JSON
-            return response()->json($filloutput);
-        }
-    }
+    //                       <a  href="' . route('product.details', $product->id) . '" class="bg-white border-box displayflex p-6 rounded-3xl leading-8 transform hover:-translate-y-1 duration-300 transition-transform product-show">
+    //                      <div class="w-10 mb-4">
+    //                          <img src=' . $product->logo . ' alt="">
+    //                      </div>
+    //
+    //                    <div class="flex items-center mb-4">
+    //                         <h2 class="font-YekanBakh-ExtraBold text-base mr-1">' . $product->name . '</h2>
+    //                     </div>
+    //                     <div>
+    //                         <p class="line3">' . $product->Description . '</p>
+    //                       </div>
+    //                      </a>
+    //';
+    //           }
+    // Return the filtered products as JSON
+    //            return response()->json($filloutput);
+    //        }
+    //    }
 }
