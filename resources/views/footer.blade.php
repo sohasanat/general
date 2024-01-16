@@ -36,7 +36,9 @@
 
 <div class="flex flex-col gap-8">
 <div class="flex items-center justify-center">
-                       <img src="../assets/images/enamad_logo.png" alt="">
+                       <!-- <img src="../assets/images/enamad_logo.png" alt=""> -->
+    <img referrerpolicy='origin' id = 'rgvjfukzapfuesgtwlaofukz' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=365046&p=xlaogvkadshwobpdaodsgvka", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=365046&p=qftiwlbqujynlymashwlwlbq' />
+
                        <img src="../assets/images/samandehi_logo.png" alt="">
                    </div>
                    <div class="flex gap-2 flex-wrap justify-center">

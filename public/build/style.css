@@ -465,8 +465,26 @@ html{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+body{
+  font-size: 1rem;
+}
+.slidr-product{
+  border: 1px solid rgb(225 225 225);
+  border-radius: 15px;
+  max-width: 180px;
+  height: 6rem;
+}
+.slidr-product img{
+  height: 6rem;
+}
 .green{
   background-color: #F5F5F5;
+}
+.filter li{
+  display: flex;
+  align-items: baseline;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
 }
 .container{
   width: 100%;
@@ -664,7 +682,9 @@ gap:3rem;
 }
 .modalProduct{
   justify-content: center;
-  min-width: 300px;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 10px;
   position: absolute;
   background-color: #eeeeee;
   color: rgb(41, 40, 39);
@@ -2332,6 +2352,9 @@ details.collapse summary::-webkit-details-marker{
 .mt-16{
   margin-top: 4rem;
 }
+.mt-12{
+  margin-top: 3rem;
+}
 
 .my-4{
   margin-top: 1rem;
@@ -2997,7 +3020,7 @@ details.collapse summary::-webkit-details-marker{
   
 }
 .font-YekanBakh-Regular{
-  font-family: sgKara-regular;
+  font-family: sgKara-light;
 }
 .font-YekanBakh-SemiBold{
   font-family: sgKara-regular;
@@ -3522,4 +3545,10 @@ justify-content: space-between;
   .lg\:pt-10{
     padding-top: 2.5rem;
   }
+}
+
+@media (max-width: 500px){
+h2{
+  font-size: 1.2rem !important;
+}
 }

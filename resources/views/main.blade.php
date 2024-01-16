@@ -101,7 +101,6 @@
             </div>
         </div>
     </section>
-
     <section class="pt-20 mb-10 px-4 py-14">
         <div class="container mx-auto max-w-screen-xl">
             <div class="container mx-auto max-w-screen-xl">
@@ -359,7 +358,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="flex justify-center">
-                                    <img class="grayscale hover:grayscale-0 duration-300" src="../assets/images/chodanSazan.svg" alt="">
+                                    <img  class="grayscale hover:grayscale-0 duration-300" src="../assets/images/chodanSazan.svg" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">

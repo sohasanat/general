@@ -44,11 +44,11 @@
         </button>
         <form action="{{ route('product.demo') }}" method="POST" enctype="multipart/form-data">
           @csrf
-          <input required name="fullname" type="text" placeholder="نام و نام‌خانوادگی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required name="phone" type="text" placeholder="شماره تماس:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required name="company" type="text" placeholder="شرکت:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required name="post" type="text" placeholder="سمت شغلی:" class="border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class=" border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="fullname" type="text" placeholder="نام و نام‌خانوادگی:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="phone" type="text" placeholder="شماره تماس:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="company" type="text" placeholder="شرکت:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required name="post" type="text" placeholder="سمت شغلی:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
           <div>
             <input type="checkbox" name="demo" value="zahra" class="formInput ml-4" id="cat-35">
             <label for="cat-35"> درخواست دمو </label>
@@ -88,7 +88,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="#" class="inline-flex items-center">
+            <a href="{{ route('main.company') }}" class="inline-flex items-center">
               خانه
             </a>
           </li>
@@ -103,7 +103,7 @@
           </li>
         </ol>
       </nav>
-      <div class="flex flex-col items-center justify-center relative mb-8 mt-16">
+      <div class="flex flex-col items-center justify-center relative mb-12 mt-12">
         <h2 class="font-YekanBakh-ExtraBlack text-3xl">{{$productsvar->name}}</h2>
 
         <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
@@ -111,7 +111,7 @@
 
       <div class="max-w-4xl mx-auto">
         <div style="display: none; z-index: 9; background-color: rgba(0,0,0,0.7);" class="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center image-modal">
-          <button class="absolute top-10 right-10 text-white close-modal">بستن</button>
+          <button id="closemode3" class="absolute top-10 right-10 text-white ">بستن</button>
           <img style="max-width: 90%;" src="../assets/images/imagesfra/g4.png" alt="" class="big-image">
         </div>
         <div class="mb-12">
@@ -122,8 +122,8 @@
             <div class="swiper-wrapper">
 
               @foreach($productimg as $img)
-              <div class="swiper-slide  overflow-y-h h-36">
-                <img class="rounded-xl cursor-pointer min-height-9 images" src="{{$img->image}}" />
+              <div class="swiper-slide slidr-product">
+                <img class="rounded-xl cursor-pointer images" src="{{$img->image}}" />
               </div>
               @endforeach
 
@@ -135,7 +135,7 @@
           <h3 class="font-YekanBakh-ExtraBlack text-xl">خوشــــــــــت اومده نـــــه؟! </h3>
           <img class="hidden sm:block" src="../assets/images/arrow.svg" alt="">
 
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap gap-4 items-center">
             <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg " id="btn-modal1">درخواست دمو / بروشور</button>
             <button class="w-auto inline-block py-2 px-7 bg-green text-white font-YekanBakh-SemiBold rounded-lg" id="btn-modal2">مشاوره</button>
           </div>
@@ -282,12 +282,13 @@
       element.addEventListener("click", () => {
         const src = element.getAttribute("src")
         document.querySelector(".image-modal").style.display = "flex"
-        document.querySelector(".big-image").setAttribute("src", src)
+        document.querySelector(".big-image").setAttribute("src", src);
       })
     })
 
-    document.querySelector(".close-modal").addEventListener("click", () => {
-      document.querySelector(".image-modal").style.display = "none"
+    document.getElementById("closemode3").addEventListener("click", () => {
+      document.querySelector(".image-modal").style.display = "none";
+
     })
 
 

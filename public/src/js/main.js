@@ -26,6 +26,9 @@ var swiper = new Swiper(".customer", {
 var swiper = new Swiper(".partners", {
   slidesPerView: 2,
   spaceBetween: 10,
+  // autoplay: {
+  //   delay: 2000,
+  // },
   loop: true,
   breakpoints: {
     640: {
@@ -150,22 +153,7 @@ if (toTopButton) {
     });
   };
 }
-//checkBox search
-let checkBoxs = document.getElementsByName("categories1");
-let viewProducts=document.getElementById("viewProducts");
-let arrayList=[];
 
-for (let checkBox of checkBoxs) {
-  checkBox.addEventListener('click', () => {
-    if (checkBox.checked) {
-      
-      // viewProducts.innerHTML=checkBox.value;
-      Array.from(document.getElementsByClassName("product-show")).map(ele=>{
-        ele.style.display="none";
-      })
-    }
-  })
-}
 
 
 //slider
@@ -182,3 +170,21 @@ slidershow.addEventListener("mouseleave",()=>{
     element.style.display = "none";
   }) 
 })
+
+
+//filter
+let checkBoxs = document.getElementsByName("categories1");
+let viewProducts=document.getElementById("viewProducts");
+let arrayList=[];
+
+for (let checkBox of checkBoxs) {
+  checkBox.addEventListener('click', () => {
+    if (checkBox.checked) {
+      
+      // viewProducts.innerHTML=checkBox.value;
+      Array.from(document.getElementsByClassName("product-show")).map(ele=>{
+        ele.style.display="none";
+      })
+    }
+  })
+}

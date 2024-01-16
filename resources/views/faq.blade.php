@@ -78,7 +78,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="#" class="inline-flex items-center">
+            <a href="{{ route('main.company') }}" class="inline-flex items-center">
               خانه
             </a>
           </li>

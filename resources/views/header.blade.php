@@ -14,7 +14,7 @@
                         </div>
                         <div class="drawer-side">
                             <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-                            <ul class="menu p-4 w-80 min-h-full lightGreen2 text-base-content text-gray">
+                            <ul class="menu p-4 w-80 min-h-full lightGreen2 text-base-content text-gray font-YekanBakh-SemiBold">
                                 <div class="drawer-content text-left">
                                     <label for="my-drawer" class="swap swap-rotate drawer-button">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -45,7 +45,7 @@
 
                 </div>
                 <div class="hidden lg:block">
-                    <ul class="flex menu lg:menu-horizontal text-gray ">
+                    <ul class="flex menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold ">
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('main.company') }}">صفحه اصلی</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
