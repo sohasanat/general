@@ -72,7 +72,7 @@
                                         <div class="min-w-0 flex-1 py-0">
                                             <div class="text-md text-gray-500">
                                                 <div>
-                                                    <span class="font-medium text-gray-900 mr-2"><?php echo e($about->title); ?></span>
+                                                    <span class="font-medium text-gray-900 mr-2 font-YekanBakh-SemiBold"><?php echo e($about->title); ?></span>
 
                                                     <span class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-2 text-xs">
 
@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="flex items-center">
-                        <h2 class="font-YekanBakh-ExtraBold text-center text-base mr-1"><?php echo e($members->name); ?></h2></a>
+                        <h2 class="font-YekanBakh-ExtraBold text-center text-base mr-1 "><?php echo e($members->name); ?></h2></a>
                     </div>
                     <div>
                         <p class="text-center"><?php echo e($members->title); ?></p>
