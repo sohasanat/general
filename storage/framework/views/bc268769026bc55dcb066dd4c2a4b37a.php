@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
-  <link rel="stylesheet" href="{{asset('build/style.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('../node_modules/swiper/swiper-bundle.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('build/style.css')); ?>">
   <title>جزئیات پروژه</title>
-  <link rel="icon" type="image/x-icon" href="{{asset('../assets/images/favicon.ico')}}">
+  <link rel="icon" type="image/x-icon" href="<?php echo e(asset('../assets/images/favicon.ico')); ?>">
 
 </head>
 
@@ -16,7 +16,7 @@
 
   <!--header -->
 
-  @include('header')
+  <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endheader-->
 
@@ -26,7 +26,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="{{ route('main.company') }}" class="inline-flex items-center">
+            <a href="<?php echo e(route('main.company')); ?>" class="inline-flex items-center">
               خانه
             </a>
           </li>
@@ -42,7 +42,7 @@
         </ol>
       </nav>
       <div class="flex flex-col items-center justify-center relative mt-16">
-        <h2 class="font-YekanBakh-ExtraBlack text-3xl">{{$jobsdetails->title}}</h2>
+        <h2 class="font-YekanBakh-ExtraBlack text-3xl"><?php echo e($jobsdetails->title); ?></h2>
 
         <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
       </div>
@@ -57,12 +57,13 @@
             <ul>
 
 
-              @foreach($expertisevar as $experence)
+              <?php $__currentLoopData = $expertisevar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $experence): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <li>
-                {{$experence->expertiseDescription}}
+                <?php echo e($experence->expertiseDescription); ?>
+
 
               </li>
-              @endforeach
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
@@ -79,12 +80,13 @@
             </h2>
             <ul>
 
-              @foreach($skillsvar as $skill)
+              <?php $__currentLoopData = $skillsvar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $skill): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <li>
-                {{$skill->skillsDescription}}
+                <?php echo e($skill->skillsDescription); ?>
+
 
               </li>
-              @endforeach
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
             </ul>
@@ -95,9 +97,9 @@
 
       </div>
       <div class="lightGreen2 mt-4 p-6 rounded-lg ">
-        <form action="{{ route('product.comment') }}" method="POST" enctype="multipart/form-data">
-          @csrf
-          <input type="hidden" name="param_name" value="{{ $jobsdetails->id}}">
+        <form action="<?php echo e(route('product.comment')); ?>" method="POST" enctype="multipart/form-data">
+          <?php echo csrf_field(); ?>
+          <input type="hidden" name="param_name" value="<?php echo e($jobsdetails->id); ?>">
           <div class="text-base leading-6 text-gray-700 sm:text-lg sm:leading-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input required type="text" name="name" placeholder="نام و نام‌خانوادگی" class="input w-full  focus:outline-none placeholder:text-sm" />
             <input required type="text" name="phone" placeholder="تلفن همراه" class="input w-full  focus:outline-none placeholder:text-sm" />
@@ -113,9 +115,9 @@
     </div>
   </section>
 
-  @if(session('message'))
+  <?php if(session('message')): ?>
   <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
-    <p class="font-bold">{{ session('message') }}</p>
+    <p class="font-bold"><?php echo e(session('message')); ?></p>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
       <linearGradient id="I9GV0SozQFknxHSR6DCx5a" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse">
@@ -130,17 +132,17 @@
 
 
   </div>
-  @endif
+  <?php endif; ?>
 
 
   <!--footer -->
 
-  @include('footer')
+  <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endfooter -->
 
-  <script src="{{asset('../node_modules/swiper/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('../src/js/main.js')}}"></script>
+  <script src="<?php echo e(asset('../node_modules/swiper/swiper-bundle.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('../src/js/main.js')); ?>"></script>
   <script>
     document.getElementById("uploadButton").addEventListener("click", () => {
       document.getElementById("uploadInput").click()
@@ -154,4 +156,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH D:\websiteSohaSanat\general\resources\views/detail-job.blade.php ENDPATH**/ ?>

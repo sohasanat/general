@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
-  <link rel="stylesheet" href="{{asset('build/style.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('../node_modules/swiper/swiper-bundle.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('build/style.css')); ?>">
   <title>ایجاد بلاگ</title>
-  <link rel="icon" type="image/x-icon" href="{{asset('../assets/images/favicon.ico')}}">
+  <link rel="icon" type="image/x-icon" href="<?php echo e(asset('../assets/images/favicon.ico')); ?>">
 
 </head>
 
@@ -16,7 +16,7 @@
 
   <!--header -->
 
-  @include('c-header')
+  <?php echo $__env->make('c-header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endheader-->
 
@@ -25,8 +25,8 @@
     <div class="container mx-auto max-w-screen-xl">
 
       <div class="lightGreen2 mt-16 p-6 rounded-lg ">
-        <form action="{{ route('blog.save') }}" method="POST" enctype="multipart/form-data">
-          @csrf
+        <form action="<?php echo e(route('blog.save')); ?>" method="POST" enctype="multipart/form-data">
+          <?php echo csrf_field(); ?>
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
             <input required type="text" name="name" placeholder="نویسنده" class="input w-full  focus:outline-none placeholder:text-sm" />
             <input required type="text" name="title" placeholder=" عنوان بلاگ" class="input w-full  focus:outline-none placeholder:text-sm" />
@@ -40,9 +40,9 @@
 
     </div>
   </section>
-  @if(session('message'))
+  <?php if(session('message')): ?>
   <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
-    <p class="font-bold">{{ session('message') }}</p>
+    <p class="font-bold"><?php echo e(session('message')); ?></p>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
       <linearGradient id="I9GV0SozQFknxHSR6DCx5a" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse">
@@ -57,14 +57,14 @@
 
 
   </div>
-  @endif
+  <?php endif; ?>
 
 
 
 
-  <script src="{{asset('../node_modules/swiper/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('../src/js/main.js')}}"></script>
+  <script src="<?php echo e(asset('../node_modules/swiper/swiper-bundle.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('../src/js/main.js')); ?>"></script>
 
 </body>
 
-</html>
+</html><?php /**PATH D:\websiteSohaSanat\general\resources\views/createBlog.blade.php ENDPATH**/ ?>

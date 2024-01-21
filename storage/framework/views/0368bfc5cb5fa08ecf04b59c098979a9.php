@@ -16,7 +16,7 @@
 
   <!--header -->
 
-  @include('header')
+  <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endheader-->
 
@@ -26,7 +26,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="{{ route('main.company') }}" class="inline-flex items-center">
+            <a href="<?php echo e(route('main.company')); ?>" class="inline-flex items-center">
               خانه
             </a>
           </li>
@@ -49,24 +49,24 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-16">
 
-        @foreach($jobsvar as $jobs)
+        <?php $__currentLoopData = $jobsvar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jobs): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
         <div class="bg-white rounded-lg flex items-center justify-between border-1p h-min px-4 flex-wrap py-3">
           <div class="flex items-center">
             <div class="lightGreen text-white rounded-lg p-2 icongreen w-14 h-14">
-              <img src="{{$jobs->photo}}" class="w-full" />
+              <img src="<?php echo e($jobs->photo); ?>" class="w-full" />
             </div>
             <div class="mr-2 gap-2 flex flex-col ">
-              <h2 class="font-YekanBakh-Bold text-base">{{$jobs->title}}</h2></a>
-              <p>{{$jobs->Description}}</p>
+              <h2 class="font-YekanBakh-Bold text-base"><?php echo e($jobs->title); ?></h2></a>
+              <p><?php echo e($jobs->Description); ?></p>
             </div>
           </div>
           <div class="border btn-w green-m text-white hover:text-white hover:bg-green duration-300 rounded-lg mt-4">
-            <a href="{{ route('job.deails', $jobs->id) }}" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
+            <a href="<?php echo e(route('job.deails', $jobs->id)); ?>" class="flex py-2.5 px-7 rounded-lg font-YekanBakh-Regular">ارسال رزومه</a>
           </div>
         </div>
 
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
@@ -82,7 +82,7 @@
 
   <!--footer -->
 
-  @include('footer')
+  <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endfooter -->
 
@@ -91,4 +91,4 @@
   <script src="../src/js/main.js"></script>
 </body>
 
-</html>
+</html><?php /**PATH D:\websiteSohaSanat\general\resources\views/job.blade.php ENDPATH**/ ?>

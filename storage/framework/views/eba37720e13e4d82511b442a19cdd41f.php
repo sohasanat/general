@@ -13,7 +13,7 @@
 
     <!--header -->
 
-    @include('c-header')
+    <?php echo $__env->make('c-header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!--endheader-->
     <div id="app">
@@ -25,7 +25,7 @@
                             <h1 class="avy awg awp axv">لیست بلاگ</h1>
                         </div>
                         <div class="lh bwf bwv bzz">
-                            <a href="{{route('blog.create') }}">
+                            <a href="<?php echo e(route('blog.create')); ?>">
                                 <button type="button" class="lu adu ajr arf arv avl awa awg bah bbn bis boy boz bpb bpk">ایجاد بلاگ<button></a>
 
                         </div>
@@ -46,22 +46,22 @@
                                         </tr>
                                     </thead>
                                     <tbody class="acc acg">
-                                        @foreach($blogvar as $blog)
+                                        <?php $__currentLoopData = $blogvar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr class="bgm">
-                                            <td class="adm asc atn auc awa awe axv cgi">{{$blog->id}}</td>
-                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/{{$blog->photo}}" alt=""></td>
-                                            <td class="adm arf asc awa axr">{{$blog->title}}</td>
-                                            <td class="adm arf asc awa axr">{{$blog->name}}</td>
+                                            <td class="adm asc atn auc awa awe axv cgi"><?php echo e($blog->id); ?></td>
+                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/<?php echo e($blog->photo); ?>" alt=""></td>
+                                            <td class="adm arf asc awa axr"><?php echo e($blog->title); ?></td>
+                                            <td class="adm arf asc awa axr"><?php echo e($blog->name); ?></td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                <a href="{{route('blog.edit',$blog->id) }}" class="ayh bli edit">ویرایش</a>
-                                                <a href="{{route('blog.delete',$blog->id) }}" class="ayh bli">حذف</a>
+                                                <a href="<?php echo e(route('blog.edit',$blog->id)); ?>" class="ayh bli edit">ویرایش</a>
+                                                <a href="<?php echo e(route('blog.delete',$blog->id)); ?>" class="ayh bli">حذف</a>
                                             </td>
                                         </tr>
-                                        @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                                        @if(session('message'))
+                                        <?php if(session('message')): ?>
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
-                                            <p class="font-bold">{{ session('message') }}</p>
+                                            <p class="font-bold"><?php echo e(session('message')); ?></p>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                                                 <linearGradient id="I9GV0SozQFknxHSR6DCx5a" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse">
@@ -76,7 +76,7 @@
 
 
                                         </div>
-                                        @endif
+                                        <?php endif; ?>
 
                                     </tbody>
                                 </table>
@@ -90,4 +90,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH D:\websiteSohaSanat\general\resources\views/blogList.blade.php ENDPATH**/ ?>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
   <link rel="stylesheet" href="{{asset('build/style.css')}}">
-  <title>ایجاد بلاگ</title>
+  <title>ایجاد محصول</title>
   <link rel="icon" type="image/x-icon" href="{{asset('../assets/images/favicon.ico')}}">
 
 </head>
@@ -26,21 +26,19 @@
 
       <div class="lightGreen2 mt-16 p-6 rounded-lg ">
         <form action="{{ route('blog.save') }}" method="POST" enctype="multipart/form-data">
-          @csrf
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
-            <input required type="text" name="name" placeholder="نویسنده" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <input required type="text" name="title" placeholder=" عنوان بلاگ" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <input type="file" name="photo" accept="image/*, .pdf" required>
-            <textarea required name="Description" placeholder="متن بلاگ" class="textarea w-full  focus:outline-none placeholder:text-sm">
-</textarea>
+            <input required type="text" name="name" placeholder="نام مشتری" class="input w-full  focus:outline-none placeholder:text-sm" />
+           <div class="flex gap-4 text-sm"><lable for="poster">لوگو مشتری</lable> <input type="file" id="poster"  accept="image/*, .pdf" required></div>
           </div>
-          <button class="btn mt-5 bg-green px-7 text-white  text-sm text-center" type="submit">ثبت بلاگ</button>
+          <button class="btn bg-green px-7 text-white  text-sm text-center mt-16" type="submit">ثبت مشتری</button>
         </form>
       </div>
 
     </div>
   </section>
-  @if(session('message'))
+
+
+  <!-- @if(session('message'))
   <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
     <p class="font-bold">{{ session('message') }}</p>
 
@@ -57,7 +55,7 @@
 
 
   </div>
-  @endif
+  @endif -->
 
 
 

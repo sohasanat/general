@@ -94,6 +94,49 @@ Route::get('/single-page', function () {
     return view('single-page');
 });
 
-Route::get('/createBlog', function () {
-    return view('createBlog');
+
+
+
+//محصولات
+Route::get('/product-list', function () {
+    return view('c-productList');
+});
+
+Route::get('/product-create', function () {
+    return view('c-productCreate');
+});
+
+Route::get('/product-edit', function () {
+    return view('c-productEdit');
+});
+
+//مشتریان
+Route::get('/customer-list', function () {
+    return view('c-customerList');
+});
+
+Route::get('/customer-create', function () {
+    return view('c-customerCreate');
+});
+
+Route::get('/customer-edit', function () {
+    return view('c-customerEdit');
+});
+
+//شغل
+Route::get('/job-list', function () {
+    return view('c-jobList');
+});
+
+Route::get('/job-create', function () {
+    return view('c-jobCreate');
+});
+
+Route::get('/job-edit', function () {
+    return view('c-jobEdit');
+});
+
+//کارجویان
+Route::get('/resume-list', function () {
+    return view('c-resumeList');
 });
