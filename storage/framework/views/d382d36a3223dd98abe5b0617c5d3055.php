@@ -26,7 +26,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="#" class="inline-flex items-center">
+            <a href="<?php echo e(route('main.company')); ?>" class="inline-flex items-center">
               خانه
             </a>
           </li>
@@ -97,7 +97,7 @@
 
       </div>
       <div class="lightGreen2 mt-4 p-6 rounded-lg ">
-        <form action="<?php echo e(route('product.comment')); ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?php echo e(route('job.request')); ?>" method="POST" enctype="multipart/form-data">
           <?php echo csrf_field(); ?>
           <input type="hidden" name="param_name" value="<?php echo e($jobsdetails->id); ?>">
           <div class="text-base leading-6 text-gray-700 sm:text-lg sm:leading-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
