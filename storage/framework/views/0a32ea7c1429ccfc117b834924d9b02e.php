@@ -249,27 +249,27 @@
   </script>
 
   <script>
-    // import axios from "axios"
-    //   $(document).ready(function() {
-    //      $('#search').on('keyup', function() {
-    //        var $value = $(this).val();
-    //        console.log($value)
-    //      $.ajax({
-    //      type: 'get',
-    //    url: "<?php echo e(route('searchpro')); ?>",
-    //          method: "GET",
-    //         data: {
-    //           'search': $value
-    //         },
-    //         success: function(data) {
-    //           $('.mycard').html(data);
-    //         }
-    //       });
-    // axios.get("searchpro?search=" + encodeURIComponent($value)).then(res => {
-    //     console.log(res)
-    // })
-    //     });
-    //    });
+    //   import axios from "axios"
+    $(document).ready(function() {
+      $('#search').on('keyup', function() {
+        var $value = $(this).val();
+        console.log($value)
+        $.ajax({
+          type: 'get',
+          url: "<?php echo e(route('searchpro')); ?>",
+          method: "GET",
+          data: {
+            'search': $value
+          },
+          success: function(data) {
+            $('.mycard').html(data);
+          }
+        });
+        // axios.get("searchpro?search=" + encodeURIComponent($value)).then(res => {
+        //     console.log(res)
+
+      });
+    });
   </script>
 
   // <script>
