@@ -210,9 +210,6 @@
             </div>
 
     </div>
-    <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
-
-    </div>
 
 
 
