@@ -57,7 +57,7 @@
 
     </div>
   </section>
-  <?php if(session('message')): ?>
+  <!-- <?php if(session('message')): ?>
   <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
     <p class="font-bold"><?php echo e(session('message')); ?></p>
 
@@ -74,7 +74,7 @@
 
 
   </div>
-  <?php endif; ?>
+  <?php endif; ?> -->
 
 
 
