@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/style.css">
-    <title>لیست شغل‌ها</title>
+    <title>لیست وبلگ</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 
@@ -13,7 +13,7 @@
 
     <!--header -->
 
-    @include('c-header')
+    <?php echo $__env->make('c-header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!--endheader-->
     <div id="app">
@@ -22,11 +22,11 @@
                 <div class="ari cfc ddh">
                     <div class="bxr cbi">
                         <div class="bzy">
-                            <h1 class="avy awg awp axv">لیست شغل‌ها</h1>
+                            <h1 class="avy awg awp axv">لیست بلاگ</h1>
                         </div>
                         <div class="lh bwf bwv bzz">
-                            <a href="/job-create">
-                                <button type="button" class="lu adu ajr arf arv avl awa awg bah bbn bis boy boz bpb bpk">ایجاد شغل<button></a>
+                            <a href="<?php echo e(route('blog.create')); ?>">
+                                <button type="button" class="lu adu ajr arf arv avl awa awg bah bbn bis boy boz bpb bpk">ایجاد بلاگ<button></a>
 
                         </div>
                     </div>
@@ -37,31 +37,31 @@
                                     <thead>
                                         <tr class="bgm">
                                             <th scope="col" class="arf asa avk awa awg axv">ردیف</th>
-                                            <th scope="col" class="arf asa avk awa awg axv">ایکن</th>
-                                            <th scope="col" class="arf asa avk awa awg axv">نام شغل</th>
-                                            <th scope="col" class="asa atn auc avk awa awg axv cgi">نوع همکاری</th>
+                                            <th scope="col" class="asa atn auc avk awa awg axv cgi">عکس</th>
+                                            <th scope="col" class="arf asa avk awa awg axv">عنوان</th>
+                                            <th scope="col" class="arf asa avk awa awg axv">نویسنده</th>
                                             <th scope="col" class="ab arf asa atm aue cgp ">
                                                 <span class="t">عملیات</span>
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody class="acc acg">
-                                        @foreach($jobsvar as $job)
-                                        <tr class="bgm  tablesRow">
-                                            <td class="adm asc atn auc awa awe axv cgi">1</td>
-                                            <td class="adm arf asc awa axr"><img class="imgB" src="{{$job->photo}}" alt=""></td>
-                                            <td class="adm arf asc awa axr">{{$job->title}}</td>
-                                            <td class="adm arf asc awa axr">تمام وقت</td>
+                                        <?php $__currentLoopData = $blogvar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <tr class="bgm tablesRow">
+                                            <td class="adm asc atn auc awa awe axv cgi"><?php echo e($blog->id); ?></td>
+                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/<?php echo e($blog->photo); ?>" alt=""></td>
+                                            <td class="adm arf asc awa axr"><?php echo e($blog->title); ?></td>
+                                            <td class="adm arf asc awa axr"><?php echo e($blog->name); ?></td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                <a href="/customer-edit" class="ayh bli edit">ویرایش</a>
-                                                <a href="#" class="ayh bli">حذف</a>
+                                                <a href="<?php echo e(route('blog.edit',$blog->id)); ?>" class="ayh bli edit">ویرایش</a>
+                                                <a href="<?php echo e(route('blog.delete',$blog->id)); ?>" class="ayh bli">حذف</a>
                                             </td>
                                         </tr>
-                                        @endforeach
-                                        <!-- 
-                                        @if(session('message'))
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                                        <?php if(session('message')): ?>
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
-                                            <p class="font-bold">{{ session('message') }}</p>
+                                            <p class="font-bold"><?php echo e(session('message')); ?></p>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                                                 <linearGradient id="I9GV0SozQFknxHSR6DCx5a" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse">
@@ -76,7 +76,7 @@
 
 
                                         </div>
-                                        @endif -->
+                                        <?php endif; ?>
 
                                     </tbody>
                                 </table>
@@ -89,7 +89,6 @@
     </div>
 
 </body>
-
 <script>
     const rows = document.getElementsByClassName("tablesRow")
     Array.from(rows).map((value, index) => {
@@ -97,4 +96,4 @@
     })
 </script>
 
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/blogList.blade.php ENDPATH**/ ?>

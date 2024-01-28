@@ -22,8 +22,8 @@
           <div>
             <h1 class="text-xl text-center font-YekanBakh-Bold">ورود</h1>
           </div>
-          <form action="{{ route('loginuser') }}" method="POST" enctype="multipart/form-data">
-            @csrf
+          <form action="<?php echo e(route('loginuser')); ?>" method="POST" enctype="multipart/form-data">
+            <?php echo csrf_field(); ?>
             <div class="divide-y divide-gray-200">
               <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <input name="email" type="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
@@ -60,4 +60,4 @@
   <script src="../src/js/main.js"></script>
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/login.blade.php ENDPATH**/ ?>

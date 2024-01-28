@@ -8,7 +8,10 @@ use App\Http\Controllers\aboutus_contrller;
 use App\Http\Controllers\job_contrller;
 use App\Http\Controllers\connectus_contrller;
 use App\Http\Controllers\blogController;
-
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\cmsprductcontroller;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\cmsdefintionjobcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,14 +23,30 @@ use App\Http\Controllers\blogController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::middleware(['auth', 'role:Customer'])->group(function () {
+    Route::get('/blog-all', [blogController::class, 'blogallmain'])->name('blogall.main');
+    Route::get('/blogList', [blogController::class, 'bloglist'])->name('blog.list');
+    Route::get('/editBlog/{id}', [blogController::class, 'editblog'])->name('blog.edit');
+    Route::post('/editBlogsave/{id}', [blogController::class, 'editsave'])->name('blog.editsave');
+    Route::post('/Blogsave', [blogController::class, 'blogsave'])->name('blog.save');
+    Route::get('/Blogcreate', [blogController::class, 'blogcreate'])->name('blog.create');
+    Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name('blog.delete');
+});
+
 //صفحه اصلی
 Route::get('/', [Company_contrller::class, 'companysender'])->name('main.company');
 
+Route::post('/login', [UserController::class, 'user'])->name('loginuser');
 
 //شغل و فرصت های شغلی
 Route::get('/job', [job_contrller::class, 'jobs'])->name('jobs');
 Route::get('/detail-job/{id}', [job_contrller::class, 'jobdeails'])->name('job.deails');
 Route::post('/detail-job-request', [job_contrller::class, 'jobrequest'])->name('job.request');
+
+
+Route::get('/job-list-cms', [cmsdefintionjobcontroller::class, 'jobs'])->name('cmsjoblist');
 
 //ارتباط با ما
 Route::get('/connect-us', [connectus_contrller::class, 'connectes'])->name('connect.us');
@@ -42,10 +61,15 @@ Route::post('/single-product-comment', [Products_contrller::class, 'productcomme
 Route::get('/product-serch', [Products_contrller::class, 'products'])->name('searchpro');
 Route::get('/product-fillter', [Products_contrller::class, 'productsfill'])->name('productsfilter');
 
+
+Route::post('/product-save', [cmsprductcontroller::class, 'productsave'])->name('product.save');
+Route::get('/product-list', [cmsprductcontroller::class, 'productcmslist'])->name('product.list');
+
 //درباره ی ما 
 Route::get('/about-us', [aboutus_contrller::class, 'aboutus'])->name('aboutus.us');
 
 //وبلاگ
+
 Route::get('/blog-all', [blogController::class, 'blogallmain'])->name('blogall.main');
 Route::get('/blogList', [blogController::class, 'bloglist'])->name('blog.list');
 Route::get('/editBlog/{id}', [blogController::class, 'editblog'])->name('blog.edit');
@@ -53,7 +77,6 @@ Route::post('/editBlogsave/{id}', [blogController::class, 'editsave'])->name('bl
 Route::post('/Blogsave', [blogController::class, 'blogsave'])->name('blog.save');
 Route::get('/Blogcreate', [blogController::class, 'blogcreate'])->name('blog.create');
 Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name('blog.delete');
-
 
 Route::get('/404', function () {
     return view('404');
@@ -98,9 +121,9 @@ Route::get('/single-page', function () {
 
 
 //محصولات
-Route::get('/product-list', function () {
-    return view('c-productList');
-});
+//Route::get('/product-list', function () {
+//    return view('c-productList');
+//});
 
 Route::get('/product-create', function () {
     return view('c-productCreate');

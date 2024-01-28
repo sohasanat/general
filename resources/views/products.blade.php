@@ -269,27 +269,27 @@
     });
   </script>
 
-  // <script>
-    //    $('input[name="categories1"]').change(function() {
-    //      var categories = $('input[name="categories1"]:checked')
-    //        .map(function() {
-    //          return this.value;
-    //        })
-    //        .get();
-    //
-    //      $.ajax({
-    //        url: "{{ route('productsfilter') }}",
-    //        method: 'GET',
-    //        data: {
-    //          categories: categories
-    //        },
-    //        success: function(data) {
-    //
-    //          $('.myfillcard').html(data);
-    //        }
-    //     });
-    //    });
-    //  
+  <script>
+    $('input[name="categories1"]').change(function() {
+      var categories = $('input[name="categories1"]:checked')
+        .map(function() {
+          return this.value;
+        })
+
+        .get();
+
+      $.ajax({
+        url: "{{ route('productsfilter') }}",
+        method: 'GET',
+        data: {
+          categories: categories
+        },
+        success: function(data) {
+
+          $('.myfillcard').html(data);
+        }
+      });
+    });
   </script>
 
 

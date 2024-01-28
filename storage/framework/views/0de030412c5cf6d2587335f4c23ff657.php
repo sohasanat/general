@@ -23,9 +23,9 @@
                                 </label>
                             </div>
                             <!-- Sidebar content here -->
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('product.list') }}">مدیریت محصولات</a></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.list') }}">مدیریت وبلاگ‌ها</a></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('cmsjoblist') }}">مدیریت فرصت‌های شغلی</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('product.list')); ?>">مدیریت محصولات</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('blog.list')); ?>">مدیریت وبلاگ‌ها</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('cmsjoblist')); ?>">مدیریت فرصت‌های شغلی</a></li>
                             <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="customer-list">مدیریت مشتریان</a></li>
                             <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="resume-list">رزومه ها</a></li>
                             <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="#">خروج از اکانت</a></li>
@@ -36,9 +36,9 @@
 
             <div class="hidden lg:block">
                 <ul class="flex menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold ">
-                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('product.list') }}">مدیریت محصولات</a></li>
-                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('blog.list') }}">مدیریت وبلاگ‌ها</a></li>
-                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('cmsjoblist') }}">مدیریت فرصت‌های شغلی</a></li>
+                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('product.list')); ?>">مدیریت محصولات</a></li>
+                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('blog.list')); ?>">مدیریت وبلاگ‌ها</a></li>
+                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('cmsjoblist')); ?>">مدیریت فرصت‌های شغلی</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="customer-list">مدیریت مشتریان</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="resume-list">رزومه ها</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="#">خروج از اکانت</a></li>
@@ -53,4 +53,4 @@
             </div>
         </div>
     </div>
-</section>
+</section><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/c-header.blade.php ENDPATH**/ ?>

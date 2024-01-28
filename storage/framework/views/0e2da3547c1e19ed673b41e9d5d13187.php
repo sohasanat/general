@@ -13,7 +13,7 @@
 
     <!--header -->
 
-    @include('c-header')
+    <?php echo $__env->make('c-header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!--endheader-->
     <div id="app">
@@ -46,22 +46,22 @@
                                         </tr>
                                     </thead>
                                     <tbody class="acc acg">
-                                        @foreach($jobsvar as $job)
+                                        <?php $__currentLoopData = $jobsvar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $job): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr class="bgm  tablesRow">
                                             <td class="adm asc atn auc awa awe axv cgi">1</td>
-                                            <td class="adm arf asc awa axr"><img class="imgB" src="{{$job->photo}}" alt=""></td>
-                                            <td class="adm arf asc awa axr">{{$job->title}}</td>
+                                            <td class="adm arf asc awa axr"><img class="imgB" src="<?php echo e($job->photo); ?>" alt=""></td>
+                                            <td class="adm arf asc awa axr"><?php echo e($job->title); ?></td>
                                             <td class="adm arf asc awa axr">تمام وقت</td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
                                                 <a href="/customer-edit" class="ayh bli edit">ویرایش</a>
                                                 <a href="#" class="ayh bli">حذف</a>
                                             </td>
                                         </tr>
-                                        @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         <!-- 
-                                        @if(session('message'))
+                                        <?php if(session('message')): ?>
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
-                                            <p class="font-bold">{{ session('message') }}</p>
+                                            <p class="font-bold"><?php echo e(session('message')); ?></p>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                                                 <linearGradient id="I9GV0SozQFknxHSR6DCx5a" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse">
@@ -76,7 +76,7 @@
 
 
                                         </div>
-                                        @endif -->
+                                        <?php endif; ?> -->
 
                                     </tbody>
                                 </table>
@@ -97,4 +97,4 @@
     })
 </script>
 
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/c-jobList.blade.php ENDPATH**/ ?>

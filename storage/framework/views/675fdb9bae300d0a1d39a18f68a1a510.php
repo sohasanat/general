@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/style.css">
-    <title>لیست شغل‌ها</title>
+    <title>لیست کارجویان</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 
@@ -13,7 +13,7 @@
 
     <!--header -->
 
-    @include('c-header')
+    <?php echo $__env->make('c-header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!--endheader-->
     <div id="app">
@@ -22,12 +22,7 @@
                 <div class="ari cfc ddh">
                     <div class="bxr cbi">
                         <div class="bzy">
-                            <h1 class="avy awg awp axv">لیست شغل‌ها</h1>
-                        </div>
-                        <div class="lh bwf bwv bzz">
-                            <a href="/job-create">
-                                <button type="button" class="lu adu ajr arf arv avl awa awg bah bbn bis boy boz bpb bpk">ایجاد شغل<button></a>
-
+                            <h1 class="avy awg awp axv">لیست کارجویان</h1>
                         </div>
                     </div>
                     <div class="lm ma">
@@ -37,31 +32,32 @@
                                     <thead>
                                         <tr class="bgm">
                                             <th scope="col" class="arf asa avk awa awg axv">ردیف</th>
-                                            <th scope="col" class="arf asa avk awa awg axv">ایکن</th>
-                                            <th scope="col" class="arf asa avk awa awg axv">نام شغل</th>
-                                            <th scope="col" class="asa atn auc avk awa awg axv cgi">نوع همکاری</th>
+                                            <th scope="col" class="asa atn auc avk awa awg axv cgi">نام</th>
+                                            <th scope="col" class="asa atn auc avk awa awg axv cgi">پوزیشن</th>
+                                            <th scope="col" class="asa atn auc avk awa awg axv cgi">شماره تلفن</th>
+                                            <th scope="col" class="arf asa avk awa awg axv">ایمیل</th>
+                                            <th scope="col" class="arf asa avk awa awg axv">تاریخ ارسال</th>
                                             <th scope="col" class="ab arf asa atm aue cgp ">
-                                                <span class="t">عملیات</span>
+                                                <span class="t">رزومه</span>
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody class="acc acg">
-                                        @foreach($jobsvar as $job)
-                                        <tr class="bgm  tablesRow">
+                                        <tr class="bgm">
                                             <td class="adm asc atn auc awa awe axv cgi">1</td>
-                                            <td class="adm arf asc awa axr"><img class="imgB" src="{{$job->photo}}" alt=""></td>
-                                            <td class="adm arf asc awa axr">{{$job->title}}</td>
-                                            <td class="adm arf asc awa axr">تمام وقت</td>
+                                            <td class="adm arf asc awa axr">زهرا خسروی</td>
+                                            <td class="adm arf asc awa axr">frontEnd</td>
+                                            <td class="adm arf asc awa axr">09133216549</td>
+                                            <td class="adm arf asc awa axr">zahra@gmail.com</td>
+                                            <td class="adm arf asc awa axr">1402.01.21</td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                <a href="/customer-edit" class="ayh bli edit">ویرایش</a>
-                                                <a href="#" class="ayh bli">حذف</a>
+                                                 <a href="#" class="ayh bli">مشاهده رزومه</a>
                                             </td>
                                         </tr>
-                                        @endforeach
-                                        <!-- 
-                                        @if(session('message'))
+                                    <!-- 
+                                        <?php if(session('message')): ?>
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
-                                            <p class="font-bold">{{ session('message') }}</p>
+                                            <p class="font-bold"><?php echo e(session('message')); ?></p>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
                                                 <linearGradient id="I9GV0SozQFknxHSR6DCx5a" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse">
@@ -76,8 +72,8 @@
 
 
                                         </div>
-                                        @endif -->
-
+                                        <?php endif; ?>
+                                    -->
                                     </tbody>
                                 </table>
                             </div>
@@ -90,11 +86,4 @@
 
 </body>
 
-<script>
-    const rows = document.getElementsByClassName("tablesRow")
-    Array.from(rows).map((value, index) => {
-        value.firstElementChild.textContent = index + 1
-    })
-</script>
-
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/c-resumeList.blade.php ENDPATH**/ ?>

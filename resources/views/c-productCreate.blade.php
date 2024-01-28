@@ -25,16 +25,18 @@
     <div class="container mx-auto max-w-screen-xl">
 
       <div class="lightGreen2 mt-16 p-6 rounded-lg ">
-        <form action="{{ route('blog.save') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('product.save') }}" method="POST" enctype="multipart/form-data">
+          @csrf
+
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
             <input required type="text" name="name" placeholder="نام محصول" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <textarea required placeholder="توضیح کوتاه" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
-            <textarea required placeholder="توضیح جامع" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
-            <textarea  placeholder="داستان موفقیت" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
+            <textarea required name="Description" placeholder="توضیح کوتاه" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
+            <textarea required name="longDescription" placeholder="توضیح جامع" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
+            <textarea name="storysuccess" placeholder="داستان موفقیت" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">حوزه</lable>
               <div class="flex">
-              <input required type="text" id="Area" class="input w-full  focus:outline-none placeholder:text-sm" />  <span onclick="newElement('Area')" class="addBtn">افزودن</span>
+                <input name="Grouping" required type="text" id="Area" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Area')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULArea" class="flex gap-4 dir-l flex-wrap">
 
@@ -43,7 +45,7 @@
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">صنایع</lable>
               <div class="flex">
-              <input required type="text" id="Industry" class="input w-full  focus:outline-none placeholder:text-sm" />  <span onclick="newElement('Industry')" class="addBtn">افزودن</span>
+                <input name="Grouping" required type="text" id="Industry" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Industry')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULIndustry" class="flex gap-4 dir-l flex-wrap">
 
@@ -51,21 +53,25 @@
             </div>
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">نگارش به این صورت وارد شود -> نگارش:
-۱.۰.۰ --
-تاریخ انتشار:
-۱۴۰۲/۱۰/۱۹ -- 
-توضیحات:
-نگارش یک</lable>
+                ۱.۰.۰ --
+                تاریخ انتشار:
+                ۱۴۰۲/۱۰/۱۹ --
+                توضیحات:
+                نگارش یک</lable>
               <div class="flex">
-              <input required type="text" id="Industry" class="input w-full  focus:outline-none placeholder:text-sm" />  <span onclick="newElement('Industry')" class="addBtn">افزودن</span>
+                <input name="Description1" required type="text" id="Industry" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Industry')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULIndustry" class="flex gap-4 dir-l flex-wrap">
 
               </ul>
             </div>
-           <div class="flex gap-4 text-sm"><lable for="poster">پوستر محصول</lable> <input type="file" id="poster"  accept="image/*, .pdf" required></div>
-           <div class="flex gap-4 text-sm">  <lable for="productImg">عکس های محصول</lable> <input type="file" id="productImg"  accept="image/*, .pdf" required multiple></div>
-</textarea>
+            <div class="flex gap-4 text-sm">
+              <lable for="logo">پوستر محصول</lable> <input type="file" id="poster" accept="image/*, .pdf" required>
+            </div>
+            <div class="flex gap-4 text-sm">
+              <lable for="image">عکس های محصول</lable> <input type="file" id="productImg" accept="image/*, .pdf" required multiple>
+            </div>
+            </textarea>
           </div>
           <button class="btn bg-green px-7 text-white  text-sm text-center mt-16" type="submit">ثبت محصول</button>
         </form>
@@ -100,56 +106,55 @@
   <script src="{{asset('../node_modules/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{asset('../src/js/main.js')}}"></script>
   <script>
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByClassName("cli");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "closel";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("closel");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Create a new list item when clicking on the "Add" button
-function newElement(inp) {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById(inp).value;
-  var t = document.createTextNode(inputValue);
-  li.className ="cli";
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("یچی باید بنویسی!");
-  } else {
-    document.getElementById(`myUL${inp}`).appendChild(li);
-  }
-  document.getElementById(inp).value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "closel";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByClassName("cli");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closel";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
     }
-  }
-}
 
-</script>
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("closel");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+    // Create a new list item when clicking on the "Add" button
+    function newElement(inp) {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById(inp).value;
+      var t = document.createTextNode(inputValue);
+      li.className = "cli";
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("یچی باید بنویسی!");
+      } else {
+        document.getElementById(`myUL${inp}`).appendChild(li);
+      }
+      document.getElementById(inp).value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closel";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 
 </html>

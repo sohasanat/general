@@ -47,7 +47,7 @@
                                     </thead>
                                     <tbody class="acc acg">
                                         @foreach($blogvar as $blog)
-                                        <tr class="bgm">
+                                        <tr class="bgm tablesRow">
                                             <td class="adm asc atn auc awa awe axv cgi">{{$blog->id}}</td>
                                             <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/{{$blog->photo}}" alt=""></td>
                                             <td class="adm arf asc awa axr">{{$blog->title}}</td>
@@ -89,5 +89,11 @@
     </div>
 
 </body>
+<script>
+    const rows = document.getElementsByClassName("tablesRow")
+    Array.from(rows).map((value, index) => {
+        value.firstElementChild.textContent = index + 1
+    })
+</script>
 
 </html>

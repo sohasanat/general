@@ -23,14 +23,14 @@
                                     </label>
                                 </div>
                                 <!-- Sidebar content here -->
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('main.company') }}">صفحه اصلی</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blogall.main') }}"> وبلاگ</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('main.company')); ?>">صفحه اصلی</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('allproducts')); ?>">محصولات</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('aboutus.us')); ?>">درباره ما</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('connect.us')); ?>">تماس با ما</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('jobs')); ?>">فرصت‌های شغلی</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('blogall.main')); ?>"> وبلاگ</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="login"> ورود | ثبت نام</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.list') }}"> مدیریت سایت</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('blog.list')); ?>"> مدیریت سایت</a></li>
 
                             </ul>
                         </div>
@@ -46,13 +46,13 @@
                 </div>
                 <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold ">
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('main.company') }}">صفحه اصلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('blogall.main') }}">وبلاگ</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blog.list') }}">مدیریت سایت</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('main.company')); ?>">صفحه اصلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('allproducts')); ?>">محصولات</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('aboutus.us')); ?>">درباره ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('connect.us')); ?>">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('jobs')); ?>">فرصت‌های شغلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('blogall.main')); ?>">وبلاگ</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('blog.list')); ?>">مدیریت سایت</a></li>
 
 
                     </ul>
@@ -63,4 +63,4 @@
 
             </div>
         </div>
-    </section>
+    </section><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/header.blade.php ENDPATH**/ ?>

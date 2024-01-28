@@ -21,5 +21,6 @@ class Products_model extends Model
                 'updated_at',
                 'link',
                 'Grouping',
+                'storysuccess'
         ];
 }
