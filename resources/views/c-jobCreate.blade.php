@@ -25,15 +25,15 @@
     <div class="container mx-auto max-w-screen-xl">
 
       <div class="lightGreen2 mt-16 p-6 rounded-lg ">
-        <form action="{{ route('blog.save') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('cmsjob.save') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
-            <input required type="text" placeholder="نام شغل" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <input required type="text" placeholder=" نوع همکاری" class="input w-full  focus:outline-none placeholder:text-sm" />
+            <input required name="title" type="text" placeholder="نام شغل" class="input w-full  focus:outline-none placeholder:text-sm" />
+            <input required name="Description" type="text" placeholder=" نوع همکاری" class="input w-full  focus:outline-none placeholder:text-sm" />
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">تخصص‌های لازم</lable>
               <div class="flex">
-              <input required type="text" id="Expertise" class="input w-full  focus:outline-none placeholder:text-sm" />  <span onclick="newElement('Expertise')" class="addBtn">افزودن</span>
+                <input required type="text" id="Expertise" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Expertise')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULExpertise" class="flex gap-4 dir-l flex-wrap">
 
@@ -43,21 +43,24 @@
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">مهارت‌های فردی</lable>
               <div class="flex">
-              <input required type="text" id="Skill" class="input w-full  focus:outline-none placeholder:text-sm" />  <span onclick="newElement('Skill')" class="addBtn">افزودن</span>
+                <input required type="text" id="Skill" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Skill')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULSkill" class="flex gap-4 dir-l flex-wrap">
 
               </ul>
-          
+
             </div>
           </div>
+          <input name="expertise" type="text" id="ExpertiseArr" class="hidden">
+          <input name="skills" type="text" id="SkillArr" class="hidden">
+
           <button class="btn mt-5 bg-green px-7 text-white  text-sm text-center" type="submit">ثبت شغل</button>
         </form>
       </div>
 
     </div>
   </section>
-  <!-- @if(session('message'))
+  @if(session('message'))
   <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
     <p class="font-bold">{{ session('message') }}</p>
 
@@ -74,7 +77,7 @@
 
 
   </div>
-  @endif -->
+  @endif
 
 
 
@@ -82,56 +85,50 @@
   <script src="{{asset('../node_modules/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{asset('../src/js/main.js')}}"></script>
   <script>
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByClassName("cli");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "closel";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+    // Create a "close" button and append it to each list item
+    let arrsObj = {
+      "ExpertiseArr": [],
+      "SkillArr": [],
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("closel");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Create a new list item when clicking on the "Add" button
-function newElement(inp) {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById(inp).value;
-  var t = document.createTextNode(inputValue);
-  li.className ="cli";
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("یچی باید بنویسی!");
-  } else {
-    document.getElementById(`myUL${inp}`).appendChild(li);
-  }
-  document.getElementById(inp).value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "closel";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
     }
-  }
-}
 
-</script>
+    // Create a new list item when clicking on the "Add" button
+    function newElement(inp) {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById(inp).value;
+      const arr = arrsObj[inp + "Arr"]
+      arr.push(inputValue)
+      arrsObj[inp + "Arr"] = arr
+      document.querySelector("#" + inp + "Arr").value = arr.join(",")
+      var t = document.createTextNode(inputValue);
+      li.className = "cli";
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("یچی باید بنویسی!");
+      } else {
+        document.getElementById(`myUL${inp}`).appendChild(li);
+      }
+      document.getElementById(inp).value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "closel";
+      span.appendChild(txt);
+      li.appendChild(span);
+      li.onclick = function() {
+        this.remove()
+        let arr = arrsObj[inp + "Arr"]
+        let index = arr.indexOf(inputValue)
+        if (index !== -1) {
+          arr.splice(index, 1);
+        }
+
+        document.querySelector("#" + inp + "Arr").value = arr.join(",")
+        arrsObj[inp + "Arr"] = arr
+      }
+
+    }
+  </script>
 </body>
 
 </html>

@@ -19,9 +19,9 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone');
-            $table->enum('role',['Admin','User'])->default('User');
-            $table->enum('statuse',['active','inactive'])->default('active');
-            $table->rememberToken();
+            $table->enum('role', ['Admin', 'User'])->default('User');
+            $table->enum('statuse', ['active', 'inactive'])->default('active');
+            $table->Token();
             $table->timestamps();
         });
     }
@@ -33,5 +33,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('users');
     }
-
 };

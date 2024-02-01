@@ -45,16 +45,17 @@
                                         </tr>
                                     </thead>
                                     <tbody class="acc acg">
+                                        @foreach($customervar as $var)
                                         <tr class="bgm">
                                             <td class="adm asc atn auc awa awe axv cgi">1</td>
-                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/chodanSazan.svg" alt=""></td>
-                                            <td class="adm arf asc awa axr">چدن‌سازان</td>
+                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/{{$var->logo}}" alt=""></td>
+                                            <td class="adm arf asc awa axr">{{$var->name}}</td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                <a href="/customer-edit" class="ayh bli edit">ویرایش</a>
-                                                <a href="#" class="ayh bli">حذف</a>
+                                                <a href="{{route('customer.editview',$var->id) }}" class="ayh bli edit">ویرایش</a>
+                                                <a href="{{route('customer.delete',$var->id) }}" class="ayh bli">حذف</a>
                                             </td>
                                         </tr>
-<!-- 
+                                        @endforeach
                                         @if(session('message'))
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
                                             <p class="font-bold">{{ session('message') }}</p>
@@ -72,7 +73,7 @@
 
 
                                         </div>
-                                        @endif -->
+                                        @endif
 
                                     </tbody>
                                 </table>

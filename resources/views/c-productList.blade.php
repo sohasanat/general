@@ -51,12 +51,11 @@
                                             <td class="adm arf asc awa axr"><img class="imgB" src="{{$product->logo}}" alt=""></td>
                                             <td class="adm arf asc awa axr">{{$product->name}}</td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                <a href="/product-edit" class="ayh bli edit">ویرایش</a>
-                                                <a href="#" class="ayh bli">حذف</a>
+                                                <a href="{{route('product.editview',$product->id) }}" method="POST" class="ayh bli edit">ویرایش</a>
+                                                <a href="{{route('product.delete',$product->id) }}" method="POST" class="ayh bli">حذف</a>
                                             </td>
                                         </tr>
                                         @endforeach
-                                        <!--  
                                         @if(session('message'))
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
                                             <p class="font-bold">{{ session('message') }}</p>
@@ -74,7 +73,7 @@
 
 
                                         </div>
-                                        @endif -->
+                                        @endif
 
                                     </tbody>
                                 </table>

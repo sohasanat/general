@@ -103,6 +103,7 @@
             <input required type="text" name="phone" placeholder="تلفن همراه" class="input w-full  focus:outline-none placeholder:text-sm" />
             <input required type="email" name="email" placeholder="ایمیل" class="input w-full  focus:outline-none placeholder:text-sm" />
             <input required id="uploadInput" name="resume" alt="resume" type="file" class="hidden">
+            <input name="date" type="text" id="timeNow" value="" class="hidden">
 
             <button id="uploadButton" class="btn text-white  text-sm lightGreen3">بارگذاری فایل رزومه</button>
           </div>
@@ -150,6 +151,11 @@
     setTimeout(() => {
       document.querySelector(".success-message").style.display = "none"
     }, 5000)
+  </script>
+
+  <script>
+    const date = new Date().toLocaleDateString("fa-ir")
+    document.querySelector("#timeNow").value = date
   </script>
 
 </body>

@@ -48,7 +48,7 @@
                                     <tbody class="acc acg">
                                         @foreach($blogvar as $blog)
                                         <tr class="bgm tablesRow">
-                                            <td class="adm asc atn auc awa awe axv cgi">{{$blog->id}}</td>
+                                            <td class="adm asc atn auc awa awe axv cgi">1</td>
                                             <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/{{$blog->photo}}" alt=""></td>
                                             <td class="adm arf asc awa axr">{{$blog->title}}</td>
                                             <td class="adm arf asc awa axr">{{$blog->name}}</td>

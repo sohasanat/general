@@ -43,18 +43,22 @@
                                         </tr>
                                     </thead>
                                     <tbody class="acc acg">
-                                        <tr class="bgm">
+
+
+                                        @foreach($alljobsvar as $job)
+                                        <tr class="bgm tablesRow">
                                             <td class="adm asc atn auc awa awe axv cgi">1</td>
-                                            <td class="adm arf asc awa axr">زهرا خسروی</td>
-                                            <td class="adm arf asc awa axr">frontEnd</td>
-                                            <td class="adm arf asc awa axr">09133216549</td>
-                                            <td class="adm arf asc awa axr">zahra@gmail.com</td>
-                                            <td class="adm arf asc awa axr">1402.01.21</td>
+                                            <td class="adm arf asc awa axr">{{$job->name}}</td>
+                                            <td class="adm arf asc awa axr">{{$job->jobname}}</td>
+                                            <td class="adm arf asc awa axr">{{$job->phone}}</td>
+                                            <td class="adm arf asc awa axr">{{$job->email}}</td>
+                                            <td id="dataTime" class="adm arf asc awa axr">{{$job->date}}</td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                 <a href="#" class="ayh bli">مشاهده رزومه</a>
+                                                <a href="{{ route('resume.details', $job->resume) }}" class="ayh bli">مشاهده رزومه</a>
                                             </td>
                                         </tr>
-                                    <!-- 
+                                        @endforeach
+                                        <!-- 
                                         @if(session('message'))
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
                                             <p class="font-bold">{{ session('message') }}</p>
@@ -83,6 +87,20 @@
             </div>
         </div>
     </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> -->
+    <script>
+        const element = document.querySelector("#dataTime")
+        const time = new Date(element.innerHTML && "").toLocaleDateString("fa-ir")
+        console.log(element.innerHTML)
+        element.innerHTML = time
+    </script>
+    <script>
+        const rows = document.getElementsByClassName("tablesRow")
+        Array.from(rows).map((value, index) => {
+            value.firstElementChild.textContent = index + 1
+        })
+    </script>
 
 </body>
 

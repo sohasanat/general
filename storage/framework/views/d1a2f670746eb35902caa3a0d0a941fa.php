@@ -25,10 +25,13 @@
     <div class="container mx-auto max-w-screen-xl">
 
       <div class="lightGreen2 mt-16 p-6 rounded-lg ">
-        <form action="<?php echo e(route('blog.save')); ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?php echo e(route('customer.save')); ?>" method="POST" enctype="multipart/form-data">
+          <?php echo csrf_field(); ?>
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
             <input required type="text" name="name" placeholder="نام مشتری" class="input w-full  focus:outline-none placeholder:text-sm" />
-           <div class="flex gap-4 text-sm"><lable for="poster">لوگو مشتری</lable><input type="file" id="poster"  accept="image/*, .pdf" required></div>
+            <div class="flex gap-4 text-sm">
+              <lable for="poster">لوگو مشتری</lable><input name="logo" type="file" id="poster" accept="image/*, .pdf" required>
+            </div>
           </div>
           <button class="btn bg-green px-7 text-white  text-sm text-center mt-16" type="submit">ثبت مشتری</button>
         </form>

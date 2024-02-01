@@ -53,12 +53,11 @@
                                             <td class="adm arf asc awa axr">{{$job->title}}</td>
                                             <td class="adm arf asc awa axr">تمام وقت</td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                <a href="/customer-edit" class="ayh bli edit">ویرایش</a>
-                                                <a href="#" class="ayh bli">حذف</a>
+                                                <a href="{{route('cmsjob.edit',$job->id) }}" class="ayh bli edit">ویرایش</a>
+                                                <a href="{{route('cmsjob.delete',$job->id) }}" class="ayh bli">حذف</a>
                                             </td>
                                         </tr>
                                         @endforeach
-                                        <!-- 
                                         @if(session('message'))
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
                                             <p class="font-bold">{{ session('message') }}</p>
@@ -76,7 +75,7 @@
 
 
                                         </div>
-                                        @endif -->
+                                        @endif
 
                                     </tbody>
                                 </table>

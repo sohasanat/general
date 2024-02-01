@@ -25,16 +25,17 @@
     <div class="container mx-auto max-w-screen-xl">
 
       <div class="lightGreen2 mt-16 p-6 rounded-lg ">
-        <form action="{{ route('blog.save') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('product.editsave' ,$editpro->id) }}" method="POST" enctype="multipart/form-data">
+          @csrf
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
-            <input required type="text" name="name" placeholder="نام محصول" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <textarea required placeholder="توضیح کوتاه" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
-            <textarea required placeholder="توضیح جامع" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
-            <textarea placeholder="داستان موفقیت" class="textarea w-full  focus:outline-none placeholder:text-sm"></textarea>
+            <input required type="text" name="name" value="{{$editpro->name}}" placeholder="نام محصول" class="input w-full  focus:outline-none placeholder:text-sm" />
+            <input required name="Description" value="{{$editpro->Description}}" placeholder="توضیح کوتاه" class="textarea w-full  focus:outline-none placeholder:text-sm">
+            <input required name="longDescription" value="{{$editpro->longDescreption	}}" placeholder="توضیح جامع" class="textarea w-full  focus:outline-none placeholder:text-sm">
+            <input name="storysuccess" value="{{$editpro->storysuccess}}" placeholder="داستان موفقیت" class="textarea w-full  focus:outline-none placeholder:text-sm">
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">حوزه</lable>
               <div class="flex">
-                <input required type="text" id="Area" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Area')" class="addBtn">افزودن</span>
+                <input name="Grouping" type="text" id="Area" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Area')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULArea" class="flex gap-4 dir-l flex-wrap">
 
@@ -43,10 +44,12 @@
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">صنایع</lable>
               <div class="flex">
-                <input required type="text" id="Industry" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Industry')" class="addBtn">افزودن</span>
+                <input name="Grouping" type="text" id="Industry" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Industry')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULIndustry" class="flex gap-4 dir-l flex-wrap">
-
+                @foreach($hints as $product)
+                <li class="cli">{{$product->Description}}<span class="closel">×</span></li>
+                @endforeach
               </ul>
             </div>
             <div class="flex flex-col gap-2 text-sm">
@@ -57,20 +60,25 @@
                 توضیحات:
                 نگارش یک</lable>
               <div class="flex">
-                <input required type="text" id="Industry" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Industry')" class="addBtn">افزودن</span>
+                <input name="Description1" type="text" id="Writing" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Writing')" class="addBtn">افزودن</span>
               </div>
-              <ul id="myULIndustry" class="flex gap-4 dir-l flex-wrap">
-
+              <ul ul id="myULIndustry" class="flex gap-4 dir-l flex-wrap">
+                @foreach($proinfo as $product)
+                <li class="cli">{{$product->Description}}<span class="closel">×</span></li>
+                @endforeach
               </ul>
             </div>
             <div class="flex gap-4 text-sm">
-              <lable for="poster">پوستر محصول</lable> <input type="file" id="poster" accept="image/*, .pdf" required>
+              <lable for="poster">پوستر محصول</lable> <input type="file" name="logo" src="../assets/images/{{$editpro->logo}}" id="poster" accept="image/*, .pdf" required>
             </div>
             <div class="flex gap-4 text-sm">
-              <lable for="productImg">عکس های محصول</lable> <input type="file" id="productImg" accept="image/*, .pdf" required multiple>
+              <lable for="productImg">عکس های محصول</lable> <input type="file" name="photo" src="../assets/images/{{$editpro->photo}}" id="productImg" accept="image/*, .pdf" required multiple>
             </div>
             </textarea>
           </div>
+          <input name="writing" type="text" id="WritingArr" class="hidden">
+          <input name="industry" type="text" id="IndustryArr" class="hidden">
+          <input name="area" type="text" id="AreaArr" class="hidden">
           <button class="btn bg-green px-7 text-white  text-sm text-center mt-16" type="submit">ثبت محصول</button>
         </form>
       </div>
@@ -79,7 +87,7 @@
   </section>
 
 
-  <!-- @if(session('message'))
+  @if(session('message'))
   <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
     <p class="font-bold">{{ session('message') }}</p>
 
@@ -96,39 +104,29 @@
 
 
   </div>
-  @endif -->
+  @endif
 
 
 
 
   <script src="{{asset('../node_modules/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{asset('../src/js/main.js')}}"></script>
+
+
   <script>
+    let arrsObj = {
+      "WritingArr": [],
+      "IndustryArr": [],
+      "AreaArr": [],
+    }
     // Create a "close" button and append it to each list item
-    var myNodelist = document.getElementsByClassName("cli");
-    var i;
-    for (i = 0; i < myNodelist.length; i++) {
-      var span = document.createElement("SPAN");
-      var txt = document.createTextNode("\u00D7");
-      span.className = "closel";
-      span.appendChild(txt);
-      myNodelist[i].appendChild(span);
-    }
-
-    // Click on a close button to hide the current list item
-    var close = document.getElementsByClassName("closel");
-    var i;
-    for (i = 0; i < close.length; i++) {
-      close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-      }
-    }
-
-    // Create a new list item when clicking on the "Add" button
     function newElement(inp) {
       var li = document.createElement("li");
       var inputValue = document.getElementById(inp).value;
+      const arr = arrsObj[inp + "Arr"]
+      arr.push(inputValue)
+      arrsObj[inp + "Arr"] = arr
+      document.querySelector("#" + inp + "Arr").value = arr.join(",")
       var t = document.createTextNode(inputValue);
       li.className = "cli";
       li.appendChild(t);
@@ -144,13 +142,18 @@
       span.className = "closel";
       span.appendChild(txt);
       li.appendChild(span);
-
-      for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-          var div = this.parentElement;
-          div.style.display = "none";
+      li.onclick = function() {
+        this.remove()
+        let arr = arrsObj[inp + "Arr"]
+        let index = arr.indexOf(inputValue)
+        if (index !== -1) {
+          arr.splice(index, 1);
         }
+
+        document.querySelector("#" + inp + "Arr").value = arr.join(",")
+        arrsObj[inp + "Arr"] = arr
       }
+
     }
   </script>
 </body>

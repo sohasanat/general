@@ -45,16 +45,18 @@
                                         </tr>
                                     </thead>
                                     <tbody class="acc acg">
+                                        <?php $__currentLoopData = $customervar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $var): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr class="bgm">
                                             <td class="adm asc atn auc awa awe axv cgi">1</td>
-                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/chodanSazan.svg" alt=""></td>
-                                            <td class="adm arf asc awa axr">چدن‌سازان</td>
+                                            <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/<?php echo e($var->logo); ?>" alt=""></td>
+                                            <td class="adm arf asc awa axr"><?php echo e($var->name); ?></td>
                                             <td class="ab arf adm asc atm aue avm awa awe cgp">
-                                                <a href="/customer-edit" class="ayh bli edit">ویرایش</a>
-                                                <a href="#" class="ayh bli">حذف</a>
+                                                <a href="<?php echo e(route('customer.editview',$var->id)); ?>" class="ayh bli edit">ویرایش</a>
+                                                <a href="<?php echo e(route('customer.delete',$var->id)); ?>" class="ayh bli">حذف</a>
                                             </td>
                                         </tr>
-<!-- 
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        <!-- 
                                         <?php if(session('message')): ?>
                                         <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
                                             <p class="font-bold"><?php echo e(session('message')); ?></p>

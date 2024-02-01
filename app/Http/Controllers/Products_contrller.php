@@ -37,36 +37,47 @@ class Products_contrller extends Controller
 
     public function productdemo(Request $request)
     {
-        $demovar = new demo_model;
-        $demovar->fullname = $request->fullname;
-        $demovar->phone = $request->phone;
-        $demovar->company = $request->company;
-        $demovar->post = $request->post;
-        $demovar->email = $request->email;
+        $role = session('role');
+        if ($role === 'Customer') {
+            $demovar = new demo_model;
+            $demovar->fullname = $request->fullname;
+            $demovar->phone = $request->phone;
+            $demovar->company = $request->company;
+            $demovar->post = $request->post;
+            $demovar->email = $request->email;
 
-        $demovar->setAttribute('demo', $request->has('demo'));
+            $demovar->setAttribute('demo', $request->has('demo'));
 
-        $demovar->setAttribute('broshor', $request->has('broshor'));
+            $demovar->setAttribute('broshor', $request->has('broshor'));
 
-        $demovar->save();
-        session()->flash('message', ' وبلاگ شما با موفقیت ثبت شد');
-        return redirect()->back();
+            $demovar->save();
+            session()->flash('message', ' درخواست شما با موفقیت ثبت شد');
+            return redirect()->back();
+        } else {
+            session()->flash('message', ' قبل از درخواست باید  در سایت ثبت نام کنید ');
+            return redirect()->back();
+        }
     }
 
 
     public function productcomments(Request $request)
     {
-        $procomments = new productcomment_model;
-        $procomments->name = $request->name;
-        $procomments->email = $request->email;
-        $procomments->Description = $request->Description;
-        $procomments->products_id = $request->param_name;
+        $role = session('role');
+        if ($role == 'Customer') {
+            $procomments = new productcomment_model;
+            $procomments->name = $request->name;
+            $procomments->email = $request->email;
+            $procomments->Description = $request->Description;
+            $procomments->products_id = $request->param_name;
 
-        $procomments->save();
-        session()->flash('message', 'نظر شما با موفقیت ثبت شد');
-        return redirect()->back();
+            $procomments->save();
+            session()->flash('message', 'نظر شما با موفقیت ثبت شد');
+            return redirect()->back();
+        } else {
+            session()->flash('message', ' قبل از درخواست باید  در سایت ثبت نام کنید ');
+            return redirect()->back();
+        }
     }
-
 
     public function products(Request $request)
     {

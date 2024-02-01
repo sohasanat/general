@@ -48,7 +48,7 @@
                                     <tbody class="acc acg">
                                         <?php $__currentLoopData = $blogvar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr class="bgm tablesRow">
-                                            <td class="adm asc atn auc awa awe axv cgi"><?php echo e($blog->id); ?></td>
+                                            <td class="adm asc atn auc awa awe axv cgi">1</td>
                                             <td class="adm arf asc awa axr"><img class="imgB" src="../assets/images/blogimages/<?php echo e($blog->photo); ?>" alt=""></td>
                                             <td class="adm arf asc awa axr"><?php echo e($blog->title); ?></td>
                                             <td class="adm arf asc awa axr"><?php echo e($blog->name); ?></td>

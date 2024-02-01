@@ -13,8 +13,13 @@ class Role
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, ...$roles): Response
+    public function handle(Request $request, Closure $next, $roles): Response
     {
-        return $next($request);
+        $role = session('role');
+        if ($role == $roles) {
+            return $next($request);
+        }
+
+        return redirect('main')->with('error', "You don't have admin access.");
     }
 }

@@ -15,14 +15,20 @@ class connectus_contrller extends Controller
 
     public function connectescomment(Request $request)
     {
+        $role = session('role');
+        if ($role === 'Customer') {
 
-        $connects = new connectus_model;
-        $connects->title = $request->title;
-        $connects->email = $request->email;
-        $connects->Description = $request->Description;
+            $connects = new connectus_model;
+            $connects->title = $request->title;
+            $connects->email = $request->email;
+            $connects->Description = $request->Description;
 
-        $connects->save();
-        session()->flash('message', 'نظر شما با موفقیت ثبت شد . ممنون از نظر خوب شما');
-        return redirect()->back();
+            $connects->save();
+            session()->flash('message', 'نظر شما با موفقیت ثبت شد . ممنون از نظر خوب شما');
+            return redirect()->back();
+        } else {
+            session()->flash('message', ' قبل از درخواست باید  در سایت ثبت نام کنید ');
+            return redirect()->back();
+        }
     }
 }
