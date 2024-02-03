@@ -51,7 +51,7 @@ class job_contrller extends Controller
             session()->flash('message', 'درخواست شما با موفقیت ثبت شد');
             return redirect()->back();
         } else {
-            session()->flash('message', ' قبل از درخواست باید  در سایت ثبت نام کنید ');
+            session()->flash('message1', ' قبل از درخواست باید  در سایت ثبت نام کنید ');
             return redirect()->back();
         }
     }

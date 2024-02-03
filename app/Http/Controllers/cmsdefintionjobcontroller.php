@@ -105,12 +105,12 @@ class cmsdefintionjobcontroller extends Controller
         $detailjobedit = detailjob_model::find($id);
         $detailjobedit->title = $request->title;
         $detailjobedit->Description = $request->Description;
-
+        $detailjobedit->longDescreption = $request->longDescreption1;
         $detailjobedit->push();
         $proinfo = jobexpertise_model::where('job_id', $id);
         $proinfo->delete();
 
-        // $detailjobid = detailjob_model::latest('id')->value('id');
+        $detailjobid = detailjob_model::latest('id')->value('id');
         // $idlast = $saveproid->id;
         foreach ($expertise as $item) {
             $expertisejob = new jobexpertise_model;

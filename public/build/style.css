@@ -531,7 +531,7 @@ gap:3rem;
   transition: 0.3s;
 
 }
-ul.dir-l li span{
+ul.dir-l li span:last-child{
   color:#e92c2c;
   padding-left: 5px;
 }

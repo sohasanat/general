@@ -95,5 +95,10 @@
         value.firstElementChild.textContent = index + 1
     })
 </script>
+<script>
+    setTimeout(() => {
+        document.querySelector(".alert").style.display = "none"
+    }, 2000);
+</script>
 
 </html>

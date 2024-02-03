@@ -27,7 +27,7 @@ class connectus_contrller extends Controller
             session()->flash('message', 'نظر شما با موفقیت ثبت شد . ممنون از نظر خوب شما');
             return redirect()->back();
         } else {
-            session()->flash('message', ' قبل از درخواست باید  در سایت ثبت نام کنید ');
+            session()->flash('message1', ' قبل از درخواست باید  در سایت ثبت نام کنید ');
             return redirect()->back();
         }
     }

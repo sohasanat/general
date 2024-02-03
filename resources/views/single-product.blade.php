@@ -48,7 +48,7 @@
           <input required name="phone" type="text" placeholder="شماره تماس:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
           <input required name="company" type="text" placeholder="شرکت:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
           <input required name="post" type="text" placeholder="سمت شغلی:" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
-          <input required type="email" name="email" placeholder="ایمیل(اختیاری):" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
+          <input type="email" name="email" placeholder="ایمیل(اختیاری):" class="mb-4 border-box input w-full rounded-full focus:outline-none placeholder:text-sm" />
           <div>
             <input type="checkbox" name="demo" value="zahra" class="formInput ml-4" id="cat-35">
             <label for="cat-35"> درخواست دمو </label>
@@ -79,6 +79,42 @@
         <path fill="#fff" d="M21.293,32.707l-8-8c-0.391-0.391-0.391-1.024,0-1.414l1.414-1.414c0.391-0.391,1.024-0.391,1.414,0	L22,27.758l10.879-10.879c0.391-0.391,1.024-0.391,1.414,0l1.414,1.414c0.391,0.391,0.391,1.024,0,1.414l-13,13	C22.317,33.098,21.683,33.098,21.293,32.707z" />
       </svg>
 
+
+    </div>
+    @endif
+
+
+    @if(session('message1'))
+    <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
+      <p class="font-bold">{{ session('message1') }}</p>
+
+      <svg width="48px" height="48px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #fac100;
+            }
+
+            .cls-2 {
+              fill: #ff9500;
+            }
+
+            .cls-3 {
+              fill: #2d4a60;
+            }
+
+            .cls-4 {
+              fill: #263f52;
+            }
+          </style>
+        </defs>
+        <title>Crisis</title>
+        <path class="cls-1" d="M44.5,34.5,28.33,6.5a5,5,0,0,0-8.66,0L3.5,34.5A5,5,0,0,0,7.834,42H40.166a5,5,0,0,0,4.33-7.5Z" />
+        <path class="cls-2" d="M34,37A24.006,24.006,0,0,1,11.344,20.921L3.5,34.5A5,5,0,0,0,7.834,42H40.166a5,5,0,0,0,4.364-7.431A23.9,23.9,0,0,1,34,37Z" />
+        <path class="cls-3" d="M24,30A2.1,2.1,0,0,0,26.1,28.1l1.18-11.8A3,3,0,0,0,24.29,13h-.58a3,3,0,0,0-2.985,3.3L21.905,28.1A2.1,2.1,0,0,0,24,30Z" />
+        <circle class="cls-3" cx="24" cy="34.5" r="3.5" />
+        <path class="cls-4" d="M24,38a3.5,3.5,0,0,0,3.154-2.009,23.838,23.838,0,0,1-6.326-2.949A3.46,3.46,0,0,0,20.5,34.5,3.5,3.5,0,0,0,24,38Z" />
+      </svg>
 
     </div>
     @endif
@@ -313,7 +349,11 @@
     })
   </script>
 
-
+  <script>
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none"
+    }, 2000);
+  </script>
 
 
 </body>

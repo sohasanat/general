@@ -80,7 +80,7 @@ class cmsprductcontroller extends Controller
         $savepro = Products_model::find($id);
         $savepro->name = $request->name;
         $savepro->Description = $request->Description;
-        $savepro->longDescription = $request->longDescription;
+        $savepro->longDescreption = $request->longDescreption;
         $savepro->storysuccess = $request->storysuccess;
         if ($request->file('photo')) {
             $file = $request->file('photo');

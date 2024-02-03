@@ -14,7 +14,7 @@ class Products_model extends Model
                 'name',
                 'photo',
                 'Description',
-                'longDescription',
+                'longDescreption',
                 'company_id',
                 'remember_token',
                 'created_at',

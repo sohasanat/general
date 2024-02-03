@@ -129,6 +129,11 @@
 
     }
   </script>
+  <script>
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none"
+    }, 2000);
+  </script>
 </body>
 
 </html>

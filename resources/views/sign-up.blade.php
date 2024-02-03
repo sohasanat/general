@@ -54,7 +54,11 @@
   </div>
   </div>
   </div>
-
+  <script>
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none"
+    }, 2000);
+  </script>
   <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
   <script src="../src/js/main.js"></script>
 </body>

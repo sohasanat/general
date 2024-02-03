@@ -29,7 +29,7 @@
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blogall.main') }}"> وبلاگ</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="login"> ورود | ثبت نام</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('login.view') }}"> ورود | ثبت نام</a></li>
                             </ul>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                     </ul>
                 </div>
                 <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full hidden sm:block">
-                    <a href="login" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
+                    <a href="{{ route('login.view') }}" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
                 </div>
 
             </div>

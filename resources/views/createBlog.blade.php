@@ -30,8 +30,12 @@
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
             <input required type="text" name="name" placeholder="نویسنده" class="input w-full  focus:outline-none placeholder:text-sm" />
             <input required type="text" name="title" placeholder=" عنوان وبلاگ" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <div class="flex gap-4 text-sm"><lable for="poster">عکس نویسنده</lable> <input type="file"  accept="image/*, .pdf" required></div>
-            <div class="flex gap-4 text-sm"><lable for="poster">عکس وبلاگ</lable> <input type="file" accept="image/*, .pdf" required></div>
+            <div class="flex gap-4 text-sm">
+              <lable for="poster">عکس نویسنده</lable> <input type="file" accept="image/*, .pdf" required>
+            </div>
+            <div class="flex gap-4 text-sm">
+              <lable for="poster">عکس وبلاگ</lable> <input type="file" accept="image/*, .pdf" required>
+            </div>
 
             <textarea required name="Description" placeholder="متن وبلاگ" class="textarea w-full  focus:outline-none placeholder:text-sm">
 </textarea>
@@ -66,7 +70,11 @@
 
   <script src="{{asset('../node_modules/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{asset('../src/js/main.js')}}"></script>
-
+  <script>
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none"
+    }, 2000);
+  </script>
 </body>
 
 </html>

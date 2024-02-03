@@ -30,6 +30,7 @@ use App\Http\Controllers\customerController;
 //صفحه اصلی
 Route::get('/main', [Company_contrller::class, 'companysender'])->name('main.company');
 Route::get('/', [Company_contrller::class, 'main'])->name('main');
+Route::get('/loginview', [Company_contrller::class, 'loginview'])->name('login.view');
 
 Route::post('/login', [UserController::class, 'user'])->name('loginuser');
 Route::post('/register', [UserController::class, 'userrequest'])->name('user.register');

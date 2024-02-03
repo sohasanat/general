@@ -78,17 +78,17 @@
                         </div>
                         <!-- for mobile start-->
                         <div class="bg-white relative flex flex-wrap py-6 rounded-2xl border-1p sm:hidden">
-                                <div class="lg:w-1/2 px-6">
-                                    <p class="font-YekanBakh-Bold text-base mb-2">مکـــان:</p>
-                                    <p class="mb-4 text-xs leading-6">اصفهان - خیابان 22بهمن - روبه‌روی بانک سپه - پلاک 205</p>
-                                </div>
-                                <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                                    <p class="font-YekanBakh-Bold text-base mb-2">ایمیــل:</p>
-                                    <a class="text-orange-500 leading-relaxed">info@sohasanat.net</a>
-                                    <p class="font-YekanBakh-Bold text-base mb-2">تمـاس:</p>
-                                    <p class="leading-relaxed">031-91099120 | 09131862984</p>
-                                </div>
+                            <div class="lg:w-1/2 px-6">
+                                <p class="font-YekanBakh-Bold text-base mb-2">مکـــان:</p>
+                                <p class="mb-4 text-xs leading-6">اصفهان - خیابان 22بهمن - روبه‌روی بانک سپه - پلاک 205</p>
                             </div>
+                            <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                                <p class="font-YekanBakh-Bold text-base mb-2">ایمیــل:</p>
+                                <a class="text-orange-500 leading-relaxed">info@sohasanat.net</a>
+                                <p class="font-YekanBakh-Bold text-base mb-2">تمـاس:</p>
+                                <p class="leading-relaxed">031-91099120 | 09131862984</p>
+                            </div>
+                        </div>
                         <!-- for mobile end-->
                         <div class="lg:w-2/3 md:w-1/2 rounded-3xl overflow-hidden hidden sm:mr-10 p-4 md:flex items-end justify-start relative">
                             <iframe width="100%" height="100%" class="absolute border-1p inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" style="filter: opacity(0.7);" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1258.3920220984826!2d51.70158335846726!3d32.64603791291042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1703419123037!5m2!1sen!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -127,6 +127,41 @@
             </div>
             @endif
 
+            @if(session('message1'))
+            <div style="box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);" class="alert alert-success success-message fixed top-5 w-80 bg-white p-4 rounded-md flex gap-1 justify-between items-center slide-left">
+                <p class="font-bold">{{ session('message1') }}</p>
+
+                <svg width="48px" height="48px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #fac100;
+                            }
+
+                            .cls-2 {
+                                fill: #ff9500;
+                            }
+
+                            .cls-3 {
+                                fill: #2d4a60;
+                            }
+
+                            .cls-4 {
+                                fill: #263f52;
+                            }
+                        </style>
+                    </defs>
+                    <title>Crisis</title>
+                    <path class="cls-1" d="M44.5,34.5,28.33,6.5a5,5,0,0,0-8.66,0L3.5,34.5A5,5,0,0,0,7.834,42H40.166a5,5,0,0,0,4.33-7.5Z" />
+                    <path class="cls-2" d="M34,37A24.006,24.006,0,0,1,11.344,20.921L3.5,34.5A5,5,0,0,0,7.834,42H40.166a5,5,0,0,0,4.364-7.431A23.9,23.9,0,0,1,34,37Z" />
+                    <path class="cls-3" d="M24,30A2.1,2.1,0,0,0,26.1,28.1l1.18-11.8A3,3,0,0,0,24.29,13h-.58a3,3,0,0,0-2.985,3.3L21.905,28.1A2.1,2.1,0,0,0,24,30Z" />
+                    <circle class="cls-3" cx="24" cy="34.5" r="3.5" />
+                    <path class="cls-4" d="M24,38a3.5,3.5,0,0,0,3.154-2.009,23.838,23.838,0,0,1-6.326-2.949A3.46,3.46,0,0,0,20.5,34.5,3.5,3.5,0,0,0,24,38Z" />
+                </svg>
+
+            </div>
+            @endif
+
         </section>
     </div>
 
@@ -139,10 +174,15 @@
 
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="../src/js/main.js"></script>
-    <script>
+    <!-- <script>
         setTimeout(() => {
             document.querySelector(".success-message").style.display = "none"
         }, 5000)
+    </script> -->
+    <script>
+        setTimeout(() => {
+            document.querySelector(".alert").style.display = "none"
+        }, 2000);
     </script>
 </body>
 

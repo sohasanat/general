@@ -30,7 +30,7 @@
           <div class="text-base text-gray-700 sm:text-lg leading-8 flex flex-col gap-6">
             <input required type="text" name="name" value="{{$editpro->name}}" placeholder="نام محصول" class="input w-full  focus:outline-none placeholder:text-sm" />
             <input required name="Description" value="{{$editpro->Description}}" placeholder="توضیح کوتاه" class="textarea w-full  focus:outline-none placeholder:text-sm">
-            <input required name="longDescription" value="{{$editpro->longDescreption	}}" placeholder="توضیح جامع" class="textarea w-full  focus:outline-none placeholder:text-sm">
+            <input required name="longDescreption" value="{{$editpro->longDescreption	}}" placeholder="توضیح جامع" class="textarea w-full  focus:outline-none placeholder:text-sm">
             <input name="storysuccess" value="{{$editpro->storysuccess}}" placeholder="داستان موفقیت" class="textarea w-full  focus:outline-none placeholder:text-sm">
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">حوزه</lable>
@@ -48,7 +48,7 @@
               </div>
               <ul id="myULIndustry" class="flex gap-4 dir-l flex-wrap">
                 @foreach($hints as $product)
-                <li class="cli">{{$product->Description}}<span class="closel">×</span></li>
+                <li onclick="deleteFunction(this, 'Industry')" class="cli"><span>{{$product->Description}}</span><span class="closel">×</span></li>
                 @endforeach
               </ul>
             </div>
@@ -62,9 +62,9 @@
               <div class="flex">
                 <input name="Description1" type="text" id="Writing" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Writing')" class="addBtn">افزودن</span>
               </div>
-              <ul ul id="myULIndustry" class="flex gap-4 dir-l flex-wrap">
+              <ul ul id="myULWriting" class="flex gap-4 dir-l flex-wrap">
                 @foreach($proinfo as $product)
-                <li class="cli">{{$product->Description}}<span class="closel">×</span></li>
+                <li onclick="deleteFunction(this, 'Writing')" class="cli"><span>{{$product->Description}}</span><span class="closel">×</span></li>
                 @endforeach
               </ul>
             </div>
@@ -119,7 +119,7 @@
       "IndustryArr": [],
       "AreaArr": [],
     }
-    // Create a "close" button and append it to each list item
+
     function newElement(inp) {
       var li = document.createElement("li");
       var inputValue = document.getElementById(inp).value;
@@ -128,8 +128,10 @@
       arrsObj[inp + "Arr"] = arr
       document.querySelector("#" + inp + "Arr").value = arr.join(",")
       var t = document.createTextNode(inputValue);
+      const spanValue = document.createElement("span")
+      spanValue.appendChild(t)
       li.className = "cli";
-      li.appendChild(t);
+      li.appendChild(spanValue);
       if (inputValue === '') {
         alert("یچی باید بنویسی!");
       } else {
@@ -155,6 +157,47 @@
       }
 
     }
+
+    function deleteFunction(element, inp) {
+      element.parentNode.removeChild(element);
+      let arr = arrsObj[inp + "Arr"]
+      let index = arr.indexOf(element.firstElementChild.textContent)
+      if (index !== -1) {
+        arr.splice(index, 1);
+      }
+
+      document.querySelector("#" + inp + "Arr").value = arr.join(",")
+      arrsObj[inp + "Arr"] = arr
+    }
+
+    const clis = Array.from(document.getElementsByClassName("cli"))
+    clis.map((ele) => {
+      if (ele.parentElement.id.includes("Writing")) {
+        let arr = arrsObj["WritingArr"]
+
+        arr.push(ele.firstElementChild.textContent)
+        document.querySelector("#WritingArr").value = arr.join(",")
+        arrsObj["WritingArr"] = arr
+      } else if (ele.parentElement.id.includes("Industry")) {
+        let arr = arrsObj["IndustryArr"]
+
+        arr.push(ele.firstElementChild.textContent)
+        document.querySelector("#IndustryArr").value = arr.join(",")
+        arrsObj["IndustryArr"] = arr
+      } else if (ele.parentElement.id.includes("Area")) {
+        let arr = arrsObj["AreaArr"]
+
+        arr.push(ele.firstElementChild.textContent)
+        document.querySelector("#AreaArr").value = arr.join(",")
+        arrsObj["AreaArr"] = arr
+      }
+    })
+  </script>
+
+  <script>
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none"
+    }, 2000);
   </script>
 </body>
 

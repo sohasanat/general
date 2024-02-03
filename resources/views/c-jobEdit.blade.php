@@ -33,11 +33,11 @@
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">تخصص‌های لازم</lable>
               <div class="flex">
-                <input required type="text" id="Expertise" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Expertise')" class="addBtn">افزودن</span>
+                <input type="text" id="Expertise" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Expertise')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULExpertise" class="flex gap-4 dir-l flex-wrap">
                 @foreach($experiense as $ex)
-                <li class="cli">{{$ex->expertiseDescription}}<span class="closel">×</span></li>
+                <li onclick="deleteFunction(this, 'Expertise')" class="cli" id="see"><span>{{$ex->expertiseDescription}}</span><span class="closel">×</span></li>
                 @endforeach
               </ul>
             </div>
@@ -45,11 +45,12 @@
             <div class="flex flex-col gap-2 text-sm">
               <lable for="poster">مهارت‌های فردی</lable>
               <div class="flex">
-                <input required type="text" id="Skill" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Skill')" class="addBtn">افزودن</span>
+                <input type="text" id="Skill" class="input w-full  focus:outline-none placeholder:text-sm" /> <span onclick="newElement('Skill')" class="addBtn">افزودن</span>
               </div>
               <ul id="myULSkill" class="flex gap-4 dir-l flex-wrap">
                 @foreach($skills as $skill)
-                <li class="cli">{{$skill->skillsDescription}}<span class="closel">×</span></li>
+
+                <li onclick="deleteFunction(this, 'Skill')" class="cli"><span>{{$skill->skillsDescription}}</span><span class="closel">×</span></li>
                 @endforeach
               </ul>
 
@@ -105,8 +106,10 @@
       arrsObj[inp + "Arr"] = arr
       document.querySelector("#" + inp + "Arr").value = arr.join(",")
       var t = document.createTextNode(inputValue);
+      const spanValue = document.createElement("span")
+      spanValue.appendChild(t)
       li.className = "cli";
-      li.appendChild(t);
+      li.appendChild(spanValue);
       if (inputValue === '') {
         alert("یچی باید بنویسی!");
       } else {
@@ -132,6 +135,40 @@
       }
 
     }
+
+    function deleteFunction(element, inp) {
+      element.parentNode.removeChild(element);
+      let arr = arrsObj[inp + "Arr"]
+      let index = arr.indexOf(element.firstElementChild.textContent)
+      if (index !== -1) {
+        arr.splice(index, 1);
+      }
+
+      document.querySelector("#" + inp + "Arr").value = arr.join(",")
+      arrsObj[inp + "Arr"] = arr
+    }
+
+    const clis = Array.from(document.getElementsByClassName("cli"))
+    clis.map((ele) => {
+      if (ele.parentElement.id.includes("Expertise")) {
+        let arr = arrsObj["ExpertiseArr"]
+
+        arr.push(ele.firstElementChild.textContent)
+        document.querySelector("#ExpertiseArr").value = arr.join(",")
+        arrsObj["ExpertiseArr"] = arr
+      } else if (ele.parentElement.id.includes("Skill")) {
+        let arr = arrsObj["SkillArr"]
+
+        arr.push(ele.firstElementChild.textContent)
+        document.querySelector("#SkillArr").value = arr.join(",")
+        arrsObj["SkillArr"] = arr
+      }
+    })
+  </script>
+  <script>
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none"
+    }, 2000);
   </script>
 </body>
 
