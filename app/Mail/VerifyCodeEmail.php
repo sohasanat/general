@@ -23,7 +23,7 @@ class VerifyCodeEmail extends Mailable
 
     public function build()
     {
-        return $this->view('emails.verify_code_email');
+        return $this->view('lost-password-vrify');
     }
 }
 

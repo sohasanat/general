@@ -29,7 +29,7 @@
                 <p class="text-xs text-gray-600 text-center leading-8">
                   ایمیل خود را وارد کنید. یک لینک برای ساختن گذرواژه جدید در ایمیل خود دریافت خواهید کرد.
                 </p>
-                <input type="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
+                <input name="email" type="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
                 <button class="btn bg-stone-800 w-full hover:bg-stone-900 text-white rounded-full text-sm" type="submit">
                   <a href="/lost-pass-code">بازیابی گذرواژه</a>
 

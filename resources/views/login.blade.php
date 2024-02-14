@@ -31,7 +31,7 @@
                 <button class="btn bg-stone-800 w-full hover:bg-stone-900 text-white rounded-full text-sm" type="submit">ورود</button>
                 <p class="mt-6 text-xs text-gray-600 text-center leading-8">
                   رمز عبور خود را فراموش کرده اید؟
-                  <a href="/lost-password" class="border-b border-gray-500 border-dotted">
+                  <a href="{{ route('user.losstpas') }}" class="border-b border-gray-500 border-dotted">
                     کلیک کنید.
                   </a>
                   <br>
