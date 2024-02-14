@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class model_tiket_table extends Model
 {
-    use HasFactory;
+    protected $table = 'tiket';
+    protected $fillable = ['name', 'email', 'phone', 'title', 'receiver', 'section', 'importent', 'status'];
 }
