@@ -187,3 +187,16 @@ Route::get('/job-edit', function () {
 Route::get('/resume-list', function () {
     return view('c-resumeList');
 });
+
+
+Route::get('/ticketList', function () {
+    return view('ticketing.ticketList');
+});
+
+Route::get('/ticketCreate', function () {
+    return view('ticketing.ticketCreate');
+});
+
+Route::get('/ticketDetail', function () {
+    return view('ticketing.ticketDetail');
+});

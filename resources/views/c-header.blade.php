@@ -28,7 +28,7 @@
                             <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('cmsjoblist') }}">مدیریت فرصت‌های شغلی</a></li>
                             <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('customer.list') }}">مدیریت مشتریان</a></li>
                             <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('resumeslist') }}">رزومه ها</a></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('user.logout') }}">خروج از اکانت</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('user.logout') }}">بازگشت به سایت</a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('cmsjoblist') }}">مدیریت فرصت‌های شغلی</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('customer.list') }}">مدیریت مشتریان</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('resumeslist') }}">رزومه ها</a></li>
-                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('user.logout') }}">خروج از اکانت</a></li>
+                    <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('user.logout') }}">بازگشت به سایت</a></li>
                 </ul>
             </div>
             <div class="flex items-center gap-8">

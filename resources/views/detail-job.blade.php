@@ -105,9 +105,11 @@
             <input required id="uploadInput" name="resume" alt="resume" type="file" class="hidden">
             <input name="date" type="text" id="timeNow" value="" class="hidden">
 
-            <button id="uploadButton" class="btn text-white  text-sm lightGreen3">بارگذاری فایل رزومه</button>
+            <button id="uploadButton" class="flex-1 flex-100 btn font-YekanBakh-Regular text-white border-dash ">بارگذاری فایل رزومه</button>
           </div>
+          <div class="flex justify-end w-full">
           <button class="btn mt-5 bg-green px-7 text-white  text-sm text-center" type="submit">ارسال رزومه</button>
+</div>
         </form>
       </div>
 
