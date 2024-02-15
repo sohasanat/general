@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\connectus_model;
+use App\Models\User;
 
 class connectus_contrller extends Controller
 {
     public function connectes()
     {
-
-        return view('contact-us');
+        $id = session('id');
+        $username = User::find($id);
+        return view('contact-us', compact('username'));
     }
 
     public function connectescomment(Request $request)

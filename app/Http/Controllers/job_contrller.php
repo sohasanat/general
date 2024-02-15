@@ -7,13 +7,16 @@ use App\Models\job_model;
 use App\Models\detailjob_model;
 use App\Models\jobexpertise_model;
 use App\Models\jobskills_model;
+use App\Models\User;
 
 class job_contrller extends Controller
 {
     public function jobs()
     {
+        $id = session('id');
+        $username = User::find($id);
         $jobsvar = detailjob_model::all();
-        return view('job', compact('jobsvar'));
+        return view('job', compact('jobsvar', 'username'));
     }
 
     public function jobdeails($id)

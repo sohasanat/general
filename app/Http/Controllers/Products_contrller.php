@@ -9,13 +9,17 @@ use App\Models\Productinformations_model;
 use App\Models\images_model;
 use App\Models\demo_model;
 use App\Models\productcomment_model;
+use App\Models\User;
 
 class Products_contrller extends Controller
 {
     public function productsender()
     {
+
         $allproductsvar = Products_model::all();
-        return view('products', compact('allproductsvar'));
+        $id = session('id');
+        $username = User::find($id);
+        return view('products', compact('allproductsvar', 'username'));
     }
 
     public function productdetails($id)
@@ -78,6 +82,9 @@ class Products_contrller extends Controller
             return redirect()->back();
         }
     }
+
+
+
 
     public function products(Request $request)
     {

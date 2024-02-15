@@ -13,14 +13,22 @@ use App\Mail\VerifyCodeEmail;
 class UserController extends Controller
 {
 
+    public function saveUserRoleAndId($id, $role)
+    {
+
+        session()->put('role', $role);
+        session()->put('id', $id);
+    }
+
     public function user(Request $request)
     {
         $user = User::where('email', $request->email)->first();
 
         if ($user && password_verify($request->password, $user->password)) {
             $role = $user->role;
-            $request->attributes->add(['role' => $role]);
-            session()->put('role', $role);
+            $id = $user->id;
+            $this->saveUserRoleAndId($id, $role);
+            session()->flash('message', 'با موفقیت وارد شدید');
             return redirect()->route('main.company');
         } else {
             // مدیریت خطا: نام کاربری یا رمز عبور نادرست است
@@ -38,19 +46,22 @@ class UserController extends Controller
             session()->flash('message', 'این ایمیل قبلا ثبت شده است');
             return redirect()->back();
         } else {
-            $user = new User;
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->password = bcrypt($request->password);
+            $userr = new User;
+            $userr->name = $request->name;
+            $userr->email = $request->email;
+            $userr->password = bcrypt($request->password);
 
-            $user->save();
-
+            $userr->save();
+            $user = User::latest()->first();
+            $id = $user->id;
+            $role = $user->role;
+            $this->saveUserRoleAndId($id, $role);
 
             session()->flash('message', 'با موفقیت ثبت شدید');
-            $blogmainall = blog_model::take(4)->get();
-            $companyvar = Company::all();
-
-            return view('main', compact('companyvar', 'blogmainall'));
+            // $blogmainall = blog_model::take(4)->get();
+            // $companyvar = Company::all();
+            session()->flash('message', 'با موفقیت وارد شدید');
+            return redirect()->route('main.company');
         }
     }
 
@@ -58,6 +69,7 @@ class UserController extends Controller
     {
 
         $request->session()->forget('role');
+        $request->session()->forget('id');
         $blogmainall = blog_model::take(4)->get();
         $companyvar = Company::all();
 

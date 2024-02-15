@@ -23,7 +23,7 @@
                                     </label>
                                 </div>
                                 <!-- Sidebar content here -->
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('main') }}">صفحه اصلی</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('main.company') }}">صفحه اصلی</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blogall.main') }}"> وبلاگ</a></li>
                                 <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
@@ -46,7 +46,18 @@
                 </div>
                 <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold ">
+
+                        @php
+                        $role = 'Customer'; // Replace 'Customer' with the actual role value you want to check
+                        @endphp
+
+                        @if(session('role') == $role)
+
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('main.prof') }}">صفحه اصلی</a></li>
+                        @else
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('main') }}">صفحه اصلی</a></li>
+                        @endif
+
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
                         <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
@@ -62,15 +73,20 @@
                     <a href="{{ route('login.view') }}" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
                 </div>
                 <ul class=" menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold hidden sm:flex">
-                    <li><details>
-                            <summary><a href="#">نام کاربری طرف</a></summary>
+                    <li>@if(isset($username->name))
+
+                        <details>
+                            <summary><a>نام کاربری طرف {{$username->name}}</a></summary>
                             <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0 top-left">
-                              <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li>
-                              <li><a href="/ticketList">تیکت ها</a></li>
-                              <li><a>خروج از حساب</a></li>
+                                <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li>
+                                <li><a href="/ticketList">تیکت ها</a></li>
+                                <li><a href="{{ route('user.logout') }}">خروج از حساب</a></li>
                             </ul>
-                        </details></li>
-                        </ul>
+                        </details>
+                        <!-- <summary><a>نام کاربری طرف {{$username->name}}</a></summary> -->
+                        @endif
+                    </li>
+                </ul>
 
             </div>
         </div>

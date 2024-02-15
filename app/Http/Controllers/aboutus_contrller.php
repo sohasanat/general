@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\aboutus_model;
 use App\Models\members_model;
+use App\Models\User;
 
 class aboutus_contrller extends Controller
 {
     public function aboutus()
     {
+        $id = session('id');
+        $username = User::find($id);
         $allabouts = aboutus_model::all();
         $allmembers = members_model::all();
-        return view('about-us', compact('allabouts', 'allmembers'));
+        return view('about-us', compact('allabouts', 'allmembers', 'username'));
     }
 }

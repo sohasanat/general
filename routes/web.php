@@ -30,7 +30,7 @@ use App\Http\Controllers\tiketController;
 //صفحه اصلی
 Route::get('/main', [Company_contrller::class, 'companysender'])->name('main.company');
 Route::get('/', [Company_contrller::class, 'main'])->name('main');
-
+Route::get('/main-profile', [Company_contrller::class, 'mainprof'])->name('main.prof');
 
 
 //تعریف ادمین
@@ -41,6 +41,10 @@ Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 Route::get('/lostpassword', [UserController::class, 'losst'])->name('user.losstpas');
 Route::post('/lostpassword-vrify', [UserController::class, 'sendVerificationCode'])->name('user.losstpasvrify');
 
+
+
+// Route::post('productcomments', 'ProductController@productcomments')->name('user.losstpas')->middleware('checkRole:Customer');
+// Route::post('productcomments', 'ProductController@produ')->name('user.losstpas');
 
 //شغل و فرصت های شغلی
 Route::get('/job', [job_contrller::class, 'jobs'])->name('jobs');
@@ -80,7 +84,7 @@ Route::get('/product-send', [Products_contrller::class, 'productsender'])->name(
 Route::get('/single-product/{id}', [Products_contrller::class, 'productdetails'])->name('product.details');
 Route::post('/single-product-demo', [Products_contrller::class, 'productdemo'])->name('product.demo');
 Route::post('/single-product-comment', [Products_contrller::class, 'productcomments'])->name('product.comment');
-
+// Route::post('/single-product-comment1', [Products_contrller::class, 'productcomments1'])->name('product.comment1')->middleware('Role:Customer');
 
 //فیلتر محصولات 
 Route::get('/product-serch', [Products_contrller::class, 'products'])->name('searchpro');
@@ -107,8 +111,8 @@ Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name(
 
 
 
-//tiketing  سایت 
-
+// //tiketing  سایت 
+// Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name('blog.delete');
 
 
 
