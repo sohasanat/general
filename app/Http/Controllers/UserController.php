@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\blog_model;
 use App\Models\Company;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\VerifyCodeEmail;
 
 
 class UserController extends Controller
@@ -30,17 +32,26 @@ class UserController extends Controller
 
     public function userrequest(Request $request)
     {
-        $connects = new User;
-        $connects->name = $request->name;
-        $connects->email = $request->email;
-        $connects->password = bcrypt($request->password);
+        $emailExists = User::where('email', $request->email)->exists();
 
-        $connects->save();
-        session()->flash('message', 'با موفقیت ثبت شدید');
-        $blogmainall = blog_model::take(4)->get();
-        $companyvar = Company::all();
+        if ($emailExists) {
+            session()->flash('message', 'این ایمیل قبلا ثبت شده است');
+            return redirect()->back();
+        } else {
+            $user = new User;
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = bcrypt($request->password);
 
-        return view('main', compact('companyvar', 'blogmainall'));
+            $user->save();
+
+
+            session()->flash('message', 'با موفقیت ثبت شدید');
+            $blogmainall = blog_model::take(4)->get();
+            $companyvar = Company::all();
+
+            return view('main', compact('companyvar', 'blogmainall'));
+        }
     }
 
     public function logout(Request $request)
@@ -51,5 +62,40 @@ class UserController extends Controller
         $companyvar = Company::all();
 
         return view('main', compact('companyvar', 'blogmainall'));
+    }
+
+    public function losst(Request $request)
+    {
+
+
+        return view('lost-password');
+    }
+
+
+
+    public function sendVerificationCode(Request $request)
+    {
+
+
+
+        $emailExists = User::where('email', $request->email)->exists();
+
+        if ($emailExists) {
+            $userEmail = $request->email;
+
+            // ایجاد یک کد تصادفی 4 رقمی
+            $verificationCode = str_pad(mt_rand(1, 9999), 4, '0', STR_PAD_LEFT);
+            // dd($verificationCode);
+            // ذخیره کد تصادفی در دیتابیس
+            $user = User::where('email', $userEmail)->first();
+            $user->verification_code = $verificationCode;
+            $user->save();
+
+            Mail::to($userEmail)->send(new VerifyCodeEmail($verificationCode));
+        } else {
+
+            session()->flash('message', 'این ایمیل قبلا ثبت نشده است');
+            return redirect()->back();
+        }
     }
 }

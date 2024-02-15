@@ -13,7 +13,7 @@ use App\Http\Controllers\cmsprductcontroller;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\cmsdefintionjobcontroller;
 use App\Http\Controllers\customerController;
-
+use App\Http\Controllers\tiketController;
 
 
 /*
@@ -30,11 +30,17 @@ use App\Http\Controllers\customerController;
 //صفحه اصلی
 Route::get('/main', [Company_contrller::class, 'companysender'])->name('main.company');
 Route::get('/', [Company_contrller::class, 'main'])->name('main');
-Route::get('/loginview', [Company_contrller::class, 'loginview'])->name('login.view');
 
+
+
+//تعریف ادمین
+Route::get('/loginview', [Company_contrller::class, 'loginview'])->name('login.view');
 Route::post('/login', [UserController::class, 'user'])->name('loginuser');
 Route::post('/register', [UserController::class, 'userrequest'])->name('user.register');
 Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
+Route::get('/lostpassword', [UserController::class, 'losst'])->name('user.losstpas');
+Route::post('/lostpassword-vrify', [UserController::class, 'sendVerificationCode'])->name('user.losstpasvrify');
+
 
 //شغل و فرصت های شغلی
 Route::get('/job', [job_contrller::class, 'jobs'])->name('jobs');
@@ -101,6 +107,11 @@ Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name(
 
 
 
+//tiketing  سایت 
+
+
+
+
 
 Route::get('/404', function () {
     return view('404');
@@ -141,6 +152,9 @@ Route::get('/single-page', function () {
     return view('single-page');
 });
 
+Route::get('/lost-pass-code', function () {
+    return view('lost-password-vrify');
+});
 
 
 
