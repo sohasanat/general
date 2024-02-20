@@ -3,23 +3,15 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 class Role
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next, $roles): Response
+    public function handle($request, Closure $next, $role)
     {
-        $role = session('role');
-        if ($role == $roles) {
-            return $next($request);
+        if ($request->session()->get('role') !== $role) {
+            return redirect()->back()->with('error', 'شما مجوز لازم برای دسترسی به این بخش را ندارید');
         }
 
-        return redirect('main')->with('error', "You don't have admin access.");
+        return $next($request);
     }
 }

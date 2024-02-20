@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\blog_model;
+use App\Models\User;
 
 class blogController extends Controller
 {
 
     public function blogallmain()
     {
+        $id = session('id');
+        $username = User::find($id);
         $blogvarall = blog_model::all();
-        return view('blog', compact('blogvarall'));
+        return view('blog', compact('blogvarall', 'username'));
     }
     public function bloglist()
     {
