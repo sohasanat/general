@@ -17,7 +17,7 @@
 
   <!--header -->
 
-  @include('header')
+  <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endheader-->
 
@@ -102,7 +102,7 @@
         </div>
 
 
-        <form class="w-full" action="{{ route('job.request') }}" method="POST" enctype="multipart/form-data">
+        <form class="w-full" action="<?php echo e(route('job.request')); ?>" method="POST" enctype="multipart/form-data">
 
           <div class="flex flex-col justify-between py-6 w-full">
             <span class=" text-base">نوشتن پیام:
@@ -146,7 +146,7 @@
 
   <!--footer -->
 
-  @include('footer')
+  <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endfooter -->
 
@@ -159,7 +159,7 @@
 <script type="text/javascript">
   $.ajaxSetup({
     headers: {
-      'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      'X-CSRF-TOKEN': '<?php echo e(csrf_token()); ?>'
     }
   })
 </script>
@@ -172,7 +172,7 @@
       console.log($value)
       $.ajax({
         type: 'get',
-        url: "{{ route('searchpro') }}",
+        url: "<?php echo e(route('searchpro')); ?>",
         method: "GET",
         data: {
           'search': $value
@@ -198,7 +198,7 @@
       .get();
 
     $.ajax({
-      url: "{{ route('productsfilter') }}",
+      url: "<?php echo e(route('productsfilter')); ?>",
       method: 'GET',
       data: {
         categories: categories
@@ -235,4 +235,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/ticketing/ticketDetail.blade.php ENDPATH**/ ?>

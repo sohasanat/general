@@ -112,8 +112,10 @@ Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name(
 
 
 // //tiketing  سایت 
+Route::get('/tiket-all', [tiketController::class, 'tiketall'])->name('tiket.view');
 Route::post('/tiketsave', [tiketController::class, 'savetiket'])->name('tiket.save');
-
+Route::get('/masseges-all/{id}', [tiketController::class, 'showMessages'])->name('massage.view');
+// /{id}
 
 
 
@@ -222,4 +224,3 @@ Route::get('/ticketDetail', function () {
 Route::get('/competition', function () {
     return view('competition.competition1');
 });
-

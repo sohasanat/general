@@ -79,11 +79,12 @@
 
           <!-- end select -->
 
-
+          <input name="date" type="text" id="timeNow" value="" class="hidden">
           <div class="flex gap-4  items-center w-full flex-wrap">
             <input required type="text" name="title" placeholder="عنوان پیام" class="flex-1 flex-100 border-box input w-full  focus:outline-none placeholder:text-sm" />
             <input id="uploadInput" name="resume" alt="resume" type="file" class="hidden">
-            <input name="date" type="text" id="timeNow" value="" class="hidden">
+
+
 
             <button id="uploadButton" class="flex-1 flex-100 btn font-YekanBakh-Regular text-white border-dash">بارگذاری فایل </button>
           </div>
@@ -230,6 +231,9 @@
       }
     });
   </script>
+
+
+
 
 </body>
 
