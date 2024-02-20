@@ -214,3 +214,17 @@ Route::get('/ticketCreate', function () {
 Route::get('/ticketDetail', function () {
     return view('ticketing.ticketDetail');
 });
+
+
+
+Route::get('/c-ticketList', function () {
+    return view('ticketing.c-ticketList');
+});
+
+Route::get('/c-ticketDetail', function () {
+    return view('ticketing.c-ticketDetail');
+});
+
+Route::get('/c-ticketListHistory', function () {
+    return view('ticketing.c-ticketListHistory');
+});

@@ -44,10 +44,10 @@
       </nav>
     <div class="bg-white rounded-lg flex flex-col  items-center justify-between border-1p px-6 py-6">
 
-    <div class="flex justify-between items-center w-full">
-                 <h2 class="font-YekanBakh-ExtraBold text-base mr-1">لیست پیام‌ها
+    <div class="justify-center flex sm:justify-between gap-y-5  gap-x-2 items-center w-full flex-wrap">
+                 <span class="font-YekanBakh-ExtraBold text-base mr-1">لیست پیام‌ها
                    
-                 </h2>
+                 </span>
                  <div class="rounded-full bg-orange-200 hover:duration-300 font-YekanBakh-SemiBold text-white">
                     <a href="/ticketCreate" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ارسال پیام</a>
                 </div>
@@ -57,7 +57,7 @@
 
 
 
-<a href="/ticketDetail"><div class="bg-white rounded-lg px-4 box-ticket mt-3">
+<a href="/ticketDetail"><div class="bg-white rounded-lg px-4 box-ticket mt-3 border-red">
 <div class="flex border-b py-3 justify-between gap-x-2">
 <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>در حال بررسی</span></div> 
 <div>1401/02/05</div> 
@@ -65,9 +65,23 @@
 <div class="py-3 flex">
     <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
     <p class="line1 flex-1">پوووولمو نداد</p>
+    <div class="flex flex-end mt-3 w-5 mr-3"><img src="../../assets/images/DoubleCheck.svg" alt=""></div>
+
 </div>
 </div></a>
 
+<a href="/ticketDetail"><div class="bg-white rounded-lg px-4 box-ticket mt-3 border-red">
+<div class="flex border-b py-3 justify-between gap-x-2">
+<div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>در حال بررسی</span></div> 
+<div>1401/02/05</div> 
+</div>
+<div class="py-3 flex">
+    <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
+    <p class="line1 flex-1">پوووولمو نداد</p>
+    <div class="flex flex-end mt-3 w-5 mr-3"><img src="../../assets/images/DoubleCheck.svg" alt=""></div>
+
+</div>
+</div></a>
 <a href="/ticketDetail"><div class="bg-white rounded-lg px-4 box-ticket mt-3">
 <div class="flex border-b py-3 justify-between gap-x-2">
 <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>در حال بررسی</span></div> 
@@ -76,6 +90,18 @@
 <div class="py-3 flex">
     <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
     <p class="line1 flex-1">پوووولمو نداد</p>
+
+</div>
+</div></a>
+<a href="/ticketDetail"><div class="bg-white rounded-lg px-4 box-ticket mt-3">
+<div class="flex border-b py-3 justify-between gap-x-2">
+<div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>در حال بررسی</span></div> 
+<div>1401/02/05</div> 
+</div>
+<div class="py-3 flex">
+    <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
+    <p class="line1 flex-1">پوووولمو نداد</p>
+
 </div>
 </div></a>
 

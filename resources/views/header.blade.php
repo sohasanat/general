@@ -62,8 +62,9 @@
                     <a href="{{ route('login.view') }}" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
                 </div>
                 <ul class=" menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold hidden sm:flex">
-                    <li><details>
-                            <summary><a href="#">نام کاربری طرف</a></summary>
+                    <li>
+                        <details dir="ltr">
+                            <summary>نام کاربری طرف</summary>
                             <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0 top-left">
                               <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li>
                               <li><a href="/ticketList">تیکت ها</a></li>

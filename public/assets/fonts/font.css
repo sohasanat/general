@@ -65,3 +65,14 @@
 	src: url('woff/SG-Kara-SemiBold.woff') format('woff'),   
 	url('woff2/SG-Kara-SemiBold.woff2') format('woff2');		 
 }
+
+/*------------- SGFanoos -------------*/
+
+@font-face {
+	font-family: SGFanoos-bold;
+	src: url('woff2/SGFanoos-Bold.woff2') format('woff2'),   
+}
+@font-face {
+	font-family: SGFanoos-regular;
+	src: url('woff2/SGFanoos-Regular.woff2') format('woff2'),   
+}
