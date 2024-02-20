@@ -58,8 +58,9 @@
           <!-- , $message->id -->
 
           <?php $__currentLoopData = $alltiket; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-          <?php if($message->status === "بررسی نشده"): ?>
+          <?php if($message->importent === "importent"): ?>
           <a href="<?php echo e(route('massage.view', $message->id)); ?>">
+
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
               <div class="flex border-b py-3 justify-between gap-x-2">
                 <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span><?php echo e($message->status); ?></span></div>

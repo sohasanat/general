@@ -59,11 +59,11 @@ class tiketController extends Controller
     public function showMessages($id)
     {
 
-        $massages = model_tiket_massage_table::where('tiket_id', $id)->orderBy('created_at', 'asc')->get();
+        // $massages = model_tiket_massage_table::where('tiket_id', $id)->orderBy('created_at', 'asc')->get();
 
-        $id1 = session('id');
-        $username = User::find($id1);
-        return view('ticketing.ticketDetail', compact('username', 'massages'));
-        // 
+        // $id1 = session('id');
+        // $username = User::find($id1);
+        return view('ticketing.ticketDetail');
+        // , compact('username', 'massages')
     }
 }

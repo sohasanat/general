@@ -57,8 +57,10 @@
 
           <!-- , $message->id -->
 
+
+
           @foreach($alltiket as $message)
-          @if($message->status === "بررسی نشده")
+          @if($message->important === "important")
           <a href="{{ route('massage.view', $message->id) }}">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
