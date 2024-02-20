@@ -218,3 +218,8 @@ Route::get('/ticketCreate', function () {
 Route::get('/ticketDetail', function () {
     return view('ticketing.ticketDetail');
 });
+
+Route::get('/competition', function () {
+    return view('competition.competition1');
+});
+

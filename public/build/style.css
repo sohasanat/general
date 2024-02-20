@@ -2985,6 +2985,9 @@ details.collapse summary::-webkit-details-marker{
 .p-8{
   padding: 2rem;
 }
+.p-10{
+  padding: 3rem;
+}
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -3710,5 +3713,12 @@ top:4px;
   }
   .text-grayC{
     color:#9d9d9d;
+  }
+  .maxWith1000{
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+  .text-justify{
+text-align: justify;
   }
 
