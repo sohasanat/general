@@ -112,7 +112,7 @@ Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name(
 
 
 // //tiketing  سایت 
-// Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name('blog.delete');
+Route::post('/tiketsave', [tiketController::class, 'savetiket'])->name('tiket.save');
 
 
 

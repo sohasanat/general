@@ -69,24 +69,27 @@
 
                     </ul>
                 </div>
-                <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full hidden sm:block">
-                    <a href="{{ route('login.view') }}" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
-                </div>
-                <ul class=" menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold hidden sm:flex">
-                    <li>@if(isset($username->name))
+                <li>@if(isset($username->name))
+                    @else
+                    <div class="border bg-green text-white hover:text-white hover:bg-green duration-300 rounded-full hidden sm:block">
+                        <a href="{{ route('login.view') }}" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
+                    </div>
+                    @endif
+                    <ul class=" menu lg:menu-horizontal text-gray font-YekanBakh-SemiBold hidden sm:flex">
+                        <li>@if(isset($username->name))
 
-                        <details>
-                            <summary><a>نام کاربری طرف {{$username->name}}</a></summary>
-                            <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0 top-left">
-                                <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li>
-                                <li><a href="/ticketList">تیکت ها</a></li>
-                                <li><a href="{{ route('user.logout') }}">خروج از حساب</a></li>
-                            </ul>
-                        </details>
-                        <!-- <summary><a>نام کاربری طرف {{$username->name}}</a></summary> -->
-                        @endif
-                    </li>
-                </ul>
+                            <details>
+                                <summary><a>نام کاربری طرف {{$username->name}}</a></summary>
+                                <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0 top-left">
+                                    <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li>
+                                    <li><a href="/ticketList">تیکت ها</a></li>
+                                    <li><a href="{{ route('user.logout') }}">خروج از حساب</a></li>
+                                </ul>
+                            </details>
+                            <!-- <summary><a>نام کاربری طرف {{$username->name}}</a></summary> -->
+                            @endif
+                        </li>
+                    </ul>
 
             </div>
         </div>

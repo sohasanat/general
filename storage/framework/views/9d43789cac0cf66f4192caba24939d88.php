@@ -22,9 +22,9 @@
   <!--endheader-->
 
   <section class="px-4 mb-24 min-h ">
-  <div class="container mx-auto max-w-screen-xl">
+    <div class="container mx-auto max-w-screen-xl">
 
-  <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
+      <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
             <a href="<?php echo e(route('main.company')); ?>" class="inline-flex items-center">
@@ -42,75 +42,66 @@
           </li>
         </ol>
       </nav>
-      <form action="<?php echo e(route('job.request')); ?>" method="POST" enctype="multipart/form-data">
-    <div class="bg-white rounded-lg flex flex-col  items-center justify-between border-1p px-6 py-6">
- <!-- start select -->
-    <div class="flex gap-4  items-center w-full flex-wrap">
+      <form action="<?php echo e(route('tiket.save')); ?>" method="POST" enctype="multipart/form-data">
+        <?php echo csrf_field(); ?>
+        <div class="bg-white rounded-lg flex flex-col  items-center justify-between border-1p px-6 py-6">
+          <!-- start select -->
+          <div class="flex gap-4  items-center w-full flex-wrap">
 
-    <div class="flex-1 flex-100">
-          <label
-            class="font-semibold text-sm text-gray-600 pb-1 block"
-            for="gender"
-            >گیرنده*</label
-          >
-          <select
-            class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n"
-          >
-          <option value="other">انتخاب کنید</option>
-            <option value="male">نام محصول اول</option>
-            <option value="female">نام محصول دوم</option>
-          </select>
-        </div>
-    <div class="flex-1 flex-100">
-          <label
-            class="font-semibold text-sm text-gray-600 pb-1 block"
-            for="gender"
-            >بخش مربوطه*</label
-          >
-          <select
-            class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n"
-          >
-          <option value="other">انتخاب کنید</option>
-            <option value="male">فروش</option>
-            <option value="female">فنی</option>
-            <option value="female">مالی</option>
-            <option value="female">پیشنهاد</option>
-          </select>
-        </div>
-        <div class="flex-1 flex-100">
-          <label
-            class="font-semibold text-sm text-gray-600 pb-1 block"
-            for="gender"
-            >اولویت*</label
-          >
-          <select
-            class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n"
-          >
-          <option value="other">انتخاب کنید</option>
-            <option value="male">مهم</option>
-            <option value="female">معمولی</option>
-          </select>
-        </div>
+            <div class="flex-1 flex-100">
+              <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">گیرنده*</label>
+              <select name="receiver" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n" id='select-reciever'>
+                <option id="1" value="other">انتخاب کنید</option>
+                <option id="2" value="product1">نام محصول اول</option>
+                <option id="3" value="product2">نام محصول دوم</option>
+              </select>
+            </div>
+            <div class="flex-1 flex-100">
+              <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">بخش مربوطه*</label>
+              <select name="section" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
+                <option id="1" value="other">انتخاب کنید</option>
+                <option id="2" value="sale">فروش</option>
+                <option id="3" value="technical">فنی</option>
+                <option id="4" value="money">مالی</option>
+                <option id="5" value="sugges">پیشنهاد</option>
+              </select>
+            </div>
+            <div class="flex-1 flex-100">
+              <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">اولویت*</label>
+              <select name="importent" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
+                <option id="1" value="other">انتخاب کنید</option>
+                <option id="2" value="importent">مهم</option>
+                <option id="3" value="normal">معمولی</option>
+              </select>
+            </div>
 
-    </div>
+          </div>
 
-     <!-- end select -->
+          <!-- end select -->
 
 
-     <div class="flex gap-4  items-center w-full flex-wrap">
-            <input required type="text" name="name" placeholder="عنوان پیام" class="flex-1 flex-100 border-box input w-full  focus:outline-none placeholder:text-sm" />
-            <input required id="uploadInput" name="resume" alt="resume" type="file" class="hidden">
+          <div class="flex gap-4  items-center w-full flex-wrap">
+            <input required type="text" name="title" placeholder="عنوان پیام" class="flex-1 flex-100 border-box input w-full  focus:outline-none placeholder:text-sm" />
+            <input id="uploadInput" name="resume" alt="resume" type="file" class="hidden">
             <input name="date" type="text" id="timeNow" value="" class="hidden">
 
             <button id="uploadButton" class="flex-1 flex-100 btn font-YekanBakh-Regular text-white border-dash">بارگذاری فایل </button>
           </div>
-          
-          <textarea name="storysuccess" placeholder="توضیحات" class="border-box textarea w-full mt-6  focus:outline-none placeholder:text-sm"></textarea>
+
+          <textarea required name="storysuccess" placeholder="توضیحات" class="border-box textarea w-full mt-6  focus:outline-none placeholder:text-sm"></textarea>
+
+
+
+
+
+
+
+
           <div class="flex justify-end w-full">
-         <button class="btn mt-5 bg-orange-200 px-7 text-white  text-sm text-center" type="submit">ارسال رزومه</button>
-         </div>
+            <button class="btn mt-5 bg-orange-200 px-7 text-white  text-sm text-center" type="submit" id='submitBtn'>ارسال رزومه</button>
+          </div>
         </div>
-    </form>
+      </form>
 
   </section>
 
@@ -128,15 +119,15 @@
 
 
 
-  
 
-   <!--footer -->
 
-   <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  <!--footer -->
 
-<!--endfooter -->
+  <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-<!-- 
+  <!--endfooter -->
+
+  <!-- 
 <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
 <script src="../src/js/main.js"></script>
 
@@ -199,7 +190,7 @@
 
 
 
-<script>
+  <script>
     document.getElementById("uploadButton").addEventListener("click", () => {
       document.getElementById("uploadInput").click()
     })
@@ -218,6 +209,26 @@
     setTimeout(() => {
       document.querySelector(".alert").style.display = "none"
     }, 2000);
+  </script>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function(event) {
+      console.log("click");
+      var selections = document.querySelectorAll('select');
+      console.log(selections);
+      var isValid = true;
+
+      selections.forEach(function(select) {
+        if (select.value === 'other') {
+          isValid = false;
+        }
+      });
+
+      if (!isValid) {
+        alert('لطفا یک مورد معتبر برای هر یک از selection ها را انتخاب کنید.');
+        event.preventDefault();
+      }
+    });
   </script>
 
 </body>
