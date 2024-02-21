@@ -82,7 +82,7 @@
                                 <summary><a>نام کاربری طرف {{$username->name}}</a></summary>
                                 <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0 top-left">
                                     <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li>
-                                    <li><a href="/ticketList">تیکت ها</a></li>
+                                    <li><a href="{{ route('tiket.view') }}">تیکت ها</a></li>
                                     <li><a href="{{ route('user.logout') }}">خروج از حساب</a></li>
                                 </ul>
                             </details>
