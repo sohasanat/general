@@ -50,19 +50,17 @@
 
 
 
-          <div class=" py-6 px-3">
-
-
-
+          <div class=" py-6 px-3 w-full">
 
             <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($message->from === $username->id): ?>
-            <div class="flex flex-start relative mt-4">
+            <div class="flex justify-start relative mt-4">
               <div class="grayC p-4 pb-1  rounded-lg leading-6">
 
                 <p>
                   <?php echo e($message->Description); ?>
 
+                  <!-- kdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvckdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvckdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvc -->
                 </p>
                 <div class="flex justify-end  mt-2">
                   20:21
@@ -73,7 +71,7 @@
             </div>
 
             <?php else: ?>
-            <div class="flex flex-start relative  mt-4  text-white">
+            <div class="flex justify-end relative  mt-4  text-white">
               <div class="greenC p-4 pb-1 rounded-lg leading-6">
                 <p>
                   <?php echo e($message->Description); ?>
@@ -86,10 +84,10 @@
 
               <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
             </div>
-          </div>
-          <?php endif; ?>
-          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php endif; ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
+          </div>
 
           <!-- rightMessage
           <div class="flex flex-start relative mt-4">
