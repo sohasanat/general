@@ -49,7 +49,7 @@
 
           </span>
           <div class="rounded-full bg-orange-200 hover:duration-300 font-YekanBakh-SemiBold text-white">
-            <a href="/ticketCreate" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ارسال پیام</a>
+            <a href="{{ route('tiket.creat')}}" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ارسال پیام</a>
           </div>
         </div>
 
@@ -60,7 +60,7 @@
 
 
           @foreach($alltiket as $message)
-          @if($message->importent === "importent")
+          @if($message->status === "بررسی نشده")
           <a href="{{ route('massage.view', $message->id)}}">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">

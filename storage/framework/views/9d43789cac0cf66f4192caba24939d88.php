@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
-  <link rel="stylesheet" href="{{asset('build/style.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('../node_modules/swiper/swiper-bundle.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('build/style.css')); ?>">
 
   <title>تیکت‌ها</title>
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
@@ -18,7 +18,7 @@
 
   <!--header -->
 
-  @include('header')
+  <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endheader-->
 
@@ -28,7 +28,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="{{ route('main.company') }}" class="inline-flex items-center">
+            <a href="<?php echo e(route('main.company')); ?>" class="inline-flex items-center">
               خانه
             </a>
           </li>
@@ -43,8 +43,8 @@
           </li>
         </ol>
       </nav>
-      <form action="{{ route('tiket.save') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+      <form action="<?php echo e(route('tiket.save')); ?>" method="POST" enctype="multipart/form-data">
+        <?php echo csrf_field(); ?>
         <div class="bg-white rounded-lg flex flex-col  items-center justify-between border-1p px-6 py-6">
           <!-- start select -->
           <div class="flex gap-4  items-center w-full flex-wrap">
@@ -53,10 +53,10 @@
               <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">گیرنده*</label>
               <select name="receiver" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n" id='select-reciever'>
                 <option id="1" value="other">انتخاب کنید</option>
-                @foreach($products as $product)
-                <option id="2" value="{{$product->name}}">{{$product->name}}</option>
+                <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <option id="2" value="<?php echo e($product->name); ?>"><?php echo e($product->name); ?></option>
                 <!-- <option id="3" value="product2">نام محصول دوم</option> -->
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
               </select>
             </div>
@@ -128,7 +128,7 @@
 
   <!--footer -->
 
-  @include('footer')
+  <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endfooter -->
 
@@ -141,7 +141,7 @@
 <script type="text/javascript">
   $.ajaxSetup({
     headers: {
-      'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      'X-CSRF-TOKEN': '<?php echo e(csrf_token()); ?>'
     }
   })
 </script>
@@ -154,7 +154,7 @@
       console.log($value)
       $.ajax({
         type: 'get',
-        url: "{{ route('searchpro') }}",
+        url: "<?php echo e(route('searchpro')); ?>",
         method: "GET",
         data: {
           'search': $value
@@ -180,7 +180,7 @@
       .get();
 
     $.ajax({
-      url: "{{ route('productsfilter') }}",
+      url: "<?php echo e(route('productsfilter')); ?>",
       method: 'GET',
       data: {
         categories: categories
@@ -241,4 +241,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/ticketing/ticketCreate.blade.php ENDPATH**/ ?>

@@ -8,6 +8,7 @@ use App\Models\model_tiket_massage_table;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\VerifyCodeEmail;
+use App\Models\Products_model;
 
 class tiketController extends Controller
 {
@@ -24,6 +25,14 @@ class tiketController extends Controller
         $username = User::find($id);
         return view('ticketing.ticketList', compact('username', 'alltiket'));
     }
+    public function tiketcreat()
+    {
+        $id = session('id');
+        $username = User::find($id);
+        $products = Products_model::all();
+        return view('ticketing.ticketCreate', compact('username', 'products'));
+    }
+
 
     public function savetiket(Request $request)
     {
@@ -51,7 +60,7 @@ class tiketController extends Controller
         $massage->Description = $request->storysuccess;
 
         $massage->save();
-        session()->flash('message', 'نظر شما با موفقیت ثبت شد');
+
         return redirect()->back();
     }
 
@@ -75,5 +84,20 @@ class tiketController extends Controller
             $username = User::find($id);
             return view('ticketing.ticketList', compact('username', 'alltiket'));
         }
+    }
+
+
+    public function savemessege(Request $request)
+    {
+        $massage = new model_tiket_massage_table;
+        $massage->tiket_id = $request->tiket;
+
+        $massage->file = $request->file;
+        $massage->from = $request->from;
+        $massage->Description = $request->Description;
+
+        $massage->save();
+        session()->flash('message', 'نظر شما با موفقیت ثبت شد');
+        return redirect()->back();
     }
 }
