@@ -60,7 +60,7 @@ class tiketController extends Controller
         $massage->Description = $request->storysuccess;
 
         $massage->save();
-
+        session()->flash('message', 'نظر شما با موفقیت ثبت شد');
         return redirect()->back();
     }
 
@@ -97,7 +97,6 @@ class tiketController extends Controller
         $massage->Description = $request->Description;
 
         $massage->save();
-        session()->flash('message', 'نظر شما با موفقیت ثبت شد');
         return redirect()->back();
     }
 }

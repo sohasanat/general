@@ -111,13 +111,15 @@ Route::get('/deleteBlogsave/{id}', [blogController::class, 'blogdelete'])->name(
 
 
 
-// //tiketing  سایت 
+//tiketing  
 Route::get('/tiket-all', [tiketController::class, 'tiketall'])->name('tiket.view');
 Route::get('/tiket-creat', [tiketController::class, 'tiketcreat'])->name('tiket.creat');
 Route::post('/messege-save', [tiketController::class, 'savemessege'])->name('messege.save');
 Route::post('/tiketsave', [tiketController::class, 'savetiket'])->name('tiket.save');
 Route::get('/tiket-all-massage/{id}', [tiketController::class, 'showMessages'])->name('massage.view');
-// 
+
+// tiketing  مدیریت
+Route::get('/cms-tiket-all', [tiketController::class, 'cmstiketall'])->name('cmstiket.view');
 
 
 

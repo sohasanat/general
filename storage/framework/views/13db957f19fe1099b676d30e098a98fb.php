@@ -81,7 +81,7 @@
                   20:45
                 </div>
               </div>
-
+     
               <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
             </div>
             <?php endif; ?>
