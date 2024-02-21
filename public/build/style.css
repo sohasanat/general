@@ -3738,3 +3738,6 @@ li::marker {
   content: '';
   font-size: 1.2em;
 }
+.p-break{
+  word-break: break-all;
+}

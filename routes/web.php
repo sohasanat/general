@@ -120,6 +120,7 @@ Route::get('/tiket-all-massage/{id}', [tiketController::class, 'showMessages'])-
 
 // tiketing  مدیریت
 Route::get('/cms-tiket-all', [tiketController::class, 'cmstiketall'])->name('cmstiket.view');
+Route::get('/cmstiket-all-massage/{id}', [tiketController::class, 'cmsshowMessages'])->name('cmsmassage.view');
 
 
 

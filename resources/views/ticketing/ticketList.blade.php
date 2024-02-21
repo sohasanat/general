@@ -60,7 +60,10 @@
 
 
           @foreach($alltiket as $message)
-          @if($message->status === "بررسی نشده")
+          @if($message->importent === "مهم")
+          @if($message->status === "بررسی شده")
+
+
           <a href="{{ route('massage.view', $message->id)}}">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
@@ -78,6 +81,25 @@
           </a>
           @else
           <a href="{{ route('massage.view', $message->id)}}">
+
+            <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
+              <div class="flex border-b py-3 justify-between gap-x-2">
+                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>{{$message->status}}</span></div>
+                <div>{{$message->date}}</div>
+              </div>
+              <div class="py-3 flex">
+                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
+                <p class="line1 flex-1">{{$message->title}}</p>
+
+
+              </div>
+            </div>
+          </a>
+          @endif
+
+          @else
+          @if($message->status === "بررسی شده")
+          <a href="{{ route('massage.view', $message->id)}}">
             <div class="bg-white rounded-lg px-4 box-ticket mt-3">
               <div class="flex border-b py-3 justify-between gap-x-2">
                 <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>{{$message->status}}</span></div>
@@ -91,7 +113,25 @@
               </div>
             </div>
           </a>
+          @else
+          <a href="{{ route('massage.view', $message->id)}}">
+
+            <div class=" bg-white rounded-lg px-4 box-ticket mt-3 ">
+              <div class="flex border-b py-3 justify-between gap-x-2">
+                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>{{$message->status}}</span></div>
+                <div>{{$message->date}}</div>
+              </div>
+              <div class="py-3 flex">
+                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
+                <p class="line1 flex-1">{{$message->title}}</p>
+
+
+              </div>
+            </div>
+          </a>
           @endif
+          @endif
+
           @endforeach
 
 

@@ -42,7 +42,7 @@
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('cmsjoblist')); ?>">مدیریت فرصت‌های شغلی</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('customer.list')); ?>">مدیریت مشتریان</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('resumeslist')); ?>">رزومه ها</a></li>
-                    <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('resumeslist')); ?>">تیکت ها</a></li>
+                    <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="<?php echo e(route('cmstiket.view')); ?>">تیکت ها</a></li>
                     <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="<?php echo e(route('user.logout')); ?>">بازگشت به سایت</a></li>
                 </ul>
             </div>

@@ -60,7 +60,10 @@
 
 
           <?php $__currentLoopData = $alltiket; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-          <?php if($message->status === "بررسی نشده"): ?>
+          <?php if($message->importent === "مهم"): ?>
+          <?php if($message->status === "بررسی شده"): ?>
+
+
           <a href="<?php echo e(route('massage.view', $message->id)); ?>">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
@@ -78,6 +81,25 @@
           </a>
           <?php else: ?>
           <a href="<?php echo e(route('massage.view', $message->id)); ?>">
+
+            <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
+              <div class="flex border-b py-3 justify-between gap-x-2">
+                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span><?php echo e($message->status); ?></span></div>
+                <div><?php echo e($message->date); ?></div>
+              </div>
+              <div class="py-3 flex">
+                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
+                <p class="line1 flex-1"><?php echo e($message->title); ?></p>
+
+
+              </div>
+            </div>
+          </a>
+          <?php endif; ?>
+
+          <?php else: ?>
+          <?php if($message->status === "بررسی شده"): ?>
+          <a href="<?php echo e(route('massage.view', $message->id)); ?>">
             <div class="bg-white rounded-lg px-4 box-ticket mt-3">
               <div class="flex border-b py-3 justify-between gap-x-2">
                 <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span><?php echo e($message->status); ?></span></div>
@@ -91,7 +113,25 @@
               </div>
             </div>
           </a>
+          <?php else: ?>
+          <a href="<?php echo e(route('massage.view', $message->id)); ?>">
+
+            <div class=" bg-white rounded-lg px-4 box-ticket mt-3 ">
+              <div class="flex border-b py-3 justify-between gap-x-2">
+                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span><?php echo e($message->status); ?></span></div>
+                <div><?php echo e($message->date); ?></div>
+              </div>
+              <div class="py-3 flex">
+                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
+                <p class="line1 flex-1"><?php echo e($message->title); ?></p>
+
+
+              </div>
+            </div>
+          </a>
           <?php endif; ?>
+          <?php endif; ?>
+
           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
