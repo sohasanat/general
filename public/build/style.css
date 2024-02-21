@@ -3721,4 +3721,15 @@ top:4px;
   .text-justify{
 text-align: justify;
   }
+  ::marker{
+    display: none;
+  }
 
+  .fit-content{
+    width: fit-content;
+  }
+
+  .wrapperMessage-h{
+    overflow-y: auto;
+    height: 500px;
+  }
