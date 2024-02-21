@@ -50,18 +50,16 @@
 
 
 
-          <div class=" py-6 px-3">
-
-
-
+          <div class=" py-6 px-3 w-full">
 
             @foreach($messages as $message)
             @if($message->from === $username->id)
-            <div class="flex flex-start relative mt-4">
+            <div class="flex justify-start relative mt-4">
               <div class="grayC p-4 pb-1  rounded-lg leading-6">
 
                 <p>
-                  {{$message->Description}}
+                  <!-- {{$message->Description}} -->
+                  kdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvckdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvckdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvc
                 </p>
                 <div class="flex justify-end  mt-2">
                   20:21
@@ -72,7 +70,7 @@
             </div>
 
             @else
-            <div class="flex flex-start relative  mt-4  text-white">
+            <div class="flex justify-end relative  mt-4  text-white">
               <div class="greenC p-4 pb-1 rounded-lg leading-6">
                 <p>
                   {{$message->Description}}
