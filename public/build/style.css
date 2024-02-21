@@ -3733,3 +3733,8 @@ text-align: justify;
     overflow-y: auto;
     height: 500px;
   }
+
+li::marker {
+  content: '';
+  font-size: 1.2em;
+}
