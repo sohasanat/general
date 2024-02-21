@@ -17,7 +17,7 @@
 
   <!--header -->
 
-  @include('header')
+  <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endheader-->
 
@@ -27,7 +27,7 @@
       <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2">
           <li class="inline-flex items-center">
-            <a href="{{ route('main.company') }}" class="inline-flex items-center">
+            <a href="<?php echo e(route('main.company')); ?>" class="inline-flex items-center">
               خانه
             </a>
           </li>
@@ -59,40 +59,40 @@
 
 
 
-          @foreach($alltiket as $message)
-          @if($message->importent === "importent")
-          <a href="{{ route('massage.view', $message->id)}}">
+          <?php $__currentLoopData = $alltiket; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php if($message->importent === "importent"): ?>
+          <a href="<?php echo e(route('massage.view', $message->id)); ?>">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
               <div class="flex border-b py-3 justify-between gap-x-2">
-                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>{{$message->status}}</span></div>
-                <div>{{$message->date}}</div>
+                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span><?php echo e($message->status); ?></span></div>
+                <div><?php echo e($message->date); ?></div>
               </div>
               <div class="py-3 flex">
                 <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
-                <p class="line1 flex-1">{{$message->title}}</p>
+                <p class="line1 flex-1"><?php echo e($message->title); ?></p>
                 <div class="flex flex-end mt-3 w-5 mr-3"><img src="../../assets/images/DoubleCheck.svg" alt=""></div>
 
               </div>
             </div>
           </a>
-          @else
-          <a href="{{ route('massage.view', $message->id)}}">
+          <?php else: ?>
+          <a href="<?php echo e(route('massage.view', $message->id)); ?>">
             <div class="bg-white rounded-lg px-4 box-ticket mt-3">
               <div class="flex border-b py-3 justify-between gap-x-2">
-                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>{{$message->status}}</span></div>
-                <div>{{$message->date}}</div>
+                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span><?php echo e($message->status); ?></span></div>
+                <div><?php echo e($message->date); ?></div>
               </div>
               <div class="py-3 flex">
                 <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
-                <p class="line1 flex-1">{{$message->title}}</p>
+                <p class="line1 flex-1"><?php echo e($message->title); ?></p>
                 <div class="flex flex-end mt-3 w-5 mr-3"><img src="../../assets/images/DoubleCheck.svg" alt=""></div>
 
               </div>
             </div>
           </a>
-          @endif
-          @endforeach
+          <?php endif; ?>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
@@ -119,7 +119,7 @@
 
   <!--footer -->
 
-  @include('footer')
+  <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endfooter -->
 
@@ -132,7 +132,7 @@
 <script type="text/javascript">
   $.ajaxSetup({
     headers: {
-      'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      'X-CSRF-TOKEN': '<?php echo e(csrf_token()); ?>'
     }
   })
 </script>
@@ -145,7 +145,7 @@
       console.log($value)
       $.ajax({
         type: 'get',
-        url: "{{ route('searchpro') }}",
+        url: "<?php echo e(route('searchpro')); ?>",
         method: "GET",
         data: {
           'search': $value
@@ -171,7 +171,7 @@
       .get();
 
     $.ajax({
-      url: "{{ route('productsfilter') }}",
+      url: "<?php echo e(route('productsfilter')); ?>",
       method: 'GET',
       data: {
         categories: categories
@@ -189,4 +189,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/ticketing/ticketList.blade.php ENDPATH**/ ?>
