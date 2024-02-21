@@ -37,7 +37,7 @@
               <span> {{$tiket->receiver}}</span>
             </div>
             <div class="flex brBetween2 ">
-              <span>{{$tiket->section}}</span>
+              <span>{{$tiket->date}}</span>
             </div>
             <div class="flex gap-x-2 flex-wrap justify-center">
               <span class="font-YekanBakh-SemiBold">بخش مربوطه: </span>
