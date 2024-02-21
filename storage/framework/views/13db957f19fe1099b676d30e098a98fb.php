@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="build/style.css">
+
+  <link rel="stylesheet" href="<?php echo e(asset('../node_modules/swiper/swiper-bundle.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('build/style.css')); ?>">
   <title>تیکت‌ها</title>
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href=" <?php echo e(asset('../assets/images/favicon.ico')); ?>">
 
 </head>
 
@@ -54,15 +55,13 @@
 
 
 
-
-
-
-            <!-- rightMessage -->
+            <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($message->from === $username->id): ?>
             <div class="flex flex-start relative mt-4">
               <div class="grayC p-4 pb-1  rounded-lg leading-6">
 
                 <p>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
+                  <?php echo e($message->Description); ?>
 
                 </p>
                 <div class="flex justify-end  mt-2">
@@ -73,15 +72,11 @@
               <img class="absolute message-r" src="../../../assets/images/plygonGrayRight.svg" alt="plygonGrayRight">
             </div>
 
-            <!-- leftMessage -->
-
-
-
-
+            <?php else: ?>
             <div class="flex flex-start relative  mt-4  text-white">
               <div class="greenC p-4 pb-1 rounded-lg leading-6">
                 <p>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
+                  <?php echo e($message->Description); ?>
 
                 </p>
                 <div class="flex justify-start mt-2">
@@ -92,6 +87,45 @@
               <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
             </div>
           </div>
+          <?php endif; ?>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+          <!-- rightMessage
+          <div class="flex flex-start relative mt-4">
+            <div class="grayC p-4 pb-1  rounded-lg leading-6">
+
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
+
+              </p>
+              <div class="flex justify-end  mt-2">
+                20:21
+              </div>
+            </div>
+
+            <img class="absolute message-r" src="../../../assets/images/plygonGrayRight.svg" alt="plygonGrayRight">
+          </div>
+
+          leftMessage -->
+
+
+
+
+          <!-- <div class="flex flex-start relative  mt-4  text-white">
+            <div class="greenC p-4 pb-1 rounded-lg leading-6">
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
+
+              </p>
+              <div class="flex justify-start mt-2">
+                20:45
+              </div>
+            </div>
+
+            <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
+          </div>
+        </div> -->
 
 
 

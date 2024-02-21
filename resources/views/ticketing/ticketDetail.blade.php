@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="build/style.css">
+  <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
+  <link rel="stylesheet" href="{{asset('build/style.css')}}">
   <title>تیکت‌ها</title>
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href=" {{asset('../assets/images/favicon.ico')}}">
 
 </head>
 
@@ -34,14 +34,14 @@
           <div class="flex gap-x-2 justify-center">
             <div class="flex gap-x-2 flex-wrap justify-center">
               <span class="font-YekanBakh-SemiBold">گیرنده: </span>
-              <span>فلان</span>
+              <span> {{$tiket->receiver}}</span>
             </div>
             <div class="flex brBetween2 ">
-              <span>یکشنبه 05 شهریور 1402</span>
+              <span>{{$tiket->section}}</span>
             </div>
             <div class="flex gap-x-2 flex-wrap justify-center">
               <span class="font-YekanBakh-SemiBold">بخش مربوطه: </span>
-              <span>مالی</span>
+              <span>{{$tiket->section}}</span>
             </div>
 
           </div>
@@ -55,16 +55,13 @@
 
 
 
-
-
-
-            <!-- rightMessage -->
+            @foreach($messages as $message)
+            @if($message->from === $username->id)
             <div class="flex flex-start relative mt-4">
               <div class="grayC p-4 pb-1  rounded-lg leading-6">
 
                 <p>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
-
+                  {{$message->Description}}
                 </p>
                 <div class="flex justify-end  mt-2">
                   20:21
@@ -74,16 +71,11 @@
               <img class="absolute message-r" src="../../../assets/images/plygonGrayRight.svg" alt="plygonGrayRight">
             </div>
 
-            <!-- leftMessage -->
-
-
-
-
+            @else
             <div class="flex flex-start relative  mt-4  text-white">
               <div class="greenC p-4 pb-1 rounded-lg leading-6">
                 <p>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
-
+                  {{$message->Description}}
                 </p>
                 <div class="flex justify-start mt-2">
                   20:45
@@ -93,6 +85,45 @@
               <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
             </div>
           </div>
+          @endif
+          @endforeach
+
+
+          <!-- rightMessage
+          <div class="flex flex-start relative mt-4">
+            <div class="grayC p-4 pb-1  rounded-lg leading-6">
+
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
+
+              </p>
+              <div class="flex justify-end  mt-2">
+                20:21
+              </div>
+            </div>
+
+            <img class="absolute message-r" src="../../../assets/images/plygonGrayRight.svg" alt="plygonGrayRight">
+          </div>
+
+          leftMessage -->
+
+
+
+
+          <!-- <div class="flex flex-start relative  mt-4  text-white">
+            <div class="greenC p-4 pb-1 rounded-lg leading-6">
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
+
+              </p>
+              <div class="flex justify-start mt-2">
+                20:45
+              </div>
+            </div>
+
+            <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
+          </div>
+        </div> -->
 
 
 

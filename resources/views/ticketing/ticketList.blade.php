@@ -60,8 +60,8 @@
 
 
           @foreach($alltiket as $message)
-          @if($message->important === "important")
-          <a href="{{ route('massage.view', $message->id) }}">
+          @if($message->importent === "importent")
+          <a href="{{ route('massage.view', $message->id)}}">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
               <div class="flex border-b py-3 justify-between gap-x-2">

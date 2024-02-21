@@ -57,6 +57,8 @@
 
           <!-- , $message->id -->
 
+
+
           <?php $__currentLoopData = $alltiket; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <?php if($message->importent === "importent"): ?>
           <a href="<?php echo e(route('massage.view', $message->id)); ?>">

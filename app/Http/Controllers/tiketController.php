@@ -58,12 +58,22 @@ class tiketController extends Controller
 
     public function showMessages($id)
     {
+        $messages = model_tiket_massage_table::where('tiket_id', $id)->get();
+        if ($messages) {
+            $tiket = model_tiket_table::find($id);
 
-        // $massages = model_tiket_massage_table::where('tiket_id', $id)->orderBy('created_at', 'asc')->get();
+            $id1 = session('id');
+            $username = User::find($id1);
+            return view('ticketing.ticketDetail',  compact('username', 'messages', 'tiket'));
+        } else {
 
-        // $id1 = session('id');
-        // $username = User::find($id1);
-        return view('ticketing.ticketDetail');
-        // , compact('username', 'massages')
+            $id = session('id');
+
+            $alltiket = model_tiket_table::where('idtiket', $id)->orderBy('created_at')->get();
+
+
+            $username = User::find($id);
+            return view('ticketing.ticketList', compact('username', 'alltiket'));
+        }
     }
 }
