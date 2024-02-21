@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
-  <link rel="stylesheet" href="{{asset('build/style.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('../node_modules/swiper/swiper-bundle.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('build/style.css')); ?>">
   <title>تیکت‌ها</title>
-  <link rel="icon" type="image/x-icon" href=" {{asset('../assets/images/favicon.ico')}}">
+  <link rel="icon" type="image/x-icon" href=" <?php echo e(asset('../assets/images/favicon.ico')); ?>">
 
 </head>
 
@@ -18,7 +18,7 @@
 
   <!--header -->
 
-  @include('header')
+  <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endheader-->
 
@@ -29,19 +29,19 @@
 
 
         <div class="w-full text-center my-6">
-          <h2 class="font-YekanBakh-ExtraBold text-base my-6">عنوان پیام :{{$tiket->title}}</h2>
+          <h2 class="font-YekanBakh-ExtraBold text-base my-6">عنوان پیام :<?php echo e($tiket->title); ?></h2>
 
           <div class="flex gap-x-2 justify-center">
             <div class="flex gap-x-2 flex-wrap justify-center">
               <span class="font-YekanBakh-SemiBold">گیرنده: </span>
-              <span> {{$tiket->receiver}}</span>
+              <span> <?php echo e($tiket->receiver); ?></span>
             </div>
             <div class="flex brBetween2 ">
-              <span>{{$tiket->date}}</span>
+              <span><?php echo e($tiket->date); ?></span>
             </div>
             <div class="flex gap-x-2 flex-wrap justify-center">
               <span class="font-YekanBakh-SemiBold">بخش مربوطه: </span>
-              <span>{{$tiket->section}}</span>
+              <span><?php echo e($tiket->section); ?></span>
             </div>
 
           </div>
@@ -52,13 +52,14 @@
 
           <div class=" py-6 px-3 w-full">
 
-            @foreach($messages as $message)
-            @if($message->from == $username->id)
+            <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($message->from == $username->id): ?>
             <div class="flex justify-start relative mt-4">
               <div class="grayC p-4 pb-1  rounded-lg leading-6">
 
                 <p>
-                  {{$message->Description}}
+                  <?php echo e($message->Description); ?>
+
                   <!-- kdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvckdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvckdljsafdafjdvjlsdbvlsdvb dnlv bsdlvbdvbdskivbsdlvkdb v dbv lkcxb ncx bvvidovhbnsdv bncljx bxcjlb cvhn disv ndlk vbdkvc -->
                 </p>
                 <div class="flex justify-end  mt-2">
@@ -69,21 +70,22 @@
               <img class="absolute message-r" src="../../../assets/images/plygonGrayRight.svg" alt="plygonGrayRight">
             </div>
 
-            @else
+            <?php else: ?>
             <div class="flex justify-end relative  mt-4  text-white">
               <div class="greenC p-4 pb-1 rounded-lg leading-6">
                 <p>
-                  {{$message->Description}}
+                  <?php echo e($message->Description); ?>
+
                 </p>
                 <div class="flex justify-start mt-2">
                   20:45
                 </div>
               </div>
-     
+
               <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
             </div>
-            @endif
-            @endforeach
+            <?php endif; ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
           </div>
 
@@ -132,8 +134,8 @@
         </div>
 
 
-        <form class="w-full" action="{{ route('messege.save') }}" method="POST" enctype="multipart/form-data">
-          @csrf
+        <form class="w-full" action="<?php echo e(route('messege.save')); ?>" method="POST" enctype="multipart/form-data">
+          <?php echo csrf_field(); ?>
 
           <div class="flex flex-col justify-between py-6 w-full">
             <span class=" text-base">نوشتن پیام:
@@ -145,8 +147,8 @@
               <div class="justify-center flex sm:justify-between gap-x-2 flex-wrap w-full gap-y-5">
                 <div class="flex-1 w-300 flex">
                   <input id="uploadInput" alt="resume" type="file" class="hidden">
-                  <input name="from" type="text" id="timeNow" value="{{$username->id}}" class="hidden">
-                  <input name="tiket" type="text" id="timeNow" value="{{$tiket->id}}" class="hidden">
+                  <input name="from" type="text" id="timeNow" value="<?php echo e($username->id); ?>" class="hidden">
+                  <input name="tiket" type="text" id="timeNow" value="<?php echo e($tiket->id); ?>" class="hidden">
 
                   <button name="file" id="uploadButton" class="flex-1 btn font-YekanBakh-Regular border-dash w-52">بارگذاری فایل </button>
                 </div>
@@ -178,7 +180,7 @@
 
   <!--footer -->
 
-  @include('footer')
+  <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <!--endfooter -->
 
@@ -191,7 +193,7 @@
 <script type="text/javascript">
   $.ajaxSetup({
     headers: {
-      'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      'X-CSRF-TOKEN': '<?php echo e(csrf_token()); ?>'
     }
   })
 </script>
@@ -204,7 +206,7 @@
       console.log($value)
       $.ajax({
         type: 'get',
-        url: "{{ route('searchpro') }}",
+        url: "<?php echo e(route('searchpro')); ?>",
         method: "GET",
         data: {
           'search': $value
@@ -230,7 +232,7 @@
       .get();
 
     $.ajax({
-      url: "{{ route('productsfilter') }}",
+      url: "<?php echo e(route('productsfilter')); ?>",
       method: 'GET',
       data: {
         categories: categories
@@ -267,4 +269,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH D:\websiteSohaSanat\general\resources\views/ticketing/ticketDetail.blade.php ENDPATH**/ ?>
