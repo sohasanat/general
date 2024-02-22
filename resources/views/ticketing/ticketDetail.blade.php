@@ -127,6 +127,7 @@
 
 
         <form class="w-full" action="{{ route('messege.save') }}" method="POST" enctype="multipart/form-data">
+          @csrf
 
           <div class="flex flex-col justify-between py-6 w-full">
             <span class=" text-base">نوشتن پیام:
@@ -138,9 +139,8 @@
               <div class="justify-center flex sm:justify-between gap-x-2 flex-wrap w-full gap-y-5">
                 <div class="flex-1 w-300 flex">
                   <input id="uploadInput" name="file" alt="resume" type="file" class="hidden">
-                  <!-- <input name="date" type="text" id="timeNow" value="{{$message->Description}}" class="hidden"> -->
                   <input name="from" type="text" value="{{$username->id}}" class="hidden">
-                  <input name="tiket_id" type="text" id="timeNow" value="{{$tiket->id}}" class="hidden">
+                  <input name="tiket_id" type="text" value="{{$tiket->id}}" class="hidden">
 
                   <button id="uploadButton" class="flex-1 btn font-YekanBakh-Regular border-dash w-52">بارگذاری فایل </button>
                 </div>

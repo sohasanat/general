@@ -45,6 +45,12 @@
             </div>
 
           </div>
+
+
+          <div class="border btn-w bg-orange-200 text-white hover:text-white hover:bg-green duration-300 rounded-lg text-center">
+            <a href="{{ route('history.tiket',$tiket->idtiket) }}" class="rounded-lg font-YekanBakh-Regular text-center  py-2.5 w-full">تاریخچه ی کاربر</a>
+
+          </div>
         </div>
         <div class="bg-white rounded-lg flex flex-col  items-center justify-between border-1p px-6 py-6 w-full">
 
@@ -55,7 +61,7 @@
             @foreach($messages as $message)
             @if($message->from === $username->id)
             <div class="flex justify-start relative mt-4">
-              <div class="grayC p-4 pb-1 fit-content rounded-lg leading-6">
+              <div class="grayC  p-4 pb-1 fit-content rounded-lg leading-6">
                 <p class="p-break">
                   {{$message->Description}}
                 </p>
@@ -126,7 +132,8 @@
         </div>
 
 
-        <form class="w-full" action="{{ route('messege.save') }}" method="POST" enctype="multipart/form-data">
+        <form class="w-full" action="{{ route('cmsmessege.save') }}" method="POST" enctype="multipart/form-data">
+          @csrf
 
           <div class="flex flex-col justify-between py-6 w-full">
             <span class=" text-base">نوشتن پیام:
@@ -138,9 +145,8 @@
               <div class="justify-center flex sm:justify-between gap-x-2 flex-wrap w-full gap-y-5">
                 <div class="flex-1 w-300 flex">
                   <input id="uploadInput" name="file" alt="resume" type="file" class="hidden">
-                  <!-- <input name="date" type="text" id="timeNow" value="{{$message->Description}}" class="hidden"> -->
                   <input name="from" type="text" value="{{$username->id}}" class="hidden">
-                  <input name="tiket_id" type="text" id="timeNow" value="{{$tiket->id}}" class="hidden">
+                  <input name="tiket_id" type="text" value="{{$tiket->id}}" class="hidden">
 
                   <button id="uploadButton" class="flex-1 btn font-YekanBakh-Regular border-dash w-52">بارگذاری فایل </button>
                 </div>

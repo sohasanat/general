@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="build/style.css">
+  <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
+  <link rel="stylesheet" href="{{asset('build/style.css')}}">
+
   <title>تیکت‌ها</title>
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href=" {{asset('../assets/images/favicon.ico')}}">
 
 </head>
 
@@ -17,7 +18,7 @@
 
   <!--header -->
 
-  @include('header')
+  @include('c-header')
 
   <!--endheader-->
 
@@ -29,96 +30,56 @@
           <button class="absolute top-1 left-1 close-modal w-6" id="closemode1">
             <img class="w-full" src="../assets/images/close.svg" alt="">
           </button>
-          <form class="maxw-25" action="{{ route('product.demo') }}" method="POST" enctype="multipart/form-data">
 
+
+
+          <form class="maxw-25" action="{{ route('filtring.tiket') }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="flex-1 flex-100">
               <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">گیرنده*</label>
 
-              <select class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                <option value="other">انتخاب کنید</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="other">انتخاب کنید</option>
-                <option value="male">نام محصول اول</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
-                <option value="female">نام محصول دوم</option>
-                <option value="male">نام محصول اول</option>
+              <select name="receiver" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                <option value="other">همه</option>
 
-                <option value="female">نام محصول دوم</option>
+                @foreach($products as $product)
+                <option id="2" value="{{$product->name}}">{{$product->name}}</option>
+                <!-- <option id="3" value="product2">نام محصول دوم</option> -->
+                @endforeach
+
 
               </select>
 
             </div>
             <div class="flex-1 flex-100">
               <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">بخش مربوطه*</label>
-              <select class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
-                <option value="other">انتخاب کنید</option>
-                <option value="male">فروش</option>
-                <option value="female">فنی</option>
-                <option value="female">مالی</option>
-                <option value="female">پیشنهاد</option>
+              <select name="section" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
+                <option value="other">همه</option>
+                <option value="فروش">فروش</option>
+                <option value="فنی">فنی</option>
+                <option value="مالی">مالی</option>
+                <option value="پیشنهاد">پیشنهاد</option>
               </select>
             </div>
             <div class="flex-1 flex-100">
               <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">اولویت*</label>
-              <select class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
-                <option value="other">انتخاب کنید</option>
-                <option value="male">مهم</option>
-                <option value="female">معمولی</option>
+              <select name="importent" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
+                <option value="other">همه</option>
+                <option value="مهم">مهم</option>
+                <option value="معمولی">معمولی</option>
               </select>
             </div>
             <div class="flex-1 flex-100">
               <label class="font-semibold text-sm text-gray-600 pb-1 block" for="gender">وضعیت*</label>
-              <select class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
-                <option value="other">انتخاب کنید</option>
-                <option value="male">پاسخ داده شده </option>
-                <option value="female">پاسخ داده نشده </option>
+              <select name="status" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full outlone-n">
+                <option value="other">همه</option>
+                <option value="بررسی نشده">بررسی نشده</option>
+                <option value="بررسی شده">بررسی شده</option>
               </select>
             </div>
             <div class="flex gap-x-2 flex-wrap ">
               <button class="mt-2 bg-stone-800 text-white rounded-lg font-YekanBakh-Regular text-center  py-2.5 w-full border btn-w hover:text-white hover:bg-green duration-300" tyoe="submit">ثبت </button>
             </div>
           </form>
-
-
         </div>
       </div>
 
@@ -153,14 +114,14 @@
 
         </div>
 
-        <div class="grid  grid-cols-1 md:grid-cols-2 gap-6  mt-10 w-full">
+        <div class="grid  grid-cols-1 md:grid-cols-2 gap-6  mt-10 w-full mycard">
 
           @foreach($alltiket as $message)
           @if($message->importent === "مهم")
           @if($message->status === "بررسی شده")
 
 
-          <a href="{{ route('massage.view', $message->id)}}">
+          <a href="{{ route('cmsmassage.view', $message->id)}}">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
               <div class="flex border-b py-3 justify-between gap-x-2">
@@ -176,7 +137,7 @@
             </div>
           </a>
           @else
-          <a href="{{ route('massage.view', $message->id)}}">
+          <a href="{{ route('cmsmassage.view', $message->id)}}">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 border-red">
               <div class="flex border-b py-3 justify-between gap-x-2">
@@ -195,7 +156,7 @@
 
           @else
           @if($message->status === "بررسی شده")
-          <a href="{{ route('massage.view', $message->id)}}">
+          <a href="{{ route('cmsmassage.view', $message->id)}}">
             <div class="bg-white rounded-lg px-4 box-ticket mt-3">
               <div class="flex border-b py-3 justify-between gap-x-2">
                 <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>{{$message->status}}</span></div>
@@ -210,7 +171,7 @@
             </div>
           </a>
           @else
-          <a href="{{ route('massage.view', $message->id)}}">
+          <a href="{{ route('cmsmassage.view', $message->id)}}">
 
             <div class=" bg-white rounded-lg px-4 box-ticket mt-3 ">
               <div class="flex border-b py-3 justify-between gap-x-2">
@@ -230,61 +191,8 @@
 
           @endforeach
 
-          <a href="/c-ticketDetail">
-            <div class="bg-white rounded-lg px-4 box-ticket mt-3">
-              <div class="flex border-b py-3 justify-between gap-x-2">
-                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>در حال بررسی</span></div>
-                <div>1401/02/05</div>
-              </div>
-              <div class="py-3 flex">
-                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
-                <p class="line1 flex-1 text-grayC">پوووولمو نداد</p>
-                <div class="flex flex-end mt-3 w-5 mr-3"><img src="../../assets/images/DoubleCheck.svg" alt=""></div>
-              </div>
-            </div>
-          </a>
+          <div class=""> {{ $alltiket->links() }}</div>
 
-          <a href="/c-ticketDetail">
-            <div class="bg-white rounded-lg px-4 box-ticket mt-3">
-              <div class="flex border-b py-3 justify-between gap-x-2">
-                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span>در حال بررسی</span></div>
-                <div>1401/02/05</div>
-              </div>
-              <div class="py-3 flex">
-                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
-                <p class="line1 flex-1 text-grayC">پوووولمو نداد</p>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="/c-ticketDetail">
-            <div class="bg-white rounded-lg px-4 box-ticket mt-3 border-red">
-              <div class="flex border-b py-3 justify-between gap-x-2">
-                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span class="text-grayC">در حال بررسی</span></div>
-                <div>1401/02/05</div>
-              </div>
-              <div class="py-3 flex">
-                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
-                <p class="line1 flex-1 text-grayC">پوووولمو نداد</p>
-                <div class="flex flex-end mt-3 w-5 mr-3"><img src="../../assets/images/DoubleCheck.svg" alt=""></div>
-              </div>
-            </div>
-          </a>
-
-          <a href="/c-ticketDetail">
-            <div class="bg-white rounded-lg px-4 box-ticket mt-3">
-              <div class="flex border-b py-3 justify-between gap-x-2">
-                <div class="flx-1 flex gap-x-2 flex-wrap"><span class="font-YekanBakh-SemiBold">وضعیت: </span><span class="text-grayC">در حال بررسی</span></div>
-                <div>1401/02/05</div>
-              </div>
-              <div class="py-3 flex">
-                <span class="font-YekanBakh-SemiBold w-20">عنوان پیام: </span>
-                <p class="line1 flex-1 text-grayC">پوووولمو نداد</p>
-                <div class="flex flex-end mt-3 w-5 mr-3"><img src="../../assets/images/DoubleCheck.svg" alt=""></div>
-              </div>
-            </div>
-          </a>
 
 
 
@@ -314,45 +222,45 @@
 
   <!--endfooter -->
 
-  <!-- 
-<script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-<script src="../src/js/main.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="../src/js/main.js"></script>
 
-<script type="text/javascript">
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': '{{ csrf_token() }}'
-    }
-  })
-</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<script>
-  //   import axios from "axios"
-  $(document).ready(function() {
-    $('#search').on('keyup', function() {
-      var $value = $(this).val();
-      console.log($value)
-      $.ajax({
-        type: 'get',
-        url: "{{ route('searchpro') }}",
-        method: "GET",
-        data: {
-          'search': $value
-        },
-        success: function(data) {
-          $('.mycard').html(data);
-        }
+  <script type="text/javascript">
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      }
+    })
+  </script>
+
+  <script>
+    //   import axios from "axios"
+    $(document).ready(function() {
+      $('#search').on('keyup', function() {
+        var $value = $(this).val();
+        console.log($value)
+        $.ajax({
+          type: 'get',
+          url: "{{ route('serch.tiket') }}",
+          method: "GET",
+          data: {
+            'search': $value
+          },
+          success: function(data) {
+            $('.mycard').html(data);
+          }
+        });
+        // axios.get("searchpro?search=" + encodeURIComponent($value)).then(res => {
+        //     console.log(res)
+
       });
-      // axios.get("searchpro?search=" + encodeURIComponent($value)).then(res => {
-      //     console.log(res)
-
     });
-  });
-</script>
+  </script>
 
-<script>
+  <!-- <script>
   $('input[name="categories1"]').change(function() {
     var categories = $('input[name="categories1"]:checked')
       .map(function() {
