@@ -1,6 +1,6 @@
 <?php
 
-// File: app/Mail/VerifyCodeEmail.php
+
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;

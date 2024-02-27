@@ -39,45 +39,47 @@
               <a href="#" class="mr-1 text-sm font-medium">مسابقه</a>
             </div>
           </li>
-       </ol>
+        </ol>
       </nav>
-      
 
 
-      
-<div class="maxWith1000 bg-white rounded-lg flex flex-col  items-center justify-between border-1p p-10 mt-5">
-<video width="100%" height="240" controls>
-  <source src="../../assets/images/competition/movie.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p class="py-10 text-justify leading-8">
-    اگرفارغ التحصیل و یا دانشجوی رشته های مهندسی صنایع، مهندسی کامپیوتر و یا مهندسی برق هستین، یا کلا برنامه نویسین و رشته تحصیلیتون یه زمینه دیگه بوده این ویدیو برای شماست
-اگه می خواین یه حرفه ای رو یاد بگیرین که علاوه بر خودِ همکاران سیستم توی بیش از 80000 شرکت و سازمان و مجموعه ی کارخونه ای و تولیدی توی سراسر کشور خواهان داره این ویدیو واسه شماست
-مدرسه ی فرایار یه فضای استارتاپ طوری و یه مدرسه ی تحصیلات تکمیلیه که هدف اصلی ش اینه که شما رو با صنایع مختلف آشنا کنه، بهتون یاد بده چه جوری توی محیط توسعه ی راهکاران محصولات مورد نیاز صنایع رو طراحی و تولید کنید و روش های تحلیل بازار و مارکتینگ و بازارسازی و  قیمت گذاری محصول رو یاد بگیرید
-محصول تولید کنید و از فروش، توسعه و استقرار محصولتون کسب درآمد داشته باشین
-فقط کافیه برای یه دونه سوال توی لینک جواب پیدا کنید
-نه روشش مهمه نه سبک پیاده سازی ش فقط کافیه روشتون و برنامه تون کار بده
-    </p>
-    <div class="lightGreen2 mt-4 p-6 rounded-lg w-full">
-        <form action="{{ route('job.request') }}" method="POST" enctype="multipart/form-data">
-          @csrf
-          <input type="hidden" name="param_name" value="">
-          <div class="text-base leading-6 text-gray-700 sm:text-lg sm:leading-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input required type="text" name="name" placeholder="نام و نام‌خانوادگی" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <input required type="text" name="phone" placeholder="تلفن همراه" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <input required type="email" name="email" placeholder="ایمیل" class="input w-full  focus:outline-none placeholder:text-sm" />
-            <input required id="uploadInput" name="resume" alt="resume" type="file" class="hidden" multiple>
-            <input name="date" type="text" id="timeNow" value="" class="hidden">
 
-            <button id="uploadButton" class="flex-1 flex-100 btn font-YekanBakh-Regular text-white border-dash "> فایل رزومه و پاسخ سوال را بارگذاری کنید</button>
-          </div>
-          <div class="flex justify-end w-full">
-          <button class="btn mt-5 bg-green px-7 text-white  text-sm text-center" type="submit">ارسال </button>
-</div>
-        </form>
+
+      <div class="maxWith1000 bg-white rounded-lg flex flex-col  items-center justify-between border-1p p-10 mt-5">
+        <video width="100%" height="240" controls>
+          <source src="../../assets/images/competition/movie.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="py-10 text-justify leading-8">
+          اگرفارغ التحصیل و یا دانشجوی رشته های مهندسی صنایع، مهندسی کامپیوتر و یا مهندسی برق هستین، یا کلا برنامه نویسین و رشته تحصیلیتون یه زمینه دیگه بوده این ویدیو برای شماست
+          اگه می خواین یه حرفه ای رو یاد بگیرین که علاوه بر خودِ همکاران سیستم توی بیش از 80000 شرکت و سازمان و مجموعه ی کارخونه ای و تولیدی توی سراسر کشور خواهان داره این ویدیو واسه شماست
+          مدرسه ی فرایار یه فضای استارتاپ طوری و یه مدرسه ی تحصیلات تکمیلیه که هدف اصلی ش اینه که شما رو با صنایع مختلف آشنا کنه، بهتون یاد بده چه جوری توی محیط توسعه ی راهکاران محصولات مورد نیاز صنایع رو طراحی و تولید کنید و روش های تحلیل بازار و مارکتینگ و بازارسازی و قیمت گذاری محصول رو یاد بگیرید
+          محصول تولید کنید و از فروش، توسعه و استقرار محصولتون کسب درآمد داشته باشین
+          فقط کافیه برای یه دونه سوال توی لینک جواب پیدا کنید
+          نه روشش مهمه نه سبک پیاده سازی ش فقط کافیه روشتون و برنامه تون کار بده
+        </p>
+        <div class="lightGreen2 mt-4 p-6 rounded-lg w-full">
+          <form action="{{ route('competition') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" name="param_name" value="">
+            <div class="text-base leading-6 text-gray-700 sm:text-lg sm:leading-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input required type="text" name="name" placeholder="نام و نام‌خانوادگی" class="input w-full  focus:outline-none placeholder:text-sm" />
+              <input required type="text" name="phone" placeholder="تلفن همراه" class="input w-full  focus:outline-none placeholder:text-sm" />
+              <input required type="email" name="email" placeholder="ایمیل" class="input w-full  focus:outline-none placeholder:text-sm" />
+              <input required type="text" name="Description" placeholder="جواب" class="input w-full  focus:outline-none placeholder:text-sm" />
+
+              <input required id="uploadInput" name="resume" alt="resume" type="file" class="hidden" multiple>
+              <input name="date" type="text" id="timeNow" value="" class="hidden">
+
+              <button id="uploadButton" class="flex-1 flex-100 btn font-YekanBakh-Regular text-white border-dash "> فایل رزومه و پاسخ سوال را بارگذاری کنید</button>
+            </div>
+            <div class="flex justify-end w-full">
+              <button class="btn mt-5 bg-green px-7 text-white  text-sm text-center" type="submit">ارسال </button>
+            </div>
+          </form>
+        </div>
+
       </div>
-
-    </div>
   </section>
 
   @if(session('message'))
@@ -139,13 +141,13 @@ Your browser does not support the video tag.
 
 
 
-</div>
+  </div>
 
 
 
 
-</div>
-</sevtion>
+  </div>
+  </sevtion>
 
   <!--footer -->
 

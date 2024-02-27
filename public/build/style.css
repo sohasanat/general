@@ -3770,3 +3770,8 @@ li::marker {
   color: #d71920;
 }
 
+.show-pagination nav svg{
+      transform: rotate(180deg);
+
+}
+

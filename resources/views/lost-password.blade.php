@@ -31,7 +31,7 @@
                 </p>
                 <input name="email" type="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
                 <button class="btn bg-stone-800 w-full hover:bg-stone-900 text-white rounded-full text-sm" type="submit">
-                  <a href="/lost-pass-code">بازیابی گذرواژه</a>
+                  بازیابی گذرواژه
 
                 </button>
               </div>

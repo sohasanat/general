@@ -14,7 +14,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\cmsdefintionjobcontroller;
 use App\Http\Controllers\customerController;
 use App\Http\Controllers\tiketController;
-
+use App\Http\Controllers\competition_controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -125,6 +125,9 @@ Route::post('/cmsmessege-save', [tiketController::class, 'cmssavemessege'])->nam
 Route::post('/filtring-tiket', [tiketController::class, 'filtering'])->name('filtring.tiket');
 Route::get('/history-tiket/{id}', [tiketController::class, 'history'])->name('history.tiket');
 Route::get('/serch-tiket', [tiketController::class, 'searchTicket'])->name('serch.tiket');
+
+// مسابقه
+Route::post('/competition', [competition_controller::class, 'asware'])->name('competition');
 
 
 
