@@ -191,13 +191,14 @@
 
           @endforeach
 
-          <div class=""> {{ $alltiket->links() }}</div>
-
 
 
 
         </div>
+        <div class="show-pagination">
 
+          {{ $alltiket->links()}}
+        </div>
   </section>
 
 

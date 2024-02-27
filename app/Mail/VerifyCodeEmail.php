@@ -1,16 +1,14 @@
 <?php
 
 // File: app/Mail/VerifyCodeEmail.php
-
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class VerifyCodeEmail extends Mailable
+class WelcomeEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -23,7 +21,9 @@ class VerifyCodeEmail extends Mailable
 
     public function build()
     {
-        return $this->view('lost-password-vrify');
+        return $this->view('lost-password-vrify')->with([
+            'verificationCode' => $this->verificationCode
+        ]);
     }
 }
 

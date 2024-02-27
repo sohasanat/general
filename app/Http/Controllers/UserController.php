@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Mail\WelcomeEmail;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\blog_model;
 use App\Models\Company;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\VerifyCodeEmail;
 
 
 class UserController extends Controller
 {
+
 
     public function saveUserRoleAndId($id, $role)
     {
@@ -90,20 +92,22 @@ class UserController extends Controller
 
 
 
-        $emailExists = User::where('email', $request->email)->exists();
+        $user1 = User::where('email', $request->email)->exists();
 
-        if ($emailExists) {
-            $userEmail = $request->email;
+        if ($user1) {
+
+
+            $user = $request->email;
 
             // ایجاد یک کد تصادفی 4 رقمی
-            $verificationCode = str_pad(mt_rand(1, 9999), 4, '0', STR_PAD_LEFT);
+            $email = str_pad(mt_rand(1, 9999), 4, '0', STR_PAD_LEFT);
             // dd($verificationCode);
             // ذخیره کد تصادفی در دیتابیس
-            $user = User::where('email', $userEmail)->first();
-            $user->verification_code = $verificationCode;
-            $user->save();
+            $user1 = User::where('email', $user)->first();
+            $user1->verification_code = $email;
+            $user1->save();
 
-            Mail::to($userEmail)->send(new VerifyCodeEmail($verificationCode));
+            Mail::to($user)->send(new WelcomeEmail($email));
         } else {
 
             session()->flash('message', 'این ایمیل قبلا ثبت نشده است');

@@ -3744,10 +3744,29 @@ li::marker {
 
 
 
+/* .testtt> div{
+  display: flex;
+} */
+.show-pagination{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.show-pagination nav div:last-child {
+    display: block !important;
+}
+.show-pagination nav div >p {
+    display: none !important;
 
+}
+.show-pagination nav div:nth-child(1){
+    display: none !important;
 
+}
 
-
-
-
+.text-gray-500{
+  color: #d71920;
+}
 

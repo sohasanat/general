@@ -191,13 +191,15 @@
 
           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-          <div class="pagination li.disabled span pagination li.active a pagination li a px-4 pagination li pagination"> <?php echo e($alltiket->links()); ?></div>
-
 
 
 
         </div>
+        <div class="show-pagination">
 
+          <?php echo e($alltiket->links()); ?>
+
+        </div>
   </section>
 
 

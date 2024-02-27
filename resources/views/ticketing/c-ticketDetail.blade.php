@@ -87,6 +87,7 @@
             @endif
             @endforeach
           </div>
+
           <!-- rightMessage
           <div class="flex flex-start relative mt-4">
             <div class="grayC p-4 pb-1  rounded-lg leading-6">
