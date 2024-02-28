@@ -159,6 +159,32 @@
 
       </div>
     </div>
+
+    <form class="w-full" action="{{ route('job.request') }}" method="POST" enctype="multipart/form-data">
+
+    <div class="flex flex-col justify-between py-6 w-full">
+    <span class=" text-base">نوشتن پیام:
+               
+               </span>
+          <textarea name="storysuccess" placeholder="توضیحات" class="border-box textarea w-full mt-4  focus:outline-none placeholder:text-sm"></textarea>
+          <div class="flex justify-between items-center flex-wrap w-full mt-4 gap-x-2 leading-10">
+
+<div class="justify-center flex sm:justify-between gap-x-2 flex-wrap w-full gap-y-5">
+<div class="flex-1 w-300 flex">
+<input required id="uploadInput" name="resume" alt="resume" type="file" class="hidden">
+            <input name="date" type="text" id="timeNow" value="" class="hidden">
+
+            <button id="uploadButton" class="flex-1 btn font-YekanBakh-Regular border-dash w-52">بارگذاری فایل </button>
+</div>
+         <button class="flex-1 w-300 btn bg-orange-200 px-7 text-white  text-sm text-center" type="submit">ارسال </button>
+</div>
+         </div>
+        </div>
+    </form>
+
+
+</div> 
+</div>
   </section>
 
 
