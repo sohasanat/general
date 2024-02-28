@@ -21,7 +21,7 @@ class WelcomeEmail extends Mailable
 
     public function build()
     {
-        return $this->view('lost-password-vrify')->with([
+        return $this->view('code-email')->with([
             'verificationCode' => $this->verificationCode
         ]);
     }

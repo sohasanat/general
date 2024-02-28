@@ -86,7 +86,12 @@ class UserController extends Controller
     }
 
 
+    public function code(Request $request)
+    {
 
+
+        return view('code-email');
+    }
     public function sendVerificationCode(Request $request)
     {
 
@@ -100,14 +105,18 @@ class UserController extends Controller
             $user = $request->email;
 
             // ایجاد یک کد تصادفی 4 رقمی
-            $email = str_pad(mt_rand(1, 9999), 4, '0', STR_PAD_LEFT);
-            // dd($verificationCode);
+            $verificationCode = str_pad(mt_rand(1, 9999), 4, '0', STR_PAD_LEFT);
+            // dd($verificationCode); 
             // ذخیره کد تصادفی در دیتابیس
             $user1 = User::where('email', $user)->first();
-            $user1->verification_code = $email;
+            $user1->verification_code = $verificationCode;
             $user1->save();
 
-            Mail::to($user)->send(new WelcomeEmail($email));
+            Mail::to($user)->send(new WelcomeEmail($verificationCode));
+
+
+            // return view('code-email', compact('verificationCode'));
+            return view('lost-password-vrify');
         } else {
 
             session()->flash('message', 'این ایمیل قبلا ثبت نشده است');
