@@ -22,19 +22,30 @@ class Products_contrller extends Controller
         return view('products', compact('allproductsvar', 'username'));
     }
 
+
+
+    public function productcreat()
+    {
+
+
+        return view('c-productCreate');
+    }
+
     public function productdetails($id)
     {
+        $id = session('id');
+        $username = User::find($id);
         $productsvar = Products_model::find($id);
         if ($productsvar) {
             $hintsvar = hints_model::where('products_id', $id)->get('Description');
             $informationvar = Productinformations_model::where('products_id', $id)->get('Description');
             $productimg = images_model::where('products_id', $id)->get('image');
             $reltionproductsvar = Products_model::where('company_id', $productsvar->company_id)->get();
-            return view('single-product', compact('productsvar', 'hintsvar', 'informationvar', 'productimg', 'reltionproductsvar'));
+            return view('single-product', compact('productsvar', 'hintsvar', 'informationvar', 'productimg', 'reltionproductsvar', 'username'));
         } else {
 
             $allproductsvar = Products_model::all();
-            return view('products', compact('allproductsvar'));
+            return view('products', compact('allproductsvar', 'username'));
         }
     }
 

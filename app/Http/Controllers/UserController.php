@@ -86,11 +86,37 @@ class UserController extends Controller
     }
 
 
+
+    public function passwordchange(Request $request)
+    {;
+
+        if ($request->pass1 === $request->pass2) {
+            $id = User::where('email', $request->user)->first();
+            $id->password = $request->pass2;
+            $id->push();
+            return view('login');
+        } {
+
+            session()->flash('message', ' کد اشتباه است ');
+            return redirect()->back();
+        }
+    }
+
+
+
     public function code(Request $request)
     {
 
+        $id = User::where('email', $request->mail)->first();
+        $vrify = $id->verification_code;
+        if ($vrify === $request->code) {
+            $passcode = $id->email;
+            return view('codeVerify', compact('passcode'));
+        } {
 
-        return view('code-email');
+            session()->flash('message', ' کد اشتباه است ');
+            return redirect()->back();
+        }
     }
     public function sendVerificationCode(Request $request)
     {
@@ -109,14 +135,18 @@ class UserController extends Controller
             // dd($verificationCode); 
             // ذخیره کد تصادفی در دیتابیس
             $user1 = User::where('email', $user)->first();
+
             $user1->verification_code = $verificationCode;
             $user1->save();
+
+            $vri = User::where('email', $user)->first();
+            $data = $vri->email;
 
             Mail::to($user)->send(new WelcomeEmail($verificationCode));
 
 
             // return view('code-email', compact('verificationCode'));
-            return view('lost-password-vrify');
+            return view('lost-password-vrify', compact('vri'));
         } else {
 
             session()->flash('message', 'این ایمیل قبلا ثبت نشده است');

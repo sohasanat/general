@@ -36,7 +36,7 @@
                   </a>
                   <br>
                   اگر اکانت ندارید
-                  <a href="/sign-up" class="border-b border-gray-500 border-dotted">
+                  <a href="{{ route('signup.view') }}" class="border-b border-gray-500 border-dotted">
                     ثبت نام کنید
                   </a>
                 </p>

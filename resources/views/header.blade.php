@@ -23,15 +23,23 @@
                                     </label>
                                 </div>
                                 <!-- Sidebar content here -->
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('main.company') }}">صفحه اصلی</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('blogall.main') }}"> وبلاگ</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('login.view') }}"> مشاهده حساب کاربری</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('login.view') }}"> تیکت ها</a></li>
-                                <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="{{ route('login.view') }}"> خروج از حساب</a></li>
+                                @php
+                                $role = 'Customer'; // Replace 'Customer' with the actual role value you want to check
+                                @endphp
+
+                                @if(session('role') == $role)
+
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('main.prof') }}">صفحه اصلی</a></li>
+                                @else
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('main') }}">صفحه اصلی</a></li>
+                                @endif
+
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('allproducts') }}">محصولات</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('aboutus.us') }}">درباره ما</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('connect.us') }}">تماس با ما</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('jobs') }}">فرصت‌های شغلی</a></li>
+                                <li><a class="hover:border-b hover:border-orange-200 pb-1 border-black duration-300" href="{{ route('blogall.main') }}">وبلاگ</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -79,9 +87,9 @@
                         <li>@if(isset($username->name))
 
                             <details>
-                                <summary><a>نام کاربری طرف {{$username->name}}</a></summary>
+                                <summary><a>{{$username->name}}</a></summary>
                                 <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0 top-left">
-                                    <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li>
+                                    <!-- <li><a href="/blog-2.html">مشاهده حساب کاربری</a></li> -->
                                     <li><a href="{{ route('tiket.view') }}">تیکت ها</a></li>
                                     <li><a href="{{ route('user.logout') }}">خروج از حساب</a></li>
                                 </ul>

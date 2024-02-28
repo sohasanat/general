@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('build/style.css')}}">
     <title>تماس با ما</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
@@ -172,8 +172,9 @@
     <!--endfooter -->
 
 
-    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="../src/js/main.js"></script>
+
+    <script src="{{asset('node_modules/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('src/js/main.js')}}"></script>
     <!-- <script>
         setTimeout(() => {
             document.querySelector(".success-message").style.display = "none"

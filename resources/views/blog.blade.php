@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('build/style.css')}}">
     <title>وبلاگ</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
@@ -71,7 +71,7 @@
                         </div>
                         <div class="leading-8">
                             <div class="flex items-center mb-2">
-                                <a href="/single-page">
+                                <a href="{{ route('blog.single', $blog->id) }}">
                                     <h2 class="font-YekanBakh-ExtraBold text-base mr-1">{{$blog->title}}</h2>
                                 </a>
                             </div>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div>
-                        <a href="/single-page"><img class="rounded-b-lg" src="../assets/images/blog-9.jpg" alt=""></a>
+                        <a href="{{ route('blog.single', $blog->id) }}"><img class="rounded-b-lg" src="../assets/images/blog-9.jpg" alt=""></a>
                     </div>
 
                 </div>
@@ -102,8 +102,9 @@
 
     <!--endfooter -->
 
-    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="../src/js/main.js"></script>
+
+    <script src="{{asset('node_modules/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('src/js/main.js')}}"></script>
 </body>
 
 </html>

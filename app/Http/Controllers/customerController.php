@@ -14,6 +14,11 @@ class customerController extends Controller
         return view('c-customerList', compact('customervar'));
     }
 
+
+    public function customercmscreat(Request $request)
+    {
+        return view('c-customerCreate');
+    }
     public function customersave(Request $request)
     {
         $savecostom = new customer;

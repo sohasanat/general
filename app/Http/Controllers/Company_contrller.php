@@ -67,6 +67,15 @@ class Company_contrller extends Controller
         return view('main', compact('companyvar', 'blogmainall'));
     }
 
+
+
+    public function signup()
+    {
+
+
+
+        return view('sign-up');
+    }
     public function loginview()
     {
 

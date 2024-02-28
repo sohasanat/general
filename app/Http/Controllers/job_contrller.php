@@ -19,14 +19,21 @@ class job_contrller extends Controller
         return view('job', compact('jobsvar', 'username'));
     }
 
+    public function creatjob()
+    {
+        return view('c-jobCreate');
+    }
+
     public function jobdeails($id)
     {
+        $id = session('id');
+        $username = User::find($id);
         $jobsdetails = detailjob_model::find($id);
         if ($jobsdetails) {
             $skillsvar = jobskills_model::where('job_id', $id)->get('skillsDescription');
             $expertisevar = jobexpertise_model::where('job_id', $id)->get('expertiseDescription');
 
-            return view('detail-job', compact('jobsdetails', 'skillsvar', 'expertisevar'));
+            return view('detail-job', compact('jobsdetails', 'skillsvar', 'expertisevar', 'username'));
         }
     }
 

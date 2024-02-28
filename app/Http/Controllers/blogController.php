@@ -9,6 +9,20 @@ use App\Models\User;
 class blogController extends Controller
 {
 
+
+
+
+    public function singleblog($id)
+    {
+        $id = session('id');
+        $username = User::find($id);
+        $blogvar = blog_model::all();
+        $blog = blog_model::find($id);
+        if ($blog) {
+            return view('single-page', compact('blog', 'blogvar', 'username'));
+        }
+    }
+
     public function blogallmain()
     {
         $id = session('id');
@@ -18,14 +32,18 @@ class blogController extends Controller
     }
     public function bloglist()
     {
+        $id = session('id');
+        $username = User::find($id);
         $blogvar = blog_model::all();
-        return view('blogList', compact('blogvar'));
+        return view('blogList', compact('blogvar', 'username'));
     }
     public function editblog($id)
     {
+        $id = session('id');
+        $username = User::find($id);
         $blogidvar = blog_model::find($id);
         if ($blogidvar) {
-            return view('editBlog', compact('blogidvar'));
+            return view('editBlog', compact('blogidvar', 'username'));
         }
     }
 
@@ -66,7 +84,9 @@ class blogController extends Controller
 
     public function blogcreate()
     {
-        return view('createBlog');
+        $id = session('id');
+        $username = User::find($id);
+        return view('createBlog', compact('username'));
     }
 
 

@@ -36,7 +36,7 @@
 
           <p class="mt-6 text-xs text-gray-600 text-center leading-8">
             قبلا حساب کاربری ساخته اید؟
-            <a href="/login" class="border-b border-gray-500 border-dotted">
+            <a href="{{ route('login.view') }}" class="border-b border-gray-500 border-dotted">
               وارد شوید.
             </a>
           </p>

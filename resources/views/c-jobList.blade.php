@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="{{asset('../node_modules/swiper/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('build/style.css')}}">
     <title>لیست شغل‌ها</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
@@ -25,7 +25,7 @@
                             <h1 class="avy awg awp axv">لیست شغل‌ها</h1>
                         </div>
                         <div class="lh bwf bwv bzz">
-                            <a href="/job-create">
+                            <a href="{{ route('creatjobcms') }}">
                                 <button type="button" class="lu adu ajr arf arv avl awa awg bah bbn bis boy boz bpb bpk">ایجاد شغل<button></a>
 
                         </div>

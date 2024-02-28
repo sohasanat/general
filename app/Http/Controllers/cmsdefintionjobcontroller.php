@@ -13,6 +13,7 @@ class cmsdefintionjobcontroller extends Controller
 {
     public function jobs()
     {
+
         $jobsvar = detailjob_model::all();
         return view('c-jobList', compact('jobsvar'));
     }
