@@ -14,7 +14,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\cmsdefintionjobcontroller;
 use App\Http\Controllers\customerController;
 use App\Http\Controllers\tiketController;
-
+use App\Http\Controllers\competition_controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -120,6 +120,14 @@ Route::get('/tiket-all-massage/{id}', [tiketController::class, 'showMessages'])-
 
 // tiketing  مدیریت
 Route::get('/cms-tiket-all', [tiketController::class, 'cmstiketall'])->name('cmstiket.view');
+Route::get('/cmstiket-all-massage/{id}', [tiketController::class, 'cmsshowMessages'])->name('cmsmassage.view');
+Route::post('/cmsmessege-save', [tiketController::class, 'cmssavemessege'])->name('cmsmessege.save');
+Route::post('/filtring-tiket', [tiketController::class, 'filtering'])->name('filtring.tiket');
+Route::get('/history-tiket/{id}', [tiketController::class, 'history'])->name('history.tiket');
+Route::get('/serch-tiket', [tiketController::class, 'searchTicket'])->name('serch.tiket');
+
+// مسابقه
+Route::post('/competition', [competition_controller::class, 'asware'])->name('competition');
 
 
 

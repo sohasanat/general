@@ -18,8 +18,8 @@
       </div>
       <div class="relative px-4 py-10 bg-gradient-to-t from-orange-100 to-[#f5f1e4] sm:rounded-3xl sm:p-14">
 
-        <form action="{{ route('user.losstpasvrify') }}" method="POST" enctype="multipart/form-data">
-          @csrf
+        <form action="<?php echo e(route('user.losstpasvrify')); ?>" method="POST" enctype="multipart/form-data">
+          <?php echo csrf_field(); ?>
           <div class="max-w-md mx-auto">
             <div>
               <h1 class="text-xl text-center font-YekanBakh-Bold">فراموشی رمز عبور</h1>
@@ -47,4 +47,4 @@
   <script src="../src/js/main.js"></script>
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\danesh\laravelprojectone\resources\views/lost-password.blade.php ENDPATH**/ ?>

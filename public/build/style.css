@@ -3738,3 +3738,40 @@ li::marker {
   content: '';
   font-size: 1.2em;
 }
+.p-break{
+  word-break: break-all;
+}
+
+
+
+/* .testtt> div{
+  display: flex;
+} */
+.show-pagination{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.show-pagination nav div:last-child {
+    display: block !important;
+}
+.show-pagination nav div >p {
+    display: none !important;
+
+}
+.show-pagination nav div:nth-child(1){
+    display: none !important;
+
+}
+
+.text-gray-500{
+  color: #d71920;
+}
+
+.show-pagination nav svg{
+      transform: rotate(180deg);
+
+}
+

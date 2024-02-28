@@ -56,7 +56,7 @@
             @if($message->from === $username->id)
             <div class="flex justify-start relative mt-4">
               <div class="grayC p-4 pb-1 fit-content rounded-lg leading-6">
-                <p>
+                <p class="p-break">
                   {{$message->Description}}
                 </p>
                 <div class="flex justify-end  mt-2">
@@ -69,7 +69,7 @@
             @else
             <div class="flex justify-end relative  mt-4  text-white">
               <div class="greenC p-4 fit-content pb-1 rounded-lg leading-6">
-                <p>
+                <p class="p-break">
                   {{$message->Description}}
                 </p>
                 <div class="flex justify-start mt-2">
@@ -78,9 +78,9 @@
               </div>
               <img class="absolute message-l" src="../../../assets/images/plygonGrayleft.svg" alt="plygonGrayRight">
             </div>
-          @endif
-          @endforeach
-</div>
+            @endif
+            @endforeach
+          </div>
           <!-- rightMessage
           <div class="flex flex-start relative mt-4">
             <div class="grayC p-4 pb-1  rounded-lg leading-6">
@@ -126,19 +126,21 @@
         </div>
 
 
-        <form class="w-full" action="{{ route('job.request') }}" method="POST" enctype="multipart/form-data">
+        <form class="w-full" action="{{ route('messege.save') }}" method="POST" enctype="multipart/form-data">
+          @csrf
 
           <div class="flex flex-col justify-between py-6 w-full">
             <span class=" text-base">نوشتن پیام:
 
             </span>
-            <textarea name="storysuccess" placeholder="توضیحات" class="border-box textarea w-full mt-4  focus:outline-none placeholder:text-sm"></textarea>
+            <textarea name="Description" placeholder="توضیحات" class="border-box textarea w-full mt-4  focus:outline-none placeholder:text-sm"></textarea>
             <div class="flex justify-between items-center flex-wrap w-full mt-4 gap-x-2 leading-10">
 
               <div class="justify-center flex sm:justify-between gap-x-2 flex-wrap w-full gap-y-5">
                 <div class="flex-1 w-300 flex">
-                  <input required id="uploadInput" name="resume" alt="resume" type="file" class="hidden">
-                  <input name="date" type="text" id="timeNow" value="" class="hidden">
+                  <input id="uploadInput" name="file" alt="resume" type="file" class="hidden">
+                  <input name="from" type="text" value="{{$username->id}}" class="hidden">
+                  <input name="tiket_id" type="text" value="{{$tiket->id}}" class="hidden">
 
                   <button id="uploadButton" class="flex-1 btn font-YekanBakh-Regular border-dash w-52">بارگذاری فایل </button>
                 </div>
